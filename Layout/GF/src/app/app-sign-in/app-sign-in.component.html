@@ -1,0 +1,39 @@
+<div class="login_modal_body">
+  <button class="close" mat-dialog-close [disabled]="false" mat-button></button>
+  <h3>Вход на сайт</h3>
+  <p class="text-center text-uppercase small loginEmail">войти через email</p>
+  <div class="row justify-content-center">
+    <div class="col-11 col-xs-12">
+      <form class="gd-form" [formGroup]="loginForm" validate>
+        <div class="form-group">
+          <input type="email" formControlName="email" [class.isEmpty]="loginForm.controls.email.errors?.isEmpty" class="form-control" id="exampleInputEmail1">
+          <label for="exampleInputEmail1">E-mail</label>
+        </div>
+        <div class="form-group">
+          <input type="password" formControlName="password" class="form-control" [class.isEmpty]="loginForm.controls.password.errors?.isEmpty" id="exampleInputPassword1">
+          <label for="exampleInputPassword1">Пароль</label>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-6 col-xs-12 p-0-xs">
+              <mat-checkbox>Запомнить пароль</mat-checkbox>
+            </div>
+            <div class="col-6 col-xs-12 p-0-xs text-center-xs text-right">
+              <a href="!#" class="forgot">Забыли пароль?</a>
+            </div>
+          </div>
+        </div>
+        <div class="form-group pt-3">
+          <button type="submit" class="btn btn-default btn-login">Войти</button>
+        </div>
+        <div class="form-group pt-3 flex-sm">
+          <button type="submit" class="btn btn-ligth btn-social facebook"><i class="fa fa-facebook-official"></i> Войти</button>
+          <button type="submit" class="btn btn-ligth btn-social twitter"><i class="fa fa-twitter"></i> Войти</button>
+          <button type="submit" class="btn btn-ligth btn-social gplus"><i class="fa google-plus"></i>Войти</button>
+        </div>
+      </form>
+      <p class="text-center all">У вас нет аккаунта на UrPG?</p>
+      <p class="text-center"><a href="#" class="forgot">Регистрация</a></p>
+    </div>
+  </div>
+</div>

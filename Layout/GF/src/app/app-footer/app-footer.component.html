@@ -1,0 +1,85 @@
+<footer class="footer mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col site-title d-flex h-100 d-xs-block col-xs-12 col-md-5">
+        <div class="footer-logo">
+          <svg class="logo" viewBox="0 0 139 42">
+            <path class="st0" d="M0,8V0h8v8H0z M26,8h8V0h-8V8z M26,25c0,5-4,9-9,9s-9-4-9-9V14H0v12h0.1C0.6,34.9,8,42,17,42s16.4-7.1,16.9-16
+	    H34V14h-8V25z M100,16c0,8.8-7.2,16-16,16H74v8h-8V0h18C92.8,0,100,7.2,100,16z M92,16c0-4.4-3.6-8-8-8H74v16h10
+	    C88.4,24,92,20.4,92,16z M48,14h-8v26h8v-6c0-6.6,5.4-12,12-12v-8c-4.5,0-8.7,1.5-12,4V14z M125,8h14V0h-14c-11,0-20,9-20,20
+	    s9,20,20,20h14V24h-8v8h-6c-6.6,0-12-5.4-12-12S118.4,8,125,8z" />
+          </svg>
+        </div>
+        <div class="desc" translate>
+          Организация туров, мероприятий, поиск интересных мест
+        </div>
+      </div>
+      <div class="col col-xs-12">
+        <ul class="cnt-list text-right">
+          <li><i class="material-icons">star</i>{{ 'Мероприятий : количество' | translate:model }}</li>
+          <li><i class="material-icons">record_voice_over</i>{{ 'Гидов : количество' | translate:model }}</li>
+          <li><i class="material-icons">business</i>{{ 'Городов : количество' | translate:model }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 d-block d-md-none  centered-in-mobile">
+        <ul class="social d-inline d-xs-block">
+          <li><a href=""><i class="fa fa-vk"></i></a></li>
+          <li><a href=""><i class="fa fa-facebook"></i></a></li>
+          <li><a href=""><i class="fa fa-odnoklassniki"></i></a></li>
+          <li><a href=""><i class="fa fa-instagram"></i></a></li>
+          <li></li>
+        </ul>
+        <!-- Example single danger button -->
+        <div class="btn-group d-inline">
+          <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Русский
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">English</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-8  d-flex h-100 col-md-12 col-xs-12 text-md-center">
+        <ul class="menu-list">
+          <li><a href="#!" translate>Политика обработки персональных данных</a></li>
+          <li><a href="#!" translate>Конфиденциальность</a></li>
+          <li><a href="#!" translate>Публичная оферта</a></li>
+          <li><a href="#!" translate>Помощь</a></li>
+        </ul>
+      </div>
+      <div class="col-xl-4  text-md-center text-xl-right col-md-12 centered-in-mobile col-xs-12 d-none d-md-block">
+        <ul class="social d-inline">
+          <li><a href=""><i class="fa fa-vk"></i></a></li>
+          <li><a href=""><i class="fa fa-facebook"></i></a></li>
+          <li><a href=""><i class="fa fa-odnoklassniki"></i></a></li>
+          <li><a href=""><i class="fa fa-instagram"></i></a></li>
+          <li></li>
+        </ul>
+        <!-- Example single danger button -->
+        <div class="btn-group d-inline">
+          <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{lang}}
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="!#" (click)= "changeLang($event, 'ru')">Русский</a>
+            <a class="dropdown-item" href="!#" (click)= "changeLang($event, 'en')">English</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="text-center copy-text">© UrPG 2010-2017. Все права защищены.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+

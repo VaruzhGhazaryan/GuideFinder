@@ -1,0 +1,71 @@
+.mat-expansion-indicator::after {
+  background-image: url('../../assets/img/logo.png')!important;
+  color:green;
+}
+
+.show-more{
+  margin-top: 20px;
+}
+
+mat-accordion{
+  background-color: #ffffff;
+  border:none;
+}
+
+.mat-expansion-panel:not([class*=mat-elevation-z]){
+  box-shadow: none;
+  margin-bottom: 10px;
+}
+.mat-expansion-panel-header:hover{
+  color:#ef7c8a;
+  border-color:#ef7c8a ;
+   }
+.faq-title{
+  font-weight: bold;
+  font-size: 26px;
+}
+.faq-title span {
+  margin-left: 50px;
+  display: block;
+}
+
+.faq-answer{
+  line-height: 25px;
+}
+
+.breadcrumbs {
+  margin-top: 30px!important;
+}
+.mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:not([aria-disabled=true]).cdk-keyboard-focused, .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:not([aria-disabled=true]).cdk-program-focused, .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:not([aria-disabled=true]):hover{
+  background-color: transparent;
+}
+@media screen and (max-width: 970px) {
+  .faq-title {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  .showhide::before {
+    margin-top: 4px;
+
+  }
+  .mat-expansion-panel{
+    margin-bottom: 20px;
+
+  }
+}
+@media screen and (max-width: 560px) {
+  .faq-title {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+  .showhide:not(.mat_content_close)::before {
+    line-height: 1.3;
+  }
+  .showhide::before {
+    width: 18px;
+    height: 18px;
+    font-size:18px
+  }
+
+}
