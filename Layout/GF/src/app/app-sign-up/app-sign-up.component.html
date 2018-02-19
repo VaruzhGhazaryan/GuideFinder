@@ -1,0 +1,182 @@
+<div class="signup_modal_body">
+  <button class="close" mat-dialog-close [disabled]="false" mat-button></button>
+  <h3 *ngIf="!confirm">РЕГИСТРАЦИЯ</h3>
+  <h3 *ngIf="confirm">ПОДТВЕРЖДЕНИЕ РЕГИСТРАЦИИ</h3>
+  <div *ngIf="confirm" class="loginEmail">
+    <p class="text-center text-uppercase small">SMS с кодом подтверждения отправлено на номер</p>
+    <p class="text-center text-uppercase small">{{number}}</p>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-11 col-lg-11 col-sm-12" >
+      <form *ngIf="initial" class="gd-form" >
+        <div class="form-group pt-3">
+          <button type="submit" class="btn btn-default btn-signup-email" (click)="signUpWithEmail()">ЗАРЕГИСТРОВАТЬСЯ ЧЕРЕЗ E-MAIL</button>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-ligth btn-social facebook"><i class="fa fa-facebook-official"></i> ВОЙТИ ЧЕРЕЗ FACEBOOK</button>
+          <button type="submit" class="btn btn-ligth btn-social twitter"><i class="fa fa-twitter"></i> ВОЙТИ ЧЕРЕЗ TWITTER</button>
+          <button type="submit" class="btn btn-ligth btn-social gplus"><i class="fa google-plus"></i>ВОЙТИ ЧЕРЕЗ GOOGLE</button>
+        </div>
+      </form>
+      <form *ngIf="signupemail" class="gd-form" [formGroup]="signupForm" validate>
+        <div class="form-group sm-50">
+          <input type="text"
+                 formControlName="surname"
+                 [ngClass]="{
+                    'has-error':(signupForm.controls.surname.errors?.required && signupForm.controls.surname.dirty),
+                    'has-success':!signupForm.controls.surname.errors?.required,
+                    'isEmpty': signupForm.controls.surname.errors?.isEmpty}"
+                 class="form-control"
+                 id="sign-up-surname">
+          <label for="sign-up-surname">Фамилия {{signupForm.controls.surname.errors?.valid}}</label>
+          <div class="help-block">
+            <small style="color: darkred;"
+                *ngIf="signupForm.controls.surname.errors?.required && signupForm.controls.surname.dirty">
+              Фамилия не может быть пустым
+            </small>
+          </div>
+        </div>
+        <div class="form-group sm-50">
+          <input type="text"
+                 formControlName="name" class="form-control"
+                 [ngClass]="{
+                    'has-error':(signupForm.controls.name.errors?.required && signupForm.controls.name.dirty),
+                    'has-success':!signupForm.controls.name.errors?.required,
+                    'isEmpty': signupForm.controls.name.errors?.isEmpty}"
+                 id="sign-up-name">
+          <label for="sign-up-name">Имя </label>
+          <div class="help-block">
+            <small style="color: darkred;"
+                *ngIf="signupForm.controls.name.errors?.required && signupForm.controls.name.dirty">
+              Имя не может быть пустым
+            </small>
+          </div>
+        </div>
+        <div class="form-group sm-50">
+          <input type="password"
+                 formControlName="password"
+                 class="form-control"
+                 [ngClass]="{
+                    'has-error':(signupForm.controls.password.errors?.required && signupForm.controls.password.dirty),
+                    'has-success':!signupForm.controls.password.errors?.required,
+                    'isEmpty': signupForm.controls.password.errors?.isEmpty}"
+                 id="sign-up-password">
+          <label for="sign-up-password">Пароль</label>
+          <div class="help-block">
+            <p style="color: darkred;"
+                *ngIf="signupForm.controls.password.errors?.required && signupForm.controls.password.dirty">
+              Пароль не может быть пустым
+            </p>
+          </div>
+        </div>
+        <div class="form-group sm-50">
+          <input type="password"
+                 formControlName="confirmpassword"
+                 class="form-control"
+                 [ngClass]="{
+                    'has-error':(!signupForm.controls.confirmpassword.errors?.required)&&
+                                    signupForm.controls.confirmpassword.value !== signupForm.controls.password.value,
+                    'has-success':(!signupForm.controls.confirmpassword.errors?.required) &&
+                                    signupForm.controls.confirmpassword.value === signupForm.controls.password.value,
+                    'isEmpty': signupForm.controls.confirmpassword.errors?.isEmpty}"
+                 id="sign-up-conf-pass">
+          <label for="sign-up-conf-pass">Подтвердите  порол</label>
+          <div class="help-block">
+            <p style="color: darkred;"
+               *ngIf="(!signupForm.controls.confirmpassword.errors?.required) &&
+                        signupForm.controls.confirmpassword.value !== signupForm.controls.password.value">
+              Пароль не совпадает
+            </p>
+          </div>
+        </div>
+        <div class="form-group sm-50">
+          <input type="email"
+                 formControlName="email"
+                 class="form-control"
+                 [ngClass]="{
+                    'has-error':(signupForm.controls.email.errors?.validateEmail && signupForm.controls.email.dirty),
+                    'has-success':!signupForm.controls.email.errors?.validateEmail && signupForm.controls.email.dirty,
+                    'isEmpty': signupForm.controls.email.errors?.isEmpty}"
+                 id="sign-up-email">
+          <label for="sign-up-email">E-mail
+            {{signupForm.controls.email.errors?.validateEmail && signupForm.controls.email.dirty ? '(поле с ошибкой)' : ''}}
+          </label>
+          <div class="help-block">
+            <small style="color: darkred;"
+                *ngIf="signupForm.controls.email.errors?.validateEmail && signupForm.controls.email.dirty">
+              Неправильный формат E-mail.
+            </small>
+
+          </div>
+        </div>
+        <div class="form-group sm-50">
+          <input type="text"
+                 formControlName="number"
+                 class="form-control"
+                 [class.isEmpty]="signupForm.controls.number.errors?.isEmpty"
+                 id="sign-up-number"
+                 dropSpecialCharacters="false"
+                 specialCharacters="[ '+', ' ', '-' ]"
+                 mask="+0 000 000-00-00"
+          >
+          <label for="sign-up-number">Номер телефона</label>
+        </div>
+        <div class="form-group sm-50">
+          <mat-form-field id="notify-method">
+            <mat-select [(value)]="selected">
+              <mat-option value="option1">Способ получение уведомлений</mat-option>
+              <mat-option value="option2">Option 2</mat-option>
+              <mat-option value="option3">Option 3</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="form-group sm-50">
+          <div class="row">
+            <div class="col">
+              <img class="captcha_img" src="../../assets/img/captcha.jpg" alt="">
+            </div>
+            <div class="col">
+              <div class="form-group sm-50">
+                <input type="text"
+                       formControlName="captcha" class="form-control"
+                       [ngClass]="{
+                    'has-error':(signupForm.controls.captcha.errors?.required && signupForm.controls.captcha.dirty),
+                    'has-success':!signupForm.controls.captcha.errors?.required,
+                    'isEmpty': signupForm.controls.captcha.errors?.isEmpty}"
+                       id="sign-up-captcha">
+                <label for="sign-up-captcha">Текст на картинке </label>
+                <div class="help-block">
+                  <small style="color: darkred;"
+                         *ngIf="signupForm.controls.captcha.errors?.required && signupForm.controls.captcha.dirty">
+                    Текст не может быть пустым
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group sm-50">
+          <div class="row">
+            <div class="col">
+              <mat-checkbox>Я согласен с<a href="!#" class="forgot"> публичной офертой </a></mat-checkbox>
+            </div>
+          </div>
+        </div>
+        <div class="form-group pt-3">
+          <button type="submit" class="btn btn-default btn-signup-email" [disabled]="!signupForm.valid" (click)="signUp()">ЗАРЕГИСТРОВАТЬСЯ</button>
+        </div>
+      </form>
+      <form *ngIf="confirm" class="gd-form"[formGroup]="loginform" validate>
+        <div class="form-group">
+          <input type="text" formControlName="confirmcode" [class.isEmpty]="loginform.controls.confirmcode.errors?.isEmpty" class="form-control" id="sign-up-confirm-code">
+          <label for="sign-up-confirm-code">Код подтверждения</label>
+        </div>
+        <div class="form-group pt-3">
+          <button type="submit" class="btn btn-default btn-signup-email" >ОТПРАВИТЬ</button>
+        </div>
+      </form>
+      <p *ngIf="!confirm" class="text-center all">У вас нет аккаунта на UrPG?</p>
+      <p *ngIf="!confirm" class="text-center md-0-xs"><a href="#" class="forgot"  (click)="login()">Войти</a></p>
+    </div>
+  </div>
+</div>

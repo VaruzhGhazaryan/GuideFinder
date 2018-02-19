@@ -1,0 +1,104 @@
+.note{
+  font-weight: bold;
+}
+.breadcrumbs {
+  margin-top: 30px!important;
+}
+
+.blog-item-img{
+  float:right
+}
+
+.turists-info h6{
+  font-weight: bold;
+
+}
+
+.turists-info ol, .turists-info ul{
+  padding-left: 18px;
+}
+.turists-info ul{
+  padding-left: 0
+}
+
+.turists-info ol li {
+  counter-increment: list;
+  list-style-type: none;
+  position: relative;
+  line-height: 35px;
+  font-size: 15px !important;
+
+}
+
+.turists-info ol li:before {
+  color: #53bcb2;
+  content: counter(list) ".";
+  left:-32px;
+  position: absolute;
+  text-align: right;
+  width: 26px;
+  font-weight: bold;
+}
+
+.turists-info ul li{
+  list-style: none;
+  font-size: 15px !important;
+  line-height: 35px;
+  position: relative;
+  margin-left: 15px;
+}
+.turists-info ul li:before {
+  content: '\2022';
+  color: #53bcb2;
+  font-weight: bold;
+  font-size: 25px;
+  position: absolute;
+  left: -15px;
+}
+
+
+figcaption{
+  text-align: center ;
+  font-style: italic ;
+  font-size: 14px ;
+  color: #757575;
+}
+
+.important-note{
+  background-color: #eeeeee;
+}
+
+.important-note p{
+  font-weight: bold;
+  line-height: 35px;
+  padding:15px;
+  font-size: 20px;
+}
+
+.place-table{
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.place-table table{
+  width:100%
+}
+.place-table table tr th, .place-table table tr td{
+  border-bottom: 1px solid #e0e0e0;
+  padding:10px 0
+}
+
+.img-div{
+  margin-bottom: 30px;
+}
+
+
+@media screen and (max-width: 990px)  {
+ .date-of-post{
+    text-align: center;
+  }
+
+  .place-table{
+    margin-bottom: 0;
+  }
+}
