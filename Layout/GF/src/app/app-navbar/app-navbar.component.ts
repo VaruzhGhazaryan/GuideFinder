@@ -19,7 +19,9 @@ export class AppNavbarComponent {
     'signin': 'Войти',
     'signup': 'Регистрация',
   };
+  //noinspection JSAnnotator
   signInDialog: MatDialogRef<AppSignInComponent>;
+  //noinspection JSAnnotator
   signUpDialog: MatDialogRef<AppSignUpComponent>;
 
   constructor(private dialog: MatDialog, router: Router) {}
