@@ -26,34 +26,27 @@
         </div>
     </div>
 
-    <div class="row justify-content-md-center m-lg-5 header-input-group pt-5  pt-sm-2 mt-3-md" *ngIf="!show">
-        <div class="row">
-            <div class="col-lg-10  col-md-10  pr-mt-0  inputs-section">
-                <div class="row">
-                    <div class="input-group col-lg-6 col-md-5 col-12">
-                        <input type="text" class="form-control" id="inp1" placeholder="Что и где искать?"
-                               aria-describedby="basic-addon2" [ngbTypeahead]="search">
-                        <label for="inp1"><i class="material-icons">location_on</i></label>
-                    </div>
-                    <div class="input-group col-lg-3 col-md-3 col-6">
-                        <input type="text" class="form-control" id="inp2" placeholder="Когда?"
-                               aria-describedby="basic-addon2">
-                        <label for="inp2"><i class="material-icons">date_range</i></label>
-                    </div>
-                    <div class="input-group col-lg-3  col-md-4 col-6">
-                        <input type="text" class="form-control" id="inp3" placeholder="Сколько вас?"
-                               aria-describedby="basic-addon2">
-                        <label for="inp3"><i class="material-icons">person</i></label>
-                    </div>
-                </div>
+    <div class="row justify-content-md-center m-lg-5 header-input-group pt-5  pt-sm-2 mt-3-md" *ngIf="!show" >
+        <div class="col-lg-9  col-md-10 pr-mt-0">
+            <div class="input-group col-lg-6 col-md-6 col-12">
+                <input type="text" class="form-control" id="inp1" placeholder="Что и где искать?"
+                       aria-describedby="basic-addon2" [ngbTypeahead]="search">
+                <label for="inp1"><i class="material-icons">location_on</i></label>
             </div>
-            <div class="col-lg-2 col-md-1 ">
-                <div class="input-group">
-                    <button type="button" class="btn btn-success btn-blue">Найти</button>
-                </div>
+            <div class="input-group col-lg-3 col-md-3 col-6">
+                <input type="text" class="form-control" id="inp2" placeholder="Когда?" aria-describedby="basic-addon2">
+                <label for="inp2"><i class="material-icons">date_range</i></label>
+            </div>
+            <div class="input-group col-lg-3  col-md-3 col-6">
+                <input type="text" class="form-control" id="inp3" placeholder="Сколько вас?" aria-describedby="basic-addon2">
+                <label for="inp3"><i class="material-icons">person</i></label>
             </div>
         </div>
-
+        <div class="col-lg-2 col-md-2 col-12">
+            <div class="input-group">
+                <button type="button" class="btn btn-success btn-blue">Найти</button>
+            </div>
+        </div>
     </div>
 
 

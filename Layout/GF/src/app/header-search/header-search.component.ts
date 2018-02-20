@@ -17,6 +17,7 @@ export class HeaderSearchComponent implements OnInit {
 
     public model: any;
 
+    //noinspection TypeScriptUnresolvedFunction
     search = (text$: Observable<string>) =>
         text$
             .debounceTime(200)

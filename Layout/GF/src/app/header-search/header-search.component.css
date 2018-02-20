@@ -52,7 +52,7 @@ label {
 }
 
 .input-group input[type=text]:focus {
-    border-top: 2px solid #53bcb2;
+    border-top: 2px inset #59ffef;
 }
 
 input:focus + label i {
