@@ -33,6 +33,7 @@ import { FaqComponent } from './faq/faq.component';
 import { MatExpansionModule } from '@angular/material';
 import { AppInlineNavbarComponent } from './app-inline-navbar/app-inline-navbar.component';
 import { GuideComponent } from './guide/guide.component';
+import { HeaderSearchComponent } from './header-search/header-search.component';
 
 
 
@@ -54,7 +55,8 @@ export function createTranslateLoader(http: HttpClient) {
     BlogItemComponent,
     FaqComponent,
     AppInlineNavbarComponent,
-    GuideComponent
+    GuideComponent,
+    HeaderSearchComponent
 
   ],
   imports: [

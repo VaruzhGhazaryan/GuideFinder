@@ -1,68 +1,60 @@
-<div class="container-fluid  mt-sm-0 mt-md-5" >
-  <div  class="row" *ngIf="!show">
-    <div class="col-lg-3 col-md-6 col-12">
+<script src="https://unpkg.com/zone.js@^0.6.23/dist/zone.js"></script>
+<script src="https://unpkg.com/zone.js@^0.6.23/dist/long-stack-trace-zone.js"></script>
+<script src="https://unpkg.com/reflect-metadata@^0.1.8/Reflect.js"></script>
+<script src="https://unpkg.com/systemjs@^0.19.40/dist/system.js"></script>
+<div class="container-fluid  mt-sm-0 mt-md-5">
+    <div class="row" *ngIf="!show">
+        <div class="col-lg-3 col-md-6 col-12">
 
-      <div class="logo d-none d-lg-block">
-        <a routerLink="/">
-          <svg viewBox="0 0 139 42">
-          <path class="st0" d="M0,8V0h8v8H0z M26,8h8V0h-8V8z M26,25c0,5-4,9-9,9s-9-4-9-9V14H0v12h0.1C0.6,34.9,8,42,17,42s16.4-7.1,16.9-16
+            <div class="logo d-none d-lg-block">
+                <a routerLink="/">
+                    <svg viewBox="0 0 139 42">
+                        <path class="st0" d="M0,8V0h8v8H0z M26,8h8V0h-8V8z M26,25c0,5-4,9-9,9s-9-4-9-9V14H0v12h0.1C0.6,34.9,8,42,17,42s16.4-7.1,16.9-16
 	    H34V14h-8V25z M100,16c0,8.8-7.2,16-16,16H74v8h-8V0h18C92.8,0,100,7.2,100,16z M92,16c0-4.4-3.6-8-8-8H74v16h10
 	    C88.4,24,92,20.4,92,16z M48,14h-8v26h8v-6c0-6.6,5.4-12,12-12v-8c-4.5,0-8.7,1.5-12,4V14z M125,8h14V0h-14c-11,0-20,9-20,20
 	    s9,20,20,20h14V24h-8v8h-6c-6.6,0-12-5.4-12-12S118.4,8,125,8z"/>
-        </svg>
-        </a>
-      </div>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-8 col-md-12 centered-in-mobile  text-md-center pt2">
+            <h1 class="header-title text-lg-left text-md-center">{{ header.title }}</h1>
+            <p class="header-text text-lg-left">
+                {{ header.desc }}
+            </p>
+        </div>
     </div>
 
-    <div class="col-lg-8 col-md-12 centered-in-mobile  text-md-center pt2">
-      <h1 class="header-title text-lg-left text-md-center">{{ header.title }}</h1>
-      <p class="header-text text-lg-left">
-        {{ header.desc }}
-      </p>
-    </div>
-  </div>
-
-
-
-  <div class="row justify-content-md-center m-lg-5 header-input-group pt-5  pt-sm-2 mt-3-md" *ngIf="!show" >
-    <div class="col-lg-9  col-md-10 pr-mt-0">
-      <div class="input-group col-lg-6 col-md-6 col-12">
-        <label for="inp1"><i class="material-icons">location_on</i></label>
-        <input type="text" class="form-control" id="inp1" placeholder="Что и где искать?"
-               aria-describedby="basic-addon2">
-      </div>
-      <div class="input-group col-lg-3 col-md-3 col-6">
-        <label for="inp2"><i class="material-icons">date_range</i></label>
-        <input type="text" class="form-control" id="inp2" placeholder="Когда?" aria-describedby="basic-addon2">
-      </div>
-      <div class="input-group col-lg-3  col-md-3 col-6">
-        <label for="inp3"><i class="material-icons">person</i></label>
-        <input type="text" class="form-control" id="inp3" placeholder="Сколько вас?" aria-describedby="basic-addon2">
-      </div>
-    </div>
-    <div class="col-lg-2 col-md-2 col-12">
-      <div class="input-group">
-        <button type="button" class="btn btn-success btn-blue">Найти</button>
-      </div>
+    <div class="row justify-content-md-center m-lg-5 header-input-group pt-5  pt-sm-2 mt-3-md" *ngIf="!show">
+        <div class="row">
+            <div class="col-lg-10  col-md-10  pr-mt-0  inputs-section">
+                <div class="row">
+                    <div class="input-group col-lg-6 col-md-5 col-12">
+                        <input type="text" class="form-control" id="inp1" placeholder="Что и где искать?"
+                               aria-describedby="basic-addon2" [ngbTypeahead]="search">
+                        <label for="inp1"><i class="material-icons">location_on</i></label>
+                    </div>
+                    <div class="input-group col-lg-3 col-md-3 col-6">
+                        <input type="text" class="form-control" id="inp2" placeholder="Когда?"
+                               aria-describedby="basic-addon2">
+                        <label for="inp2"><i class="material-icons">date_range</i></label>
+                    </div>
+                    <div class="input-group col-lg-3  col-md-4 col-6">
+                        <input type="text" class="form-control" id="inp3" placeholder="Сколько вас?"
+                               aria-describedby="basic-addon2">
+                        <label for="inp3"><i class="material-icons">person</i></label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-1 ">
+                <div class="input-group">
+                    <button type="button" class="btn btn-success btn-blue">Найти</button>
+                </div>
+            </div>
+        </div>
 
     </div>
 
-  </div>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
