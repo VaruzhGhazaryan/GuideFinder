@@ -1,4 +1,12 @@
-<div class="container">
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+</head>
+<body>
+
+<div class="container" >
   <div class="row">
     <div class="breadcrumbs hidden-sm-down" >
       <ul>
@@ -7,30 +15,39 @@
       </ul>
 
     </div>
-    <div class="col-md-12 title">
-      <h2>ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
+    <div class="divv"  class="col-md-12 title">
+      <h2 >ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
     </div>
     <div class="col-md-12">
-    <mat-accordion *ngFor="let info of infoObject">
-    <mat-expansion-panel>
-      <mat-expansion-panel-header (click)="info.isopen = showHideMessage(info.isopen)">
-        <p class="faq-title showhide" [ngClass]="{'mat_content_close': info.isopen}"><span>{{info.title}}</span></p>
-      </mat-expansion-panel-header>
+      <div *ngFor="let info of infoObject;let i = index">
+        <div >
+          <div #nameDiv class="tile" id="ff" onclick="show()" (click)=" showHideMessage(i)" >
+            <p   class="faq-title showhide" ><span>{{info.title}}</span></p>
+          </div>
+          <div class="answer" >
+          <span id="faqAnswer{{i}}"  (click)="f(this)" style="display: none" >{{info.description}} </span>
+          </div>
 
-      <p class="faq-answer">{{info.description}}</p>
-
-
-    </mat-expansion-panel>
-      </mat-accordion>
-    </div>
-    </div>
-
-
-
-
-    <div class="col-sm-12 show-more">
-      <button type="button" class="show-more-btn">Показать еще</button>
+        </div>
+      </div>
     </div>
   </div>
+
+
+
+
+  <div class="col-sm-12 show-more">
+    <button  type="button" class="show-more-btn">Показать еще</button>
+  </div>
+
+</div>
+
+<script>
+  document.getElementById("k").innerHTML="hjgjhgjhg"
+</script>
+
+
+</body>
+</html>
 
 

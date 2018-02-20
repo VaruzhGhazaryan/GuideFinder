@@ -11,12 +11,15 @@ mat-accordion{
   background-color: #ffffff;
   border:none;
 }
-
+.answer{
+  margin-bottom: 15px;
+  margin-left: 50px;
+}
 .mat-expansion-panel:not([class*=mat-elevation-z]){
   box-shadow: none;
   margin-bottom: 10px;
 }
-.mat-expansion-panel-header:hover{
+.faq-title :active{
   color:#ef7c8a;
   border-color:#ef7c8a ;
    }

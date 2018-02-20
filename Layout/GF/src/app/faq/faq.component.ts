@@ -17,47 +17,66 @@ export class FaqComponent implements OnInit {
       {
         'title': 'Как работают отзывы?',
         'description': 'Классический текст Lorem Ipsum, используемый с XVI века, приведён ниже. Также даны разделы 1.10.32 и 1.10.33 "de Finibus Bonorum et Malorum" Цицерона и их английский перевод, сделанный H. Rackham, 1914 год.',
-        'isopen': false
+        'isopen': false,
+         'id': 1
       },
       {
         'title': 'Что такое рекомендации на UrPG?',
         'description': 'Классический текст Lorem Ipsum, используемый с XVI века, приведён ниже. Также даны разделы 1.10.32 и 1.10.33 "de Finibus Bonorum et Malorum" Цицерона и их английский перевод, сделанный H. Rackham, 1914 год.',
-        'isopen': false
+        'isopen': false,
+        'id': 2
       },
       {
         'title': 'Можно ли удалить отзыв или ответить на отзыв, с которым я не согласен?',
         'description': 'Классический текст Lorem Ipsum, используемый с XVI века, приведён ниже. Также даны разделы 1.10.32 и 1.10.33 "de Finibus Bonorum et Malorum" Цицерона и их английский перевод, сделанный H. Rackham, 1914 год.',
-        'isopen': false
+        'isopen': false, 'id': 3
       },
       {
         'title': 'Безопасно ли предоставлять документы на UrPG?',
         'description': 'Классический текст Lorem Ipsum, используемый с XVI века, приведён ниже. Также даны разделы 1.10.32 и 1.10.33 "de Finibus Bonorum et Malorum" Цицерона и их английский перевод, сделанный H. Rackham, 1914 год.',
-        'isopen': false
+        'isopen': false,
+
       },
       {
         'title': 'Как мне подтвердить свои номер телефона?',
         'description': 'Классический текст Lorem Ipsum, используемый с XVI века, приведён ниже. Также даны разделы 1.10.32 и 1.10.33 "de Finibus Bonorum et Malorum" Цицерона и их английский перевод, сделанный H. Rackham, 1914 год.',
-        'isopen': false
+        'isopen': false,
+
       },
       {
         'title': 'Что такое рекомендация на UrPG?',
         'description': 'Классический текст Lorem Ipsum, используемый с XVI века, приведён ниже. Также даны разделы 1.10.32 и 1.10.33 "de Finibus Bonorum et Malorum" Цицерона и их английский перевод, сделанный H. Rackham, 1914 год.',
-        'isopen': false
+        'isopen': false,
+
       },
       {
         'title': 'Можно ли удалить отзыв или ответить на отзыв, с которым я не согласен?',
         'description': 'Классический текст Lorem Ipsum, используемый с XVI века, приведён ниже. Также даны разделы 1.10.32 и 1.10.33 "de Finibus Bonorum et Malorum" Цицерона и их английский перевод, сделанный H. Rackham, 1914 год.',
-        'isopen': false
+        'isopen': false,
+
       },
       {
         'title': 'Безопасно ли предоставлять документы на UrPG?',
         'description': 'Классический текст Lorem Ipsum, используемый с XVI века, приведён ниже. Также даны разделы 1.10.32 и 1.10.33 "de Finibus Bonorum et Malorum" Цицерона и их английский перевод, сделанный H. Rackham, 1914 год.',
-        'isopen': false
+        'isopen': false,
+
       }
     ];
   }
 
-  showHideMessage(isopen) {
-        return isopen = !isopen;
-  }
+
+
+  showHideMessage(index) {
+
+      var dsp =  document.getElementById("faqAnswer"+index);
+
+      if (dsp.style.display == "none") {
+        dsp.style.display = "inline";
+      } else {
+        dsp.style.display = "none";
+      }
+
+
+    }
+
 }
