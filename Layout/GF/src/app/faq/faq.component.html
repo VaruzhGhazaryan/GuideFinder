@@ -20,11 +20,11 @@
     </div>
     <div class="col-md-12">
       <div *ngFor="let info of infoObject;let i = index">
-        <div >
-          <div #nameDiv class="tile" id="ff" onclick="show()" (click)=" showHideMessage(i)" >
-            <p   class="faq-title showhide" ><span>{{info.title}}</span></p>
+        <div>
+          <div class="tile"   (click)=" showHideMessage($event.target.id)">
+            <p   class="faq-title showhide"  ><span id="{{i}}">{{info.title}}</span></p>
           </div>
-          <div class="answer" >
+          <div  class="answer">
           <span id="faqAnswer{{i}}"  (click)="f(this)" style="display: none" >{{info.description}} </span>
           </div>
 
@@ -42,9 +42,6 @@
 
 </div>
 
-<script>
-  document.getElementById("k").innerHTML="hjgjhgjhg"
-</script>
 
 
 </body>

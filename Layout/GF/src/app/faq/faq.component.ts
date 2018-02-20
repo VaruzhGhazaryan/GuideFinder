@@ -66,17 +66,15 @@ export class FaqComponent implements OnInit {
 
 
 
-  showHideMessage(index) {
+  showHideMessage(targetID) {
 
-      var dsp =  document.getElementById("faqAnswer"+index);
+    var thisElementMessage = document.querySelector("#faqAnswer"+targetID)
 
-      if (dsp.style.display == "none") {
-        dsp.style.display = "inline";
-      } else {
-        dsp.style.display = "none";
-      }
-
-
+    if (thisElementMessage.style.display == "none") {
+      thisElementMessage.style.display = "inline";
+    } else {
+      thisElementMessage.style.display = "none";
+    }
     }
 
 }
