@@ -1,0 +1,110 @@
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
+<div class="container-fluid">
+    <div class="row">
+        <div class="breadcrumbs  hidden-sm-down">
+            <ul>
+                <li><a routerLink="/">Главная</a></li>
+                <li><a routerLink="/guide">Иванов Иван Иванович</a></li>
+            </ul>
+
+        </div>
+        <div class="col-md-12 title">
+            <h2>Иванов Иван Иванович <i class="material-icons icon">check_circle</i></h2>
+        </div>
+    </div>
+
+
+    <div class="row post-section">
+        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-12 ">
+                <img src="../../assets/img/image.jpg" alt="" class="blog-img">
+        </div>
+        <div class="col-lg-8 col-xl-8 col-md-8 col-sm-12">
+            <div class="post">
+                <a href="">Москва, Россия</a> <br><br>
+                <div class="row">
+                    <p class="col-lg-2 col-xl-2 col-md-3 col-sm-6 col-6">Языки</p>
+                    <p class="col-lg-5 col-xl-5 col-md-5 col-sm-6 col-6">Русский, English</p>
+                </div>
+
+                <div class="row">
+                    <p class="col-lg-2 col-xl-2 col-md-3 col-sm-6 col-6">Мероприятий</p>
+                    <p class="col-lg-5 col-xl-5 col-md-5 col-sm-6 col-6">26 423</p>
+                </div>
+                <p class="about">О себе</p>
+                <p>
+                    <span>Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так.
+                        Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад.
+                        Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так.
+                    </span>
+                </p>
+                <p>
+                    <span>Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так.
+                        Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад.
+                        Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так.
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div *ngFor="let carusel of carusels;">
+        <div class="row mt-5 ">
+            <div class="col mt-lg-5 mt-md-5">
+                <h2>{{carusel.h2}}</h2>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col">
+                <owl-carousel class="carousel" [options]="option"
+                              [items]="slides"
+                              [carouselClasses]="['owl-theme', 'row', 'sliding']">
+                    <div class="item slide" *ngFor="let slide of carusel.slide;">
+                        <figure class="item">
+                            <img src="{{ slide.img }}" alt="sq-sample26"/>
+                            <p class="title">{{ slide.title }}</p>
+                            <figcaption>
+                                <i class="material-icons">visibility</i>
+                                <p>{{ slide.title }}</p>
+                            </figcaption>
+                            <a href=" {{ slide.url }} "></a>
+                        </figure>
+
+                        <div class="text-center">
+                            <span><b class="pd-letter">{{ slide.price_for_one }}</b> <span class="rouble"></span> за человека</span>
+                        </div>
+                        <div class="text-center">
+                            <small><b class="pd-letter">{{ slide.price_for_group}}</b> <span class="rouble"></span> за
+                                группу
+                            </small>
+                        </div>
+                        <div class="text-center">
+                            <ngb-rating [(rate)]="slide.rate" [max]="5" [readonly]="true" class="d-inline">
+                                <ng-template let-fill="fill">
+                                    <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                                </ng-template>
+                            </ngb-rating>
+
+                            <div class="revievs d-inline">
+                                <a href="#!">{{ slide.reviews }} {{ 'отзывов' | translate}} </a>
+                            </div>
+                        </div>
+                    </div>
+                </owl-carousel>
+
+                <div class="row">
+                    <div class="col-lg-11 col-sm-12 m-auto">
+                        <p class="more"><a href="{{carusel.href}}">{{ 'Смотреть еще' | translate}}</a> <i
+                                class="fa fa-angle-right" aria-hidden="true"></i></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
