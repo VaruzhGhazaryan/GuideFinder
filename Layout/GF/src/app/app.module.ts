@@ -35,6 +35,7 @@ import { MatExpansionModule } from '@angular/material';
 import { AppInlineNavbarComponent } from './app-inline-navbar/app-inline-navbar.component';
 import { GuideComponent } from './guide/guide.component';
 import { EventsComponent } from './events/events.component';
+import { HeaderSearchComponent } from './header-search/header-search.component';
 
 
 
@@ -58,6 +59,8 @@ export function createTranslateLoader(http: HttpClient) {
     AppInlineNavbarComponent,
     GuideComponent,
     EventsComponent
+    AppInlineNavbarComponent,
+    HeaderSearchComponent
 
   ],
   imports: [

@@ -42,7 +42,6 @@
         max-width: 20%;
     }
 }
-
 @media screen and (max-width: 770px) {
     .post-section {
         padding-bottom: 45px;
