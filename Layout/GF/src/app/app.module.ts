@@ -58,7 +58,7 @@ export function createTranslateLoader(http: HttpClient) {
     FaqComponent,
     AppInlineNavbarComponent,
     GuideComponent,
-    EventsComponent
+    EventsComponent,
     AppInlineNavbarComponent,
     HeaderSearchComponent
 
