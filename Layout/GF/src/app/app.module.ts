@@ -22,6 +22,7 @@ import {NgxMaskModule} from 'ngx-mask';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { NouisliderModule } from 'ng2-nouislider';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -33,6 +34,7 @@ import { FaqComponent } from './faq/faq.component';
 import { MatExpansionModule } from '@angular/material';
 import { AppInlineNavbarComponent } from './app-inline-navbar/app-inline-navbar.component';
 import { GuideComponent } from './guide/guide.component';
+import { EventsComponent } from './events/events.component';
 
 
 
@@ -54,7 +56,8 @@ export function createTranslateLoader(http: HttpClient) {
     BlogItemComponent,
     FaqComponent,
     AppInlineNavbarComponent,
-    GuideComponent
+    GuideComponent,
+    EventsComponent
 
   ],
   imports: [
@@ -73,6 +76,7 @@ export function createTranslateLoader(http: HttpClient) {
     HttpClientModule,
     MatDialogModule,
     MatExpansionModule,
+    NouisliderModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

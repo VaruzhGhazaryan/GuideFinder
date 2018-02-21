@@ -1,0 +1,155 @@
+<div class="container-fluid">
+
+  <div class="row filters mt-5">
+    <div class="col-9 col-xs-12">
+      <!--Тематика-->
+      <div ngbDropdown class="d-inline-block mr-2" #filterItem="ngbDropdown">
+        <button class="btn btn-outline-primary green" id="ftr1" ngbDropdownToggle>Тематика</button>
+        <div ngbDropdownMenu aria-labelledby="ftr1" class="w-500">
+          <div class="row p-2 pr-3 pl-3">
+            <div class="col-6 mb-2"><mat-checkbox>Обзорные</mat-checkbox></div>
+            <div class="col-6 mb-2"><mat-checkbox>Благотворительность</mat-checkbox></div>
+
+            <div class="col-6 mb-2"><mat-checkbox>История и архитектура</mat-checkbox></div>
+            <div class="col-6 mb-2"><mat-checkbox>Музыка</mat-checkbox></div>
+
+            <div class="col-6 mb-2"><mat-checkbox>Искусство и музей</mat-checkbox></div>
+            <div class="col-6 mb-2"><mat-checkbox>Спортивные</mat-checkbox></div>
+
+            <div class="col-6 mb-2"><mat-checkbox>Гастрономические</mat-checkbox></div>
+            <div class="col-6 mb-2"><mat-checkbox>Развлечения</mat-checkbox></div>
+
+            <div class="col-6 mb-2"><mat-checkbox>Ночная жизнь</mat-checkbox></div>
+            <div class="col-6 mb-2"><mat-checkbox>Религия и Просвещения</mat-checkbox></div>
+
+            <div class="col-6 mb-2"><mat-checkbox>Природа</mat-checkbox></div>
+            <div class="col-6 mb-2"><mat-checkbox>Сопровождения мигрантов</mat-checkbox></div>
+
+            <div class="col-6 mb-2"><mat-checkbox>Мода и шопинг</mat-checkbox></div>
+            <div class="col-6 mb-2"><mat-checkbox>Необычные</mat-checkbox></div>
+
+          </div>
+        </div>
+      </div>
+
+      <!--Формат-->
+      <div ngbDropdown class="d-inline-block mr-2" #filterItem="ngbDropdown">
+        <button class="btn btn-outline-primary green" id="ftr2" ngbDropdownToggle>Формат</button>
+        <div ngbDropdownMenu aria-labelledby="ftr2" class="p-3">
+          <div class="col-12"><h6 class="group-title">Груповые</h6></div>
+          <div class="col-12 mb-2"><mat-checkbox>Однородная группа</mat-checkbox></div>
+
+          <div class="col-12"><h6 class="group-title">Индивидуальные</h6></div>
+          <div class="col-12 mb-2"><mat-checkbox>Персональные</mat-checkbox></div>
+          <div class="col-12 mb-2"><mat-checkbox>В составе группы</mat-checkbox></div>
+        </div>
+      </div>
+
+      <!--Ценовой диапазон-->
+      <div ngbDropdown class="d-inline-block mr-2" #filterItem="ngbDropdown">
+        <button class="btn btn-outline-primary" id="ftr3" ngbDropdownToggle>Ценовой диапазон</button>
+        <div ngbDropdownMenu aria-labelledby="ftr3" class="p-3 w-300">
+          <div class="col-12">
+            <nouislider [connect]="true" [min]="1000000" [step]="100000" [max]="100000000" [(ngModel)]="priceRange"
+                        [ngModelOptions]="{standalone: true}"
+                        class="priceRange"></nouislider>
+          </div>
+          <div class="col-12 d-flex justify-content-between price-val"><span class="from">{{ priceRange[0] }}</span> <span class="separate"> - </span> <span>{{ priceRange[1] }}</span></div>
+        </div>
+      </div>
+
+      <!--Продолжительность-->
+      <div ngbDropdown class="d-inline-block mr-2" #filterItem="ngbDropdown">
+        <button class="btn btn-outline-primary" id="ftr4" ngbDropdownToggle>Продолжительность</button>
+        <div ngbDropdownMenu aria-labelledby="ftr4" class="p-3">
+          <div class="col-12 mb-2"><mat-checkbox>Короткая(до 3 часов)</mat-checkbox></div>
+          <div class="col-12 mb-2"><mat-checkbox>Средняя(3-10 часов)</mat-checkbox></div>
+          <div class="col-12 mb-2"><mat-checkbox>Длинная(более 10 часов)</mat-checkbox></div>
+        </div>
+      </div>
+
+      <!--Язык-->
+      <div ngbDropdown class="d-inline-block mr-2" #filterItem="ngbDropdown">
+        <button class="btn btn-outline-primary" id="ftr5" ngbDropdownToggle>Язык</button>
+        <div ngbDropdownMenu aria-labelledby="ftr5" class="p-3">
+          <div class="col-12 mb-2"><mat-checkbox>Русский</mat-checkbox></div>
+          <div class="col-12 mb-2"><mat-checkbox>Английский</mat-checkbox></div>
+        </div>
+      </div>
+
+      <!--Дополнительно-->
+      <div ngbDropdown class="d-inline-block mr-2" #filterItem="ngbDropdown">
+        <button class="btn btn-outline-primary" id="ftr6" ngbDropdownToggle>Дополнительно</button>
+        <div ngbDropdownMenu aria-labelledby="ftr6" class="p-3">
+          <div class="col-12 mb-2"><mat-checkbox>Доставить в место экскурсии</mat-checkbox></div>
+          <div class="col-12 mb-2"><mat-checkbox>Купить дополнительные билеты</mat-checkbox></div>
+          <div class="col-12 mb-2"><mat-checkbox>Сопровождение человека с ограниченными возможностями</mat-checkbox></div>
+        </div>
+      </div>
+
+      <!--Перемещение-->
+      <div ngbDropdown class="d-inline-block mr-2" #filterItem="ngbDropdown">
+        <button class="btn btn-outline-primary" id="ftr7" ngbDropdownToggle>Перемещение</button>
+        <div ngbDropdownMenu aria-labelledby="ftr7" class="p-3">
+          <div class="col-12 mb-2"><mat-checkbox>Автобус</mat-checkbox></div>
+          <div class="col-12 mb-2"><mat-checkbox>Пешие</mat-checkbox></div>
+          <div class="col-12 mb-2"><mat-checkbox>Автомобиль</mat-checkbox></div>
+          <div class="col-12 mb-2"><mat-checkbox>Смешанные</mat-checkbox></div>
+          <div class="col-12 mb-2"><mat-checkbox>Водный</mat-checkbox></div>
+          <div class="col-12 mb-2"><mat-checkbox>Воздушный</mat-checkbox></div>
+          <div class="col-12 mb-2"><mat-checkbox>Велосипед</mat-checkbox></div>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+    <div class="col-3 col-xs-12">sdf</div>
+  </div>
+
+  <div class="row mt-4" *ngFor="let carusel of carusels;">
+      <div class="col1-5" *ngFor="let slide of carusel.slide ; let i = index">
+        <div class="item slide">
+          <div class="checkbox_block">
+            <div class="checkbox-heart">
+              <input class="checkbox-heart--origin" [(ngModel)]="slide.like" id="{{i}}" type="checkbox"/>
+              <label class="checkbox-label" for="{{i}}"></label>
+            </div>
+          </div>
+          <figure class="item">
+            <img src="{{ slide.img }}" alt="sq-sample26"/>
+            <p class="title">{{ slide.title }}</p>
+            <figcaption>
+              <i class="material-icons">visibility</i>
+              <p>{{ slide.title }}</p>
+            </figcaption>
+            <a href=" {{ slide.url }} "></a>
+          </figure>
+
+          <div class="text-center">
+            <span><b class="pd-letter">{{ slide.price_for_one }}</b> <span class="rouble"></span> за человека</span>
+          </div>
+          <div class="text-center">
+            <small><b class="pd-letter">{{ slide.price_for_group}}</b> <span class="rouble"></span> за группу</small>
+          </div>
+          <div class="text-center">
+            <ngb-rating [(rate)]="slide.rate" [max]="5" [readonly]="true" class="d-inline">
+              <ng-template let-fill="fill">
+                <span class="star" [class.filled]="fill === 100">&#9733;</span>
+              </ng-template>
+            </ngb-rating>
+
+            <div class="revievs d-inline">
+              <a href="#!">{{ slide.reviews }} {{ 'отзывов' | translate}} </a>
+            </div>
+          </div>
+          <div class="ftr-block">
+            <span class="status-label" *ngIf="slide.label">{{slide.label}}</span>
+          </div>
+        </div>
+      </div>
+  </div>
+
+</div>

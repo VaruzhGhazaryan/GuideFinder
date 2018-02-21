@@ -28,7 +28,7 @@ export class AppComponent {
   constructor(router: Router) {
     router.events.forEach((event) => {
       if (event instanceof NavigationStart) {
-        if (event.url === '/blog' || event.url === '/blog-item' || event.url === '/faq' || event.url === '/guide') {
+        if (event.url != '/' && event.url != '/home') {
           this.show = true;
         } else {
           this.show = false;
