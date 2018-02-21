@@ -7,7 +7,8 @@ import { MatDialog, MatDialogRef } from '@angular/material';
   templateUrl: './app-sign-in.component.html',
   styleUrls: ['./app-sign-in.component.css']
 })
-export class AppSignInComponent implements OnInit {
+export class  AppSignInComponent implements OnInit {
+  //noinspection JSAnnotator
   constructor(private fb: FormBuilder,
     private elementRef: ElementRef,
     private dialog: MatDialog,
@@ -19,6 +20,7 @@ export class AppSignInComponent implements OnInit {
   }
 
   loginForm: FormGroup;
+  //noinspection JSAnnotator
   signUpDialogRef: MatDialogRef<AppSignUpComponent>;
 
   static emptyValidator(control: FormControl) {
