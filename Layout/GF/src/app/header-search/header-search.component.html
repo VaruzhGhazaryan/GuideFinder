@@ -6,20 +6,56 @@
     <div class="row">
         <div class="col-lg-10  col-md-10  pr-mt-0  inputs-section">
             <div class="row">
-                <div class="input-group col-lg-6 col-md-5 col-12">
+                <div class="input-group col-lg-5 col-md-4 col-12">
                     <input type="text" class="form-control" id="inp1" placeholder="Что и где искать?"
                            aria-describedby="basic-addon2" [ngbTypeahead]="search">
                     <label for="inp1"><i class="material-icons">location_on</i></label>
                 </div>
-                <div class="input-group col-lg-3 col-md-3 col-6">
+                <div class="input-group col-lg-3 col-md-2 col-6">
                     <input type="text" class="form-control" id="inp2" placeholder="Когда?"
                            aria-describedby="basic-addon2">
                     <label for="inp2"><i class="material-icons">date_range</i></label>
                 </div>
-                <div class="input-group col-lg-3  col-md-4 col-6">
+                <div ngbDropdown class="input-group col-lg-4  col-md-5 col-6" #filterItem="ngbDropdown">
                     <input type="text" class="form-control" id="inp3" placeholder="Сколько вас?"
-                           aria-describedby="basic-addon2">
+                           aria-describedby="basic-addon2" ngbDropdownToggle>
                     <label for="inp3"><i class="material-icons">person</i></label>
+
+                    <div ngbDropdownMenu aria-labelledby="ftr2" class="p-3">
+                        <div class="col-12"><h6 class="group-title"><b>Взрослые</b></h6></div>
+                        <div class="col-12 mb-2">
+                            <div class="contaner">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-4  col-12 mb-2">
+                                        <i class="material-icons icon">remove_circle</i>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4  col-12 mb-2">
+                                        <span class="mx-auto n">999</span>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4  col-12 mb-2">
+                                        <i class="material-icons icon">add_circle</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12"><h6 class="group-title"><b>Дети 3-12 лет</b></h6></div>
+                        <div class="col-12 mb-2">
+                            <div class="contaner">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-4  col-12 mb-2 icon_dis">
+                                        <i class="material-icons icon_dis">remove_circle</i>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4  col-12 mb-2 icon_dis">
+                                        <span class="mx-auto">0</span>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4  col-12 mb-2">
+                                        <i class="material-icons icon">add_circle</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

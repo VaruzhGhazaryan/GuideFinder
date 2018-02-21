@@ -59,6 +59,30 @@ input:focus + label i {
   color: #53bcb2;
 }
 
+.icon {
+  color: #53bcb2;
+  font-size: 32px;
+}
+
+.icon_dis i{
+  color: #d7d9de99;
+  font-size: 32px;
+}
+
+.n {
+  padding: 5px;
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.icon_dis span{
+  padding: 12px;
+  text-align: center;
+  vertical-align: middle;
+  justify-content: center;
+}
+
 .form-control:focus {
   box-shadow: none;
 }
