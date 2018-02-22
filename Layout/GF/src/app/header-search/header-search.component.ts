@@ -3,13 +3,15 @@ import {Observable} from "rxjs/Observable";
 import "rxjs/add/operator/map";
 import "rxjs/add/operator/debounceTime";
 import "rxjs/add/operator/distinctUntilChanged";
+import {NgbDropdownConfig} from '@ng-bootstrap/ng-bootstrap';
 
 const texts = ['text1', 'text2', 'text3'];
 
 @Component({
     selector: 'app-header-search',
     templateUrl: './header-search.component.html',
-    styleUrls: ['./header-search.component.css']
+    styleUrls: ['./header-search.component.css'],
+    providers: [NgbDropdownConfig]
 })
 export class HeaderSearchComponent implements OnInit {
 
@@ -25,9 +27,9 @@ export class HeaderSearchComponent implements OnInit {
             .map(term => term.length < 1 ? []
                 : texts.filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10));
 
-    constructor() {
+    constructor(config: NgbDropdownConfig) {
+        config.autoClose = "outside";
     }
-
     ngOnInit() {
     }
 
