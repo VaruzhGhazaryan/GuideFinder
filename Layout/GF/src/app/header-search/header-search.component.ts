@@ -5,7 +5,7 @@ import "rxjs/add/operator/debounceTime";
 import "rxjs/add/operator/distinctUntilChanged";
 import {NgbDropdownConfig} from '@ng-bootstrap/ng-bootstrap';
 
-const texts = ['text1', 'text2', 'text3'];
+const texts = ["LOREM", "IPSUM", "IS", "SIMPLY", "DUMMY", "TEXT", "OF", "THE", "PRINTING", "AND", "TYPESETTING", "INDUSTRY", "LOREM", "IPSUM", "HAS", "BEEN", "THE", "STANDARD", "DUMMY"];
 
 @Component({
     selector: 'app-header-search',
