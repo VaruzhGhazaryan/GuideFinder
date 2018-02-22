@@ -1,9 +1,9 @@
 <div class="container-fluid">
 
   <div class="row filters mt-5">
-    <div class="col-9 col-xs-12">
+    <div class="col-9 col-xs-12 col-xl-9 col-lg-7 col-md-7">
       <!--Тематика-->
-      <div ngbDropdown class="d-inline-block mr-2" #filterItem="ngbDropdown">
+      <div ngbDropdown class="d-inline-block mr-2 mb-2" #filterItem="ngbDropdown">
         <button class="btn btn-outline-primary green" id="ftr1" ngbDropdownToggle>Тематика</button>
         <div ngbDropdownMenu aria-labelledby="ftr1" class="w-500">
           <div class="row p-2 pr-3 pl-3">
@@ -33,7 +33,7 @@
       </div>
 
       <!--Формат-->
-      <div ngbDropdown class="d-inline-block mr-2" #filterItem="ngbDropdown">
+      <div ngbDropdown class="d-inline-block mr-2 mb-2" #filterItem="ngbDropdown">
         <button class="btn btn-outline-primary green" id="ftr2" ngbDropdownToggle>Формат</button>
         <div ngbDropdownMenu aria-labelledby="ftr2" class="p-3">
           <div class="col-12"><h6 class="group-title">Груповые</h6></div>
@@ -46,7 +46,7 @@
       </div>
 
       <!--Ценовой диапазон-->
-      <div ngbDropdown class="d-inline-block mr-2" #filterItem="ngbDropdown">
+      <div ngbDropdown class="d-inline-block mr-2 mb-2" #filterItem="ngbDropdown">
         <button class="btn btn-outline-primary" id="ftr3" ngbDropdownToggle>Ценовой диапазон</button>
         <div ngbDropdownMenu aria-labelledby="ftr3" class="p-3 w-300">
           <div class="col-12">
@@ -59,7 +59,7 @@
       </div>
 
       <!--Продолжительность-->
-      <div ngbDropdown class="d-inline-block mr-2" #filterItem="ngbDropdown">
+      <div ngbDropdown class="d-inline-block mr-2 mb-2" #filterItem="ngbDropdown">
         <button class="btn btn-outline-primary" id="ftr4" ngbDropdownToggle>Продолжительность</button>
         <div ngbDropdownMenu aria-labelledby="ftr4" class="p-3">
           <div class="col-12 mb-2"><mat-checkbox>Короткая(до 3 часов)</mat-checkbox></div>
@@ -69,7 +69,7 @@
       </div>
 
       <!--Язык-->
-      <div ngbDropdown class="d-inline-block mr-2" #filterItem="ngbDropdown">
+      <div ngbDropdown class="d-inline-block mr-2 mb-2" #filterItem="ngbDropdown">
         <button class="btn btn-outline-primary" id="ftr5" ngbDropdownToggle>Язык</button>
         <div ngbDropdownMenu aria-labelledby="ftr5" class="p-3">
           <div class="col-12 mb-2"><mat-checkbox>Русский</mat-checkbox></div>
@@ -78,7 +78,7 @@
       </div>
 
       <!--Дополнительно-->
-      <div ngbDropdown class="d-inline-block mr-2" #filterItem="ngbDropdown">
+      <div ngbDropdown class="d-inline-block mr-2 mb-2" #filterItem="ngbDropdown">
         <button class="btn btn-outline-primary" id="ftr6" ngbDropdownToggle>Дополнительно</button>
         <div ngbDropdownMenu aria-labelledby="ftr6" class="p-3">
           <div class="col-12 mb-2"><mat-checkbox>Доставить в место экскурсии</mat-checkbox></div>
@@ -88,7 +88,7 @@
       </div>
 
       <!--Перемещение-->
-      <div ngbDropdown class="d-inline-block mr-2" #filterItem="ngbDropdown">
+      <div ngbDropdown class="d-inline-block mr-2 mb-2" #filterItem="ngbDropdown">
         <button class="btn btn-outline-primary" id="ftr7" ngbDropdownToggle>Перемещение</button>
         <div ngbDropdownMenu aria-labelledby="ftr7" class="p-3">
           <div class="col-12 mb-2"><mat-checkbox>Автобус</mat-checkbox></div>
@@ -102,11 +102,31 @@
       </div>
 
 
-
-
+      <!--Расположение-->
+      <div ngbDropdown class="d-inline-block mr-2 mb-2" #filterItem="ngbDropdown">
+        <button class="btn btn-outline-primary" id="ftr8" ngbDropdownToggle>Расположение</button>
+        <div ngbDropdownMenu aria-labelledby="ftr8" class="p-3">
+          <div class="col-12 mb-2"><mat-checkbox>Центр города</mat-checkbox></div>
+          <div class="col-12 mb-2"><mat-checkbox>Окраина города</mat-checkbox></div>
+          <div class="col-12 mb-2"><mat-checkbox>За городом</mat-checkbox></div>
+        </div>
+      </div>
 
     </div>
-    <div class="col-3 col-xs-12">sdf</div>
+    <div class="col-3 col-xs-12 col-xl-3 col-lg-5 col-md-5">
+      <div class=" sortBy d-flex align-items-center justify-content-end flex-column-sm">
+        <span>Сортировать</span>
+        <div class="btn-group-toggle">
+          <label class="btn-primary mx-1 mb-2" ngbButtonLabel>
+            <input type="checkbox" ngbButton [(ngModel)]="filters.byRate"> По рейтингу
+          </label>
+          <label class="btn-primary ml-1 mb-2" ngbButtonLabel>
+            <input type="checkbox" ngbButton [(ngModel)]="filters.byAsc"> По возрастанию
+          </label>
+        </div>
+      </div>
+
+    </div>
   </div>
 
   <div class="row mt-4" *ngFor="let carusel of carusels;">
@@ -118,15 +138,21 @@
               <label class="checkbox-label" for="{{i}}"></label>
             </div>
           </div>
-          <figure class="item">
-            <img src="{{ slide.img }}" alt="sq-sample26"/>
-            <p class="title">{{ slide.title }}</p>
-            <figcaption>
-              <i class="material-icons">visibility</i>
-              <p>{{ slide.title }}</p>
-            </figcaption>
-            <a href=" {{ slide.url }} "></a>
-          </figure>
+          <div class="filter-page-item">
+            <owl-carousel  class="carousel" [options]="option"
+                           [items]="slides"
+                           [carouselClasses]="['owl-theme', 'row', 'sliding']">
+
+              <div class="slide" *ngFor="let image of slide.img">
+                <img src="{{ image }}" alt="sq-sample26"/>
+              </div>
+
+            </owl-carousel>
+            <div class="title-block d-flex align-content-end">
+              <span class="text-white w-100 text-center">{{ slide.title }}</span>
+            </div>
+
+          </div>
 
           <div class="text-center">
             <span><b class="pd-letter">{{ slide.price_for_one }}</b> <span class="rouble"></span> за человека</span>
@@ -151,5 +177,4 @@
         </div>
       </div>
   </div>
-
 </div>

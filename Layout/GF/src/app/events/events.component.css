@@ -201,8 +201,9 @@ figure.item.hover:after {
 }
 
 .filters .btn {
-  color: #8e8e8e;
+  color: #222021;
   border-color: #b7b7b7;
+  font-size: 14px;
   background-color: transparent;
   box-shadow: none !important;
 }
@@ -225,9 +226,45 @@ h6.group-title {
   width: 33.333331%;
   text-align: center;
 }
+.sortBy .btn-primary{
+  padding-right: 30px;
+  position: relative;
+}
+.sortBy .btn-primary:before{
+  content: 'keyboard_arrow_down';
+  font-family: "Material Icons";
+  font-size: 20px;
+  position: absolute;
+  right: 5px;
+  top: 4px;
+  color: #222021;
+}
+.sortBy .btn-primary.active:before{
+  content: 'keyboard_arrow_up';
+  font-family: "Material Icons";
+}
+.filter-page-item{
+  overflow: inherit !important;
+}
 .w-300{
   width: 300px;
 }
 .w-500 {
   width: 500px;
+}
+
+@media (max-width: 1200px) {
+  .col1-5 {
+    width: 33.333331% !important;
+  }
+}
+@media (max-width: 768px) {
+  .col1-5 {
+    width: 50% !important;
+  }
+}
+@media (max-width: 480px) {
+  .col1-5 {
+    width: 100% !important;
+  }
 }
