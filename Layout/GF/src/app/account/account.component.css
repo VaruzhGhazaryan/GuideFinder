@@ -1,0 +1,58 @@
+.white {
+    color: #fff;
+    border-color: #fff;
+}
+
+.white:hover{
+    background-color: transparent !important;
+    border-color: #fff !important;
+}
+
+.white:active{
+    background-color: transparent !important;
+    border-color: #fff !important;
+}
+
+.white:focus {
+    box-shadow: none;
+}
+
+.bottom{
+    padding-bottom: 15px;
+}
+
+.text-color{
+    color: #757575;
+}
+
+figure.item.item-event[_ngcontent-c5] figcaption[_ngcontent-c5]{
+    top: 10%;
+}
+
+.btn-blue {
+    background-color: #53bcb2;
+    border: none;
+    line-height: 2.3;
+    font-size: 10pt;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 3px;
+    width: 180px;
+    font-weight: bold;
+}
+
+.btn-blue:hover {
+    background-color: #4aa89f !important;
+    box-shadow: 0 0 0 0.2rem rgba(88, 188, 179, 0.5);
+}
+
+.btn-blue:focus,
+.btn-blue:active {
+    box-shadow: 0 0 0 0.2rem rgba(88, 188, 179, 0.5);
+    background-color: #3b857e !important;
+}
+
+.btn-w {
+    width: 250px;
+}

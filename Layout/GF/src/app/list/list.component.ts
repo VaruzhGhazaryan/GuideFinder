@@ -1,88 +1,70 @@
 import {Component, OnInit} from "@angular/core";
 
-
 @Component({
-    selector: 'app-add-event',
-    templateUrl: './add-event.component.html',
-    styleUrls: ['./add-event.component.css', '../account/account.component.css']
+    selector: 'app-list',
+    templateUrl: './list.component.html',
+    styleUrls: ['./list.component.css', '../account/account.component.css']
 })
-export class AddEventComponent implements OnInit {
-    today = Date.now();
+export class ListComponent implements OnInit {
 
-    displayMonths = 2;
-    navigation = 'select';
-
-    events = [
+    last_events = [
         {
-            h2: 'Мои Мероприятия',
+            h2: 'Прошедшие Мероприятия',
             href: '#!',
             slide: [{
                 img: "./assets/img/image.jpg",
                 url: "#!",
                 title: "Золотое Кольцо",
-                price_for_one: "1500",
-                price_for_group: "5000",
-                price_for_team: "1000",
-
-
+                price: "12 500",
+                date: "18 февраля 2018",
+                time: "16:00"
             },
                 {
                     img: "./assets/img/image.jpg",
                     url: "#!",
                     title: "Экскурсия по Москве",
-                    price_for_one: "1500",
-                    price_for_group: "5000",
-                    price_for_team: "1000",
-
-
+                    price: "15 500",
+                    date: "16 февраля 2018",
+                    time: "17:00"
                 },
                 {
                     img: "./assets/img/image.jpg",
                     url: "#!",
                     title: "Обзорная автобусная + \r\n пешеходная к Мавзолею",
-                    price_for_one: "1500",
-                    price_for_group: "5000", price_for_team: "1000",
-
-
+                    price: "5 800",
+                    date: "18 февраля 2018",
+                    time: "08:00"
                 },
                 {
                     img: "./assets/img/image.jpg",
                     url: "#!",
                     title: "Огни большого города",
-                    price_for_one: "1500",
-                    price_for_group: "5000",
-                    price_for_team: "1000",
-
-
+                    price: "55 500",
+                    date: "12 февраля 2018",
+                    time: "16:00"
                 },
                 {
                     img: "./assets/img/image.jpg",
                     url: "#!",
                     title: "Киностудия Мосфильм",
-                    price_for_one: "1500",
-                    price_for_group: "5000",
-                    price_for_team: "1000",
-
-
+                    price: "22 600",
+                    date: "08 февраля 2018",
+                    time: "12:00"
                 },
                 {
                     img: "./assets/img/image.jpg",
                     url: "#!",
                     title: "Киностудия Мосфильм",
-                    price_for_one: "1500",
-                    price_for_group: "5000",
-                    price_for_team: "1000",
-
-
+                    price: "12 500",
+                    date: "05 февраля 2018",
+                    time: "09:00"
                 }
             ]
+        }
 
-
-        },
     ];
-
-
     constructor() {
+
     }
 
     ngOnInit() {

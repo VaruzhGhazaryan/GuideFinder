@@ -37,6 +37,10 @@ import { GuideComponent } from './guide/guide.component';
 import { EventsComponent } from './events/events.component';
 import { HeaderSearchComponent } from './header-search/header-search.component';
 import { AddEventComponent } from './add-event/add-event.component';
+import { AccountComponent } from './account/account.component';
+import { ListComponent } from './list/list.component';
+import { EditComponent } from './edit/edit.component';
+
 
 
 
@@ -62,8 +66,10 @@ export function createTranslateLoader(http: HttpClient) {
     EventsComponent,
     AppInlineNavbarComponent,
     HeaderSearchComponent,
-    AddEventComponent
-
+    AddEventComponent,
+    AccountComponent,
+    ListComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,
@@ -91,7 +97,7 @@ export function createTranslateLoader(http: HttpClient) {
     })
   ],
   providers: [],
-  entryComponents: [AppSignInComponent, AppSignUpComponent],
+  entryComponents: [AppSignInComponent, AppSignUpComponent, ListComponent, EditComponent, AddEventComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

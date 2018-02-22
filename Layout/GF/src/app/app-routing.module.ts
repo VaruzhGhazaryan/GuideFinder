@@ -7,6 +7,7 @@ import {FaqComponent} from "./faq/faq.component";
 import {GuideComponent} from "./guide/guide.component";
 import {EventsComponent} from "./events/events.component";
 import {AddEventComponent} from "./add-event/add-event.component";
+import {AccountComponent} from "./account/account.component";
 
 const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -16,7 +17,8 @@ const routes: Routes = [
     {path: 'faq', component: FaqComponent},
     {path: 'guide', component: GuideComponent},
     {path: 'events', component: EventsComponent},
-    {path: 'add-event', component: AddEventComponent}
+    {path: 'add-event', component: AddEventComponent},
+    {path: 'account', component: AccountComponent}
 ];
 
 @NgModule({

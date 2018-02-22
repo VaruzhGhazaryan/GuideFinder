@@ -12,6 +12,7 @@ declare var $: any;
 })
 export class AppSignUpComponent implements OnInit {
   selected = 'option1';
+  //noinspection JSAnnotator
   constructor(private elementRef: ElementRef,
               private dialog: MatDialog,
               public dialogRef: MatDialogRef<AppSignUpComponent>,
@@ -62,6 +63,7 @@ export class AppSignUpComponent implements OnInit {
   public confirm: boolean;
   public signupemail: boolean;
   public initial: boolean;
+  //noinspection JSAnnotator
   fileNameDialogRef: MatDialogRef<AppSignInComponent>;
 
   ngOnInit() {
