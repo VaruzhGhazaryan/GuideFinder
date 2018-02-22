@@ -110,3 +110,19 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+.tags{
+margin-left: 3px;
+  padding-top:   5px;
+  padding-right: 5px;
+  padding-bottom:5px;
+  padding-left:  5px;
+}
+.edit{
+  margin-top: 5px;
+  background-color: #bdbdbd;
+  height: 30px
+}
+i{
+  margin-top: 3px;
+  text-align: left;
+}
