@@ -1,3 +1,372 @@
-<p>
-  add-event works!
-</p>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-4" style="background-color:white;"><b>Язик</b><span style="color: red">&nbsp;*</span></div>
+    <div class="col-sm-8" style="background-color:white;">
+      <button type="button" style="background-color: white;color: #3fb8af" class="btn btn-info col-sm-3">Русский
+      </button>
+      <button type="button" style="background-color: white;color: #3fb8af" class="btn btn-info col-sm-3">Английский
+      </button>
+    </div>
+    <br><br><br><br>
+    <div class="col-sm-4" style="background-color:white;"><b> Название мероприятия:</b></div>
+
+
+    <div class="col-sm-8" style="background-color:white;">
+      <div class="form-group">
+
+        <input type="text" style="background-color: white;color: #3fb8af"
+               placeholder=" Ввадите название мероприятия по русском язике" class=" form-control">
+      </div>
+    </div>
+    <br><br><br>
+    <div class="col-sm-4" style="background-color:white;"><b> Что входит в стоимость:</b></div>
+
+
+    <div class="col-sm-8" style="background-color:white;">
+      <div class="form-group">
+
+        <textarea type="text" style="background-color: white;color: #3fb8af"
+                  placeholder=" Описание   мероприятия,не более 600 символов" class=" form-control"></textarea>
+      </div>
+    </div>
+    <br><br><br><br>
+    <div class="col-sm-4" style="background-color:white;"><b>Продлжителность:</b></div>
+
+
+    <div class="col-sm-8" style="background-color:white;">
+      <div class="form-group">
+
+        <input type="text" style="background-color: white;color: #3fb8af"
+               placeholder=" Укажите продлжителность мероприятия " class=" form-control">
+      </div>
+    </div>
+
+    <br><br><br>
+    <div class="col-sm-4" style="background-color:white;"><b>Частное мероприятие:</b></div>
+
+
+    <div class="col-sm-8" style="background-color:white;">
+      <label class="switch" style="width: 70px">
+        <input type="checkbox">
+        <span class="slider round" style="color: white;padding: 2px;margin-left: 10px"> &nbsp;да</span>
+      </label>
+      <div class="container">
+
+        <div class="row">
+          <div class="col-sm-8">Максималное количество участников частное экскурсии<span
+            style="color: red">&nbsp;*</span></div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <select class="form-control">
+                <option>7</option>
+                <option>6</option>
+                <option>5</option>
+                <option>4</option>
+                <option>3</option>
+                <option>3</option>
+                <option>1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-sm-8">Стоимость частной экскурсии за челавека<span style="color: red">&nbsp;*</span></div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <input class="form-control">
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <br><br><br>
+    <div class="col-sm-4" style="background-color:white;"><b>Груповое мероприятие:</b></div>
+
+
+    <div class="col-sm-8" style="background-color:white;">
+      <label class="switch" style="width: 70px">
+        <input type="checkbox">
+        <span class="slider round" style="color: white;padding: 2px;margin-left: 10px"> &nbsp;да</span>
+      </label>
+      <div class="container">
+
+        <div class="row">
+          <div class="col-sm-8">Минималное количество участников Груповое экскурсии<span
+            style="color: red">&nbsp;*</span></div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <select class="form-control" id="sel1">
+                <option>8</option>
+                <option>7</option>
+                <option>6</option>
+                <option>5</option>
+                <option>4</option>
+                <option>3</option>
+                <option>3</option>
+                <option>1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+
+        <div class="row">
+          <div class="col-sm-8">Максималное количество участников Груповое экскурсии<span
+            style="color: red">&nbsp;*</span></div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <select class="form-control">
+                <option>14</option>
+                <option>13</option>
+                <option>12</option>
+                <option>11</option>
+                <option>10</option>
+                <option>9</option>
+                <option>8</option>
+                <option>7</option>
+                <option>6</option>
+                <option>5</option>
+                <option>4</option>
+                <option>3</option>
+                <option>3</option>
+                <option>1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+
+        <div class="row">
+          <div class="col-sm-8">Количество дополнителний места групавой экскурсии<span style="color: red">&nbsp;*</span>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <select class="form-control">
+                <option>7</option>
+                <option>6</option>
+                <option>5</option>
+                <option>4</option>
+                <option>3</option>
+                <option>3</option>
+                <option>1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+
+        <div class="row">
+          <div class="col-sm-8">Стоимость групавой экскурсии <span style="color: red">&nbsp;*</span></div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <input class="form-control">
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+
+        <div class="row">
+          <div class="col-sm-8">Стоимость дополнителний места экскурсии <span style="color: red">&nbsp;*</span></div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <input class="form-control">
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <br><br><br>
+    <div class="col-sm-4" style="background-color:white;"><b>Сборное мероприятие:</b></div>
+
+
+    <div class="col-sm-8" style="background-color:white;">
+      <label class="switch" style="width: 70px">
+        <input type="checkbox">
+        <span class="slider round" style="color: white;padding: 2px;margin-left: 10px"> &nbsp;да</span>
+      </label>
+      <div class="container">
+
+        <div class="row">
+          <div class="col-sm-8">Максималное количество участников сборное экскурсии<span
+            style="color: red">&nbsp;*</span></div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <select class="form-control">
+                <option>7</option>
+                <option>6</option>
+                <option>5</option>
+                <option>4</option>
+                <option>3</option>
+                <option>3</option>
+                <option>1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-sm-8">Стоимость сборное экскурсии за челавека<span style="color: red">&nbsp;*</span></div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <input class="form-control">
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br><br>
+
+    <div class="col-sm-4" style="background-color:white;"><b>Дополнительные услуги:</b></div>
+    <div class="col-sm-8" style="background-color:white;">
+      <div class="container">
+        <div class="row">
+          <div class="edit col-sm-12">
+           <div class="col-sm-11">
+           </div>
+            <div class="col-sm-1">
+             <i class="material-icons">highlight_off</i>
+          </div>
+          </div>
+          <div class="edit col-sm-12"></div>
+          <div class="edit col-sm-12"></div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+    <br><br><br><br><br><br><br>
+
+    <div class="col-sm-4" style="background-color:white;"><b>Тематика:</b></div>
+    <div class="col-sm-8" style="background-color:white;">
+      <button type="button" style="background-color: white;color: #3fb8af" class="btn btn-info col-sm-4">Обзорная
+        экскурсия
+      </button>
+      <button type="button" style="background-color: white;color: #3fb8af" class="btn btn-info col-sm-4">Тематическая
+        экскурсия
+      </button>
+    </div>
+
+
+    <br><br><br>
+
+
+    <div class="col-sm-4" style="background-color:white;"><b>Роспопожение:</b></div>
+    <div class="col-sm-8" style="background-color:white;">
+      <div class="form-group">
+        <select class="form-control col-md-8">
+          <option>Россия</option>
+
+        </select>
+      </div>
+    </div>
+    <br><br><br>
+
+
+    <div class="col-sm-4" style="background-color:white;"><b>Роспопожение:</b></div>
+    <div class="col-sm-8" style="background-color:white;">
+      <div class="form-group">
+        <select class="form-control col-md-8">
+          <option>Россия</option>
+
+        </select>
+      </div>
+    </div>
+    <br><br><br>
+
+
+    <div class="col-sm-4" style="background-color:white;"><b>Роспопожение:</b></div>
+    <div class="col-sm-8" style="background-color:white;">
+      <div class="form-group">
+        <select class="form-control col-md-8">
+          <option>Россия</option>
+
+        </select>
+      </div>
+    </div>
+
+    <br><br><br>
+
+
+    <div class="col-sm-4" style="background-color:white;"><b>Роспопожение:</b></div>
+    <div class="col-sm-8" style="background-color:white;">
+      <div class="form-group">
+        <select class="form-control col-md-8">
+          <option>Россия</option>
+
+        </select>
+      </div>
+    </div>
+    <br> <br> <br>
+    <div class="container">
+
+      <div class="row">
+        <div class="col-sm-4" style="background-color:white;"><b>Теги:</b></div>
+        <div class="col-sm-8">
+          <button type="button" style="background-color: white;color: black;border: solid 1px darkgrey"
+                  class="tags btn btn-info ">Обзор
+          </button>
+          <button type="button" style="background-color: white;color: #3fb8af;" class="tags btn btn-info "> Тематическая
+            экскурсия
+          </button>
+          <button type="button" style="background-color: white;color: black;border: solid 1px darkgrey  ;"
+                  class="tags btn btn-info ">Виды на город
+          </button>
+
+
+          <button type="button" style="background-color: white;color: #3fb8af" class="tags btn btn-info "> Экскурсия
+          </button>
+          <button type="button" style="background-color: white;color: black;" class="tags btn btn-info "> История
+          </button>
+          <button type="button" style="background-color: white;color: black;" class="tags btn btn-info ">
+            Искусствоведение
+          </button>
+        </div>
+        <br> <br>
+
+        <div class="col-sm-4" style="background-color:white;"></div>
+        <div class="col-sm-8">
+          <button type="button" style="background-color: white;color: black;border: solid 1px darkgrey"
+                  class="tags btn btn-info ">Литература
+          </button>
+          <button type="button" style="background-color: white;color: #3fb8af;" class="tags btn btn-info "> Религия
+          </button>
+          <button type="button" style="background-color: white;color: #3fb8af;" class="tags btn btn-info "> Спорт
+          </button>
+          <button type="button" style="background-color: white;color: black;border: solid 1px darkgrey"
+                  class="tags btn btn-info ">Фотография
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+</div>
+
