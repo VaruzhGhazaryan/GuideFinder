@@ -587,7 +587,15 @@ a:hover {
   .inputs-section{
     margin-left:35px!important;
   }
-
+  .mb-2-md {
+    margin-bottom: 2rem;
+  }
+  .mt-2-md {
+    margin-top: 0.7rem;
+  }
+  .p-0-md{
+    padding: 0px!important;
+  }
 }
 /* Portrait and Landscape */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -635,9 +643,11 @@ a:hover {
     padding: 10px !important;
   }
 
-  .navbar {
+  .navbar{
     padding: .5rem 30px !important;
-
+  }
+  .small-navbar{
+    padding: 0 !important;
   }
 
   .btn-blue {
@@ -712,6 +722,15 @@ a:hover {
     -webkit-box-direction: normal!important;
     -ms-flex-direction: column!important;
     flex-direction: column!important;
+  }
+  .mb-2-md {
+    margin-bottom: 2rem;
+  }
+  .mt-2-md {
+    margin-top: 0.7rem;
+  }
+  .p-0-md{
+    padding: 0px!important;
   }
 }
 

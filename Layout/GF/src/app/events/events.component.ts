@@ -1,17 +1,19 @@
+///<reference path="../../../node_modules/@ng-bootstrap/ng-bootstrap/dropdown/dropdown.d.ts"/>
 import { Component, OnInit } from '@angular/core';
-import {NgbDropdownConfig} from '@ng-bootstrap/ng-bootstrap';
+import {NgbDropdown, NgbDropdownConfig} from '@ng-bootstrap/ng-bootstrap';
+
 
 @Component({
   selector: 'app-events',
   templateUrl: './events.component.html',
   styleUrls: ['./events.component.css'],
-  providers: [NgbDropdownConfig]
+  providers: [NgbDropdownConfig , NgbDropdown ]
 })
 export class EventsComponent implements OnInit {
-
   constructor(config: NgbDropdownConfig) {
     config.autoClose = "outside";
   }
+
   priceRange = [1000000,9000000];
   filters = {
     byRate: false,

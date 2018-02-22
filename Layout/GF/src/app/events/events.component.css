@@ -226,11 +226,13 @@ h6.group-title {
   width: 33.333331%;
   text-align: center;
 }
-.sortBy .btn-primary{
+.sortBy .btn-primary,
+.filterBy .btn-outline-primary{
   padding-right: 30px;
   position: relative;
 }
-.sortBy .btn-primary:before{
+.sortBy .btn-primary:before,
+.filterBy .btn-outline-primary:before{
   content: 'keyboard_arrow_down';
   font-family: "Material Icons";
   font-size: 20px;
@@ -239,9 +241,16 @@ h6.group-title {
   top: 4px;
   color: #222021;
 }
-.sortBy .btn-primary.active:before{
+.sortBy .btn-primary.active:before,
+.filterBy.show .btn-outline-primary:before{
   content: 'keyboard_arrow_up';
   font-family: "Material Icons";
+}
+.filterBy .item{
+  cursor: pointer;
+}
+.filterBy .item:hover{
+  text-decoration: underline;
 }
 .filter-page-item{
   overflow: inherit !important;
