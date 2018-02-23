@@ -120,9 +120,79 @@ margin-left: 3px;
 .edit{
   margin-top: 5px;
   background-color: #bdbdbd;
-  height: 30px
+  height: 25px
 }
 i{
   margin-top: 3px;
   text-align: left;
+}
+.editTaitle{
+
+  font-size: 15px;
+  margin-top: 5px;
+  padding-top:   10px;
+  padding-right: 10px;
+  padding-bottom:10px;
+  padding-left:  10px;
+}
+.icons{
+   left: 150px;
+  background-color: #0a5c54;
+  position: absolute;
+  font-size: 20px;
+  text-align: left;
+}
+.ic{
+  width: 25px;
+  height: 25px;
+  padding-top:   5px;
+  paclosedding-right: 5px;
+  padding-bottom:5px;
+  padding-left:  5px;
+  font-size: 13px;
+  background-color: white;
+  border-radius: 100%;
+  border:1px solid #3fb8af;
+  color: #3fb8af;
+}
+.close {
+  font-size: 25px;
+  margin-right: 40px;
+ color:darkgrey;
+}
+.padding{
+  margin-top: 20px;
+}
+.grey{
+  background-color:  #8b8b8b;
+  margin-top: 4px;
+}
+.pluse{
+  color: #3fb8af;
+  font-size: 40px;
+}
+.pluselink{
+  color: #3fb8af;
+}
+.foto{
+  background-color: #8b8b8b;
+  height: 300px;
+  border-style: dashed;
+}
+.fotoIc{
+ margin-left:40%;
+  font-size: 50px;
+  color: black;
+}
+.hint{
+  text-align: center;
+}
+.uploadFail{
+  padding: 10px;
+ text-align: center;
+  margin: auto;
+  height: 50px;
+  width: 200px;
+  background-color: white;
+  border: solid 1px grey;
 }
