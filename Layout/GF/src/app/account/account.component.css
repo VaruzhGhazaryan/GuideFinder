@@ -25,7 +25,7 @@
     color: #757575;
 }
 
-figure.item.item-event[_ngcontent-c5] figcaption[_ngcontent-c5]{
+figure.item.item-event figcaption{
     top: 10%;
 }
 
