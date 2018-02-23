@@ -1,7 +1,12 @@
+table[_ngcontent-c13] {
+    border-collapse: unset !important;
+    border-spacing: 0 8px !important;
+}
 .table, .table thead th, .table tbody tr td {
     border: none !important;
     vertical-align: middle;
     padding-right: 30px;
+
 }
 .edit {
     font-size: 18px;
@@ -43,4 +48,9 @@
     width: 25px;
     height: 25px;
     display: block
+}
+
+
+.table-striped tbody tr:nth-of-type(even){
+    background-color: #f2f2f2;
 }

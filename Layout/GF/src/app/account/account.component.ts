@@ -1,5 +1,6 @@
 import {Component} from "@angular/core";
 import { MatDialog, MatDialogRef } from '@angular/material';
+import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 
 import { ListComponent } from '../list/list.component';
 import { EditComponent } from '../edit/edit.component';
@@ -11,6 +12,8 @@ import { AddEventComponent } from '../add-event/add-event.component';
     styleUrls: ['./account.component.css', '../app-home-content/app-home-content.component.css']
 })
 export class AccountComponent {
+
+
 
     events = [
         {
@@ -209,6 +212,18 @@ export class AccountComponent {
             '320': {items: 2},
             '768': {items: 3},
             '1200': {items: 5},
+        }
+    };
+
+    option_cal = {
+        slideBy: 2,
+        dots: false,
+        nav: true,
+        navText: ['', ''],
+        responsive: {
+            '320': {items: 2},
+            '768': {items: 2},
+            '1200': {items: 3},
         }
     };
 

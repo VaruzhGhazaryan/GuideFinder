@@ -77,14 +77,6 @@
                         </div>
                     </div>
                 </owl-carousel>
-
-                <div class="row">
-                    <div class="col-lg-11 col-sm-12 m-auto">
-                        <p class="more"><a href="{{event.href}}">{{ 'Смотреть еще' | translate}}</a> <i
-                                class="fa fa-angle-right" aria-hidden="true"></i></p>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
@@ -105,67 +97,14 @@
 
         <div class="row mt-4">
             <div class="col">
-                <owl-carousel class="carousel" [options]="option"
+                <owl-carousel class="carousel" [options]="option_cal"
                               [items]="slides"
                               [carouselClasses]="['owl-theme', 'row', 'sliding']">
                     <div class="item slide" *ngFor="let slide of cal_event.slide;">
-                        <figure class="item">
-                            <img src="{{ slide.img }}" alt="sq-sample26"/>
-                            <p class="title">{{ slide.title }}</p>
-                            <figcaption>
-                                <div class="container">
-                                    <i class="material-icons">mode_edit</i>
-                                    <div class="row bottom">
-                                        <button class="col-lg-12 col-md-12 btn btn-outline-primary white">Список
-                                            проведений
-                                        </button>
-                                    </div>
-                                    <div class="row bottom">
-                                        <button class="col-lg-12 col-md-12 btn btn-outline-primary white">
-                                            Редактировать
-                                        </button>
-                                    </div>
-                                    <div class="row bottom">
-                                        <button class="col-lg-12 col-md-12 btn btn-outline-primary white">Отправить на
-                                            модерацию
-                                        </button>
-                                    </div>
-                                    <div class="row">
-                                        <button class="col-lg-12 col-md-12 btn btn-outline-primary white">Отменить
-                                            мероприятие
-                                        </button>
-                                    </div>
-                                </div>
-                            </figcaption>
-                            <a href=" {{ slide.url }} "></a>
-                        </figure>
 
-                        <div class="text-center">
-                            <span><b class="pd-letter">{{ slide.price_for_one }}</b> <span class="rouble"></span> за человека</span>
-                        </div>
-                        <div class="text-center text-color">
-                            <small><b class="pd-letter">{{ slide.price_for_group}}</b> <span class="rouble"></span> за
-                                группу
-                            </small>
-                        </div>
-                        <div class="text-center text-color">
-                            <small><b class="pd-letter">{{ slide.price_for_team}}</b> <span class="rouble"></span> за
-                                человека в сборной экскурсии
-                            </small>
-                        </div>
-                        <div class="pt-3 text-center">
-                            <button class="btn btn-success btn-blue" type="button">Опубликовано</button>
-                        </div>
+                        <ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next"></ngb-datepicker>
                     </div>
                 </owl-carousel>
-
-                <div class="row">
-                    <div class="col-lg-11 col-sm-12 m-auto">
-                        <p class="more"><a href="{{cal_event.href}}">{{ 'Смотреть еще' | translate}}</a> <i
-                                class="fa fa-angle-right" aria-hidden="true"></i></p>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
@@ -203,13 +142,6 @@
 
                     </div>
                 </owl-carousel>
-
-                <div class="row">
-                    <div class="col-lg-11 col-sm-12 m-auto">
-                        <p class="more"><a href="{{last_event.href}}">{{ 'Смотреть еще' | translate}}</a> <i
-                                class="fa fa-angle-right" aria-hidden="true"></i></p>
-                    </div>
-                </div>
 
             </div>
         </div>

@@ -11,8 +11,7 @@
             <div class="col-lg-12">
                 <span class="pull-left pt-3 pb-2"><b>Название мероприятия:</b></span>
             </div>
-
-
+            
             <select class="form-control btn btn-outline-primary gray col-lg-12 col-md-12" id="sel1"
                     *ngFor="let event of events;">
                 <option *ngFor="let slide of event.slide;">{{ slide.title }}</option>
@@ -54,8 +53,6 @@
                     </select>
                 </div>
             </div>
-
-
 
             <!--  <div ngbDropdown class="d-inline-block mr-2" #filterItem="ngbDropdown">
                   <button class="btn btn-outline-primary green" id="ftr2" ngbDropdownToggle>Тематика</button>
