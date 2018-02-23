@@ -1,27 +1,30 @@
 <div class="container mt-5">
-  <div class="row">
+
+  <div class="row d-flex align-items-center flex-wrap">
     <div class="col-sm-4" style="background-color:white;"><b>Язик</b><span style="color: red">&nbsp;*</span></div>
     <div class="col-sm-8" style="background-color:white;">
-      <button type="button" style="background-color: white;color: #3fb8af" class="btn btn-info col-sm-3">Русский
-      </button>
-      <button type="button" style="background-color: white;color: #3fb8af" class="btn btn-info col-sm-3">Английский
-      </button>
+      <div class="btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="model">
+        <label ngbButtonLabel class="btn btn btn-outline-bordered p-3 mr-2 active">
+          <input ngbButton type="radio" value="ru" [value]="1"> Русский
+        </label>
+        <label ngbButtonLabel class="btn btn btn-outline-bordered p-3 mr-2">
+          <input ngbButton type="radio" value="en"> Английский
+        </label>
+      </div>
     </div>
-    <br><br><br><br>
+  </div>
+  <div class="row d-flex align-items-center flex-wrap">
     <div class="col-sm-4" style="background-color:white;"><b> Название мероприятия:</b></div>
-
-
     <div class="col-sm-8" style="background-color:white;">
       <div class="form-group">
-
         <input type="text" style="background-color: white;color: #3fb8af"
                placeholder=" Ввадите название мероприятия по русском язике" class=" form-control">
       </div>
     </div>
-    <br><br><br>
+  </div>
+
+  <div class="row d-flex align-items-center flex-wrap">
     <div class="col-sm-4" style="background-color:white;"><b> Что входит в стоимость:</b></div>
-
-
     <div class="col-sm-8" style="background-color:white;">
       <div class="form-group">
 
@@ -29,7 +32,9 @@
                   placeholder=" Описание   мероприятия,не более 600 символов" class=" form-control"></textarea>
       </div>
     </div>
-    <br><br><br><br>
+  </div>
+
+
     <div class="col-sm-4" style="background-color:white;"><b>Продлжителность:</b></div>
 
 

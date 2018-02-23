@@ -257,8 +257,13 @@ a:visited {
   margin-bottom: 1rem;
   line-height: 1;
 }
-
-
+.btn-outline-bordered{
+  border: 1px solid #ced4da;
+}
+.btn-outline-bordered.active{
+  border-color: #53bcb2;
+  color: #53bcb2;
+}
 .mat_content_open::before{
   content: "+";
 }
