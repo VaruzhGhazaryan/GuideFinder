@@ -196,3 +196,10 @@ i{
   background-color: white;
   border: solid 1px grey;
 }
+.add-ev .form-group{
+  margin-bottom: 0;
+}
+.add-ev input[type=text],
+.add-ev input[type=textarea]{
+  padding: 10px;
+}

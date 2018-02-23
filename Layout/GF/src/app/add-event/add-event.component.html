@@ -1,5 +1,5 @@
-<div class="container mt-5">
-  <div class="row">
+<div class="container mt-5 add-ev">
+  <div class="row d-flex align-items-center flex-wrap mt-4">
     <div class="col-sm-4" style="background-color:white;"><b>Язик</b><span style="color: red">&nbsp;*</span></div>
     <div class="col-sm-8" style="background-color:white;">
       <div class="btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="model">
@@ -12,7 +12,7 @@
       </div>
     </div>
   </div>
-  <div class="row d-flex align-items-center flex-wrap">
+  <div class="row d-flex align-items-center flex-wrap mt-4">
     <div class="col-sm-4" style="background-color:white;"><b> Название мероприятия:</b></div>
     <div class="col-sm-8" style="background-color:white;">
       <div class="form-group">
@@ -22,7 +22,7 @@
     </div>
   </div>
 
-  <div class="row d-flex align-items-center flex-wrap">
+  <div class="row d-flex align-items-center flex-wrap mt-4">
     <div class="col-sm-4" style="background-color:white;"><b> Что входит в стоимость:</b></div>
     <div class="col-sm-8" style="background-color:white;">
       <div class="form-group">
@@ -33,7 +33,7 @@
     </div>
   </div>
 
-  <div class="row d-flex align-items-center flex-wrap">
+  <div class="row d-flex align-items-center flex-wrap mt-4">
     <div class="col-sm-4" style="background-color:white;"><b>Продлжителность:</b></div>
     <div class="col-sm-8" style="background-color:white;">
       <div class="form-group">
@@ -44,51 +44,49 @@
     </div>
   </div>
 
-  <div class="row d-flex align-items-center flex-wrap">
+  <div class="row d-flex align-items-center flex-wrap mt-4">
     <div class="col-sm-4" style="background-color:white;"><b>Частное мероприятие:</b></div>
     <div class="col-sm-8" style="background-color:white;">
       <label class="switch" style="width: 70px">
         <input type="checkbox">
         <span class="slider round" style="color: white;padding: 2px;margin-left: 10px"> &nbsp;да</span>
       </label>
-      <div class="container">
-
-        <div class="row">
-          <div class="col-sm-8">Максималное количество участников частное экскурсии<span
-            style="color: red">&nbsp;*</span></div>
-          <div class="col-sm-4">
-            <div class="form-group">
-              <select class="form-control">
-                <option>7</option>
-                <option>6</option>
-                <option>5</option>
-                <option>4</option>
-                <option>3</option>
-                <option>3</option>
-                <option>1</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-
-        <div class="row">
-          <div class="col-sm-8">Стоимость частной экскурсии за челавека<span style="color: red">&nbsp;*</span></div>
-          <div class="col-sm-4">
-            <div class="form-group">
-              <input class="form-control">
+    </div>
+  </div>
 
 
-            </div>
-          </div>
-        </div>
+  <div class="row d-flex align-items-center flex-wrap mt-4">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-5">Максималное количество участников частное экскурсии<span
+      style="color: red">&nbsp;*</span></div>
+    <div class="col-sm-3">
+      <div class="form-group">
+        <select class="form-control">
+          <option>7</option>
+          <option>6</option>
+          <option>5</option>
+          <option>4</option>
+          <option>3</option>
+          <option>3</option>
+          <option>1</option>
+        </select>
       </div>
     </div>
   </div>
 
-  <div class="row d-flex align-items-center flex-wrap">
+
+  <div class="row d-flex align-items-center flex-wrap mt-4">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-5">Стоимость частной экскурсии за челавека<span style="color: red">&nbsp;*</span></div>
+    <div class="col-sm-3">
+      <div class="form-group">
+        <input class="form-control">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row d-flex align-items-center flex-wrap mt-4">
     <div class="col-sm-4" style="background-color:white;"><b>Груповое мероприятие:</b></div>
 
     <div class="col-sm-8" style="background-color:white;">
@@ -96,104 +94,102 @@
         <input type="checkbox">
         <span class="slider round" style="color: white;padding: 2px;margin-left: 10px"> &nbsp;да</span>
       </label>
-      <div class="container">
-
-        <div class="row">
-          <div class="col-sm-8">Минималное количество участников Груповое экскурсии<span
-            style="color: red">&nbsp;*</span></div>
-          <div class="col-sm-4">
-            <div class="form-group">
-              <select class="form-control" id="sel1">
-                <option>8</option>
-                <option>7</option>
-                <option>6</option>
-                <option>5</option>
-                <option>4</option>
-                <option>3</option>
-                <option>3</option>
-                <option>1</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-
-        <div class="row">
-          <div class="col-sm-8">Максималное количество участников Груповое экскурсии<span
-            style="color: red">&nbsp;*</span></div>
-          <div class="col-sm-4">
-            <div class="form-group">
-              <select class="form-control">
-                <option>14</option>
-                <option>13</option>
-                <option>12</option>
-                <option>11</option>
-                <option>10</option>
-                <option>9</option>
-                <option>8</option>
-                <option>7</option>
-                <option>6</option>
-                <option>5</option>
-                <option>4</option>
-                <option>3</option>
-                <option>3</option>
-                <option>1</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-
-        <div class="row">
-          <div class="col-sm-8">Количество дополнителний места групавой экскурсии<span style="color: red">&nbsp;*</span>
-          </div>
-          <div class="col-sm-4">
-            <div class="form-group">
-              <select class="form-control">
-                <option>7</option>
-                <option>6</option>
-                <option>5</option>
-                <option>4</option>
-                <option>3</option>
-                <option>3</option>
-                <option>1</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-
-        <div class="row">
-          <div class="col-sm-8">Стоимость групавой экскурсии <span style="color: red">&nbsp;*</span></div>
-          <div class="col-sm-4">
-            <div class="form-group">
-              <input class="form-control">
+    </div>
+  </div>
 
 
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-
-        <div class="row">
-          <div class="col-sm-8">Стоимость дополнителний места экскурсии <span style="color: red">&nbsp;*</span></div>
-          <div class="col-sm-4">
-            <div class="form-group">
-              <input class="form-control">
-
-
-            </div>
-          </div>
-        </div>
+  <div class="row d-flex align-items-center flex-wrap mt-4">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-5">Минималное количество участников Груповое экскурсии<span
+      style="color: red">&nbsp;*</span></div>
+    <div class="col-sm-3">
+      <div class="form-group">
+        <select class="form-control" id="sel1">
+          <option>8</option>
+          <option>7</option>
+          <option>6</option>
+          <option>5</option>
+          <option>4</option>
+          <option>3</option>
+          <option>3</option>
+          <option>1</option>
+        </select>
       </div>
     </div>
   </div>
 
-  <div class="row d-flex align-items-center flex-wrap">
+
+  <div class="row d-flex align-items-center flex-wrap mt-4">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-5">Максималное количество участников Груповое экскурсии<span
+      style="color: red">&nbsp;*</span>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-group">
+        <select class="form-control">
+          <option>14</option>
+          <option>13</option>
+          <option>12</option>
+          <option>11</option>
+          <option>10</option>
+          <option>9</option>
+          <option>8</option>
+          <option>7</option>
+          <option>6</option>
+          <option>5</option>
+          <option>4</option>
+          <option>3</option>
+          <option>3</option>
+          <option>1</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="row d-flex align-items-center flex-wrap mt-4">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-5">
+      Количество дополнителний места групавой экскурсии<span style="color: red">&nbsp;*</span>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-group">
+        <select class="form-control">
+          <option>7</option>
+          <option>6</option>
+          <option>5</option>
+          <option>4</option>
+          <option>3</option>
+          <option>3</option>
+          <option>1</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row d-flex align-items-center flex-wrap mt-4">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-5">Стоимость групавой экскурсии <span style="color: red">&nbsp;*</span></div>
+    <div class="col-sm-3">
+      <div class="form-group">
+        <input class="form-control">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row d-flex align-items-center flex-wrap mt-4">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-5">Стоимость дополнителний места экскурсии <span style="color: red">&nbsp;*</span></div>
+    <div class="col-sm-3">
+      <div class="form-group">
+        <input class="form-control">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row d-flex align-items-center flex-wrap mt-4">
     <div class="col-sm-4" style="background-color:white;"><b>Сборное мероприятие:</b></div>
 
     <div class="col-sm-8" style="background-color:white;">
@@ -201,45 +197,42 @@
         <input type="checkbox">
         <span class="slider round" style="color: white;padding: 2px;margin-left: 10px"> &nbsp;да</span>
       </label>
-      <div class="container">
+    </div>
+  </div>
 
-        <div class="row">
-          <div class="col-sm-8">Максималное количество участников сборное экскурсии<span
-            style="color: red">&nbsp;*</span></div>
-          <div class="col-sm-4">
-            <div class="form-group">
-              <select class="form-control">
-                <option>7</option>
-                <option>6</option>
-                <option>5</option>
-                <option>4</option>
-                <option>3</option>
-                <option>3</option>
-                <option>1</option>
-              </select>
-            </div>
-          </div>
-        </div>
+
+  <div class="row d-flex align-items-center flex-wrap mt-4">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-5">Максималное количество участников сборное экскурсии<span
+      style="color: red">&nbsp;*</span></div>
+    <div class="col-sm-3">
+      <div class="form-group">
+        <select class="form-control">
+          <option>7</option>
+          <option>6</option>
+          <option>5</option>
+          <option>4</option>
+          <option>3</option>
+          <option>3</option>
+          <option>1</option>
+        </select>
       </div>
+    </div>
+  </div>
 
-      <div class="container">
-
-        <div class="row">
-          <div class="col-sm-8">Стоимость сборное экскурсии за челавека<span style="color: red">&nbsp;*</span></div>
-          <div class="col-sm-4">
-            <div class="form-group">
-              <input class="form-control">
-
-
-            </div>
-          </div>
-        </div>
+  <div class="row d-flex align-items-center flex-wrap mt-4">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-5">Стоимость сборное экскурсии за челавека<span style="color: red">&nbsp;*</span></div>
+    <div class="col-sm-3">
+      <div class="form-group">
+        <input class="form-control">
       </div>
     </div>
   </div>
 
 
-  <div class="row d-flex align-items-center flex-wrap">
+
+  <div class="row mt-4">
     <div class="col-sm-4" style="background-color:white;"><b>Дополнительные услуги:</b></div>
     <div class="col-sm-8" style="background-color:white;">
 
@@ -268,14 +261,14 @@
     </div>
   </div>
 
-  <div class="row d-flex align-items-center flex-wrap">
+  <div class="row d-flex align-items-center flex-wrap mt-4">
     <div class="col-sm-4" style="background-color:white;"><b></b></div>
     <div class="col-sm-8" style="background-color:white;"><i class="pluse material-icons">add_circle_outline
       <button type="button" class="pluselink btn btn-link">Добавить дополнителную услугу</button>
     </i></div>
   </div>
 
-  <div class="row d-flex align-items-center flex-wrap">
+  <div class="row d-flex align-items-center flex-wrap mt-4">
     <div class="col-sm-4" style="background-color:white;"><b></b></div>
     <div class="col-sm-8" style="background-color:white;">
 
@@ -299,7 +292,7 @@
     </div>
   </div>
 
-  <div class="row d-flex align-items-center flex-wrap">
+  <div class="row d-flex align-items-center flex-wrap mt-4">
     <div class="col-sm-4" style="background-color:white;"><b>Тематика:</b></div>
     <div class="col-sm-8" style="background-color:white;">
       <button type="button" style="background-color: white;color: #3fb8af" class="btn btn-info col-sm-4">Обзорная
