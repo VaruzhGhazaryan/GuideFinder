@@ -38,6 +38,7 @@ label {
 }
 
 
+
 .input-group input[type=text]:focus {
     box-shadow: inset 0px 1px 0px #53bcb2;
     border-top-color: #53bcb2;

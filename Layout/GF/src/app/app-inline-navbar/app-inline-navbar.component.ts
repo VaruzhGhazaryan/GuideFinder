@@ -11,6 +11,7 @@ import { AppSignUpComponent} from '../app-sign-up/app-sign-up.component';
 })
 export class AppInlineNavbarComponent implements OnInit {
   show = false;
+  login = false;
   menu = {
     'blog': 'Блог',
     'guide': 'Стать гидом',

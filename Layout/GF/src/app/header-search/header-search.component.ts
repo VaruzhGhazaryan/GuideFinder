@@ -3,7 +3,7 @@ import {Observable} from "rxjs/Observable";
 import "rxjs/add/operator/map";
 import "rxjs/add/operator/debounceTime";
 import "rxjs/add/operator/distinctUntilChanged";
-import {NgbDropdownConfig} from '@ng-bootstrap/ng-bootstrap';
+import {NgbDropdownConfig} from "@ng-bootstrap/ng-bootstrap";
 
 const texts = ["LOREM", "IPSUM", "IS", "SIMPLY", "DUMMY", "TEXT", "OF", "THE", "PRINTING", "AND", "TYPESETTING", "INDUSTRY", "LOREM", "IPSUM", "HAS", "BEEN", "THE", "STANDARD", "DUMMY"];
 
@@ -30,6 +30,7 @@ export class HeaderSearchComponent implements OnInit {
     constructor(config: NgbDropdownConfig) {
         config.autoClose = "outside";
     }
+
     ngOnInit() {
     }
 

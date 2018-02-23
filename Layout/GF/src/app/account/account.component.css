@@ -3,9 +3,10 @@
     border-color: #fff;
 }
 
-.white:hover{
-    background-color: transparent !important;
-    border-color: #fff !important;
+.white:hover {
+    background-color: #fff;
+    border-color: #ffffff !important;
+    color: #53bcb2;
 }
 
 .white:active{
@@ -57,5 +58,7 @@ figure.item.item-event figcaption{
     width: 250px;
 }
 
-
+.breadcrumbs {
+    margin-top: 30px;
+}
 
