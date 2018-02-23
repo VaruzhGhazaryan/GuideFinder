@@ -540,6 +540,14 @@ a:hover {
   position: absolute;
   bottom: 0;
 }
+/*cal items*/
+/*.ngb-dp-day[_ngcontent-c10], .ngb-dp-weekday[_ngcontent-c10], .ngb-dp-week-number[_ngcontent-c10] {*/
+  /*width: 4rem !important;*/
+/*}*/
+
+/*.ngb-dp-day[_ngcontent-c10] {*/
+  /*background: #f8f9fa;*/
+/*}*/
 
 .filter-page-item .owl-prev,
 .filter-page-item .owl-next {
@@ -566,6 +574,39 @@ a:hover {
   background-size: cover !important;
 
 }
+[_nghost-c8] {
+  width: 4rem !important;
+}
+
+[_nghost-c6] {
+  border: none !important;
+}
+
+.ngb-dp-weekdays[_ngcontent-c10] {
+  border: none !important;
+
+}
+
+.ngb-dp-weekday[_ngcontent-c10] {
+  color: #7f7f7f !important;
+}
+
+.font-italic {
+  font-style: normal !important;
+}
+
+.btn-link {
+  color: transparent !important;
+}
+
+.bg-primary {
+  background-color: #53bcb2!important;
+}
+
+/*[_nghost-c8] {*/
+  /*border-radius: 0;*/
+/*}*/
+
 /*Large devices (desktops, 992px and up)*/
 @media (max-width: 992px) {
 
@@ -640,9 +681,9 @@ a:hover {
     padding: 10px !important;
   }
 
-  [_ngcontent-c3].mt-5 {
-    margin-top: 1.4rem !important;
-  }
+  /*[_ngcontent-c3].mt-5 {*/
+    /*margin-top: 1.4rem !important;*/
+  /*}*/
 
   .slide[_ngcontent-c3] {
     padding: 10px !important;

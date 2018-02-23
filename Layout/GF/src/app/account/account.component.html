@@ -1,0 +1,150 @@
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
+<link href="https://unpkg.com/@angular/material/prebuilt-themes/deeppurple-amber.css" rel="stylesheet">
+<div class="container-fluid">
+    <div class="row">
+        <div class="breadcrumbs  hidden-sm-down">
+            <ul>
+                <li><a routerLink="/">Главная</a></li>
+                <li><a routerLink="/account">Наташа Ветлицкая</a></li>
+                <li><a routerLink="/account">Управление мероприятиями</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div *ngFor="let event of events;">
+        <div class="row mt-5 ">
+            <div class="col mt-lg-5 mt-md-5">
+                <h2>{{event.h2}}</h2>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col">
+                <owl-carousel class="carousel" [options]="option"
+                              [items]="slides"
+                              [carouselClasses]="['owl-theme', 'row', 'sliding']">
+                    <div class="item slide" *ngFor="let slide of event.slide;">
+                        <figure class="item item-event">
+                            <img src="{{ slide.img }}" alt="sq-sample26"/>
+                            <p class="title">{{ slide.title }}</p>
+                            <figcaption>
+                                <div class="container">
+                                    <i class="material-icons">mode_edit</i>
+                                    <p >{{ slide.title }}</p>
+                                    <div class="row bottom">
+                                        <button class="col-lg-12 col-md-12 btn btn-outline-primary white" (click)="openListDialog()">Список
+                                            проведений
+                                        </button>
+                                    </div>
+                                    <div class="row bottom">
+                                        <button class="col-lg-12 col-md-12 btn btn-outline-primary white" (click)="openEditDialog()">
+                                            Редактировать
+                                        </button>
+                                    </div>
+                                    <div class="row bottom">
+                                        <button class="col-lg-12 col-md-12 btn btn-outline-primary white" (click)="openAddDialog()">Отправить на
+                                            модерацию
+                                        </button>
+                                    </div>
+                                    <div class="row">
+                                        <button class="col-lg-12 col-md-12 btn btn-outline-primary white">Отменить
+                                            мероприятие
+                                        </button>
+                                    </div>
+                                </div>
+                            </figcaption>
+                           <!-- <a href=" {{ slide.url }} "></a>-->
+                        </figure>
+
+                        <div class="text-center">
+                            <span><b class="pd-letter">{{ slide.price_for_one }}</b> <span class="rouble"></span> за человека</span>
+                        </div>
+                        <div class="text-center text-color">
+                            <small><b class="pd-letter">{{ slide.price_for_group}}</b> <span class="rouble"></span> за
+                                группу
+                            </small>
+                        </div>
+                        <div class="text-center text-color">
+                            <small><b class="pd-letter">{{ slide.price_for_team}}</b> <span class="rouble"></span> за
+                                человека в сборной экскурсии
+                            </small>
+                        </div>
+                        <div class="pt-3 text-center">
+                            <button class="btn btn-success btn-blue" type="button">Опубликовано</button>
+                        </div>
+                    </div>
+                </owl-carousel>
+            </div>
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-lg-12">
+            <button class="btn btn-success btn-blue btn-w" type="button">Добавить мероприятия</button>
+        </div>
+
+    </div>
+
+    <div *ngFor="let cal_event of cal_events;">
+        <div class="row mt-5 ">
+            <div class="col mt-lg-5 mt-md-5">
+                <h2>{{cal_event.h2}}</h2>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col">
+                <owl-carousel class="carousel" [options]="option_cal"
+                              [items]="slides"
+                              [carouselClasses]="['owl-theme', 'row', 'sliding']">
+                    <div class="item slide" *ngFor="let slide of cal_event.slide;">
+
+                        <ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next"></ngb-datepicker>
+                    </div>
+                </owl-carousel>
+            </div>
+        </div>
+    </div>
+
+    <div *ngFor="let last_event of last_events;">
+        <div class="row mt-5 ">
+            <div class="col mt-lg-5 mt-md-5">
+                <h2>{{last_event.h2}}</h2>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col">
+                <owl-carousel class="carousel" [options]="option"
+                              [items]="slides"
+                              [carouselClasses]="['owl-theme', 'row', 'sliding']">
+                    <div class="item slide" *ngFor="let slide of last_event.slide;">
+                        <figure class="item">
+                            <img src="{{ slide.img }}" alt="sq-sample26"/>
+                            <p class="title">{{ slide.title }}</p>
+                            <figcaption class="top">
+                                <i class="material-icons">visibility</i>
+                                <p>{{ slide.title }}</p>
+                            </figcaption>
+                            <a href=" {{ slide.url }} "></a>
+                        </figure>
+
+                        <div class="text-center">
+                            <span><b>{{ slide.price }}</b> <span
+                                    class="rouble"></span> за человека</span>
+                        </div>
+                        <div class="text-center text-color">
+                            <small>{{ slide.date}}</small>
+                        </div>
+
+                    </div>
+                </owl-carousel>
+
+            </div>
+        </div>
+    </div>
+</div>
+
