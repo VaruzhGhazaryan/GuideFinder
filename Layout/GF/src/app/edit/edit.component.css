@@ -55,7 +55,7 @@ input:focus + label i {
 
 .edit-modal .close {
     margin-top: -74px;
-    right: 27%;
+    right: 24%;
     outline: none;
     position: absolute;
 }

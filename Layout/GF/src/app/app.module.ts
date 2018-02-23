@@ -36,7 +36,7 @@ import { AppInlineNavbarComponent } from './app-inline-navbar/app-inline-navbar.
 import { GuideComponent } from './guide/guide.component';
 import { EventsComponent } from './events/events.component';
 import { HeaderSearchComponent } from './header-search/header-search.component';
-import { AddEventComponent } from './add-event/add-event.component';
+import { AddEventModalComponent } from './add-event-modal/add-event-modal.component';
 import { AccountComponent } from './account/account.component';
 import { ListComponent } from './list/list.component';
 import { EditComponent } from './edit/edit.component';
@@ -66,10 +66,10 @@ export function createTranslateLoader(http: HttpClient) {
     EventsComponent,
     AppInlineNavbarComponent,
     HeaderSearchComponent,
-    AddEventComponent,
     AccountComponent,
     ListComponent,
-    EditComponent
+    EditComponent,
+    AddEventModalComponent
   ],
   imports: [
     BrowserModule,
@@ -97,7 +97,7 @@ export function createTranslateLoader(http: HttpClient) {
     })
   ],
   providers: [],
-  entryComponents: [AppSignInComponent, AppSignUpComponent, ListComponent, EditComponent, AddEventComponent],
+  entryComponents: [AppSignInComponent, AppSignUpComponent, ListComponent, EditComponent, AddEventModalComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

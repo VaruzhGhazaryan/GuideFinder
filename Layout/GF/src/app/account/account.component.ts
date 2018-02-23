@@ -4,7 +4,7 @@ import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 
 import { ListComponent } from '../list/list.component';
 import { EditComponent } from '../edit/edit.component';
-import { AddEventComponent } from '../add-event/add-event.component';
+import { AddEventModalComponent } from '../add-event-modal/add-event-modal.component';
 
 @Component({
     selector: 'app-account',
@@ -243,7 +243,7 @@ export class AccountComponent {
     }
 
     openAddDialog() {
-        this.editDialog = this.dialog.open(AddEventComponent);
+        this.editDialog = this.dialog.open(AddEventModalComponent);
     }
 
 }
