@@ -40,6 +40,7 @@ import { AddEventModalComponent } from './add-event-modal/add-event-modal.compon
 import { AccountComponent } from './account/account.component';
 import { ListComponent } from './list/list.component';
 import { EditComponent } from './edit/edit.component';
+import { AddEventComponent } from './add-event/add-event.component';
 
 
 
@@ -69,6 +70,7 @@ export function createTranslateLoader(http: HttpClient) {
     AccountComponent,
     ListComponent,
     EditComponent,
+    AddEventComponent,
     AddEventModalComponent
   ],
   imports: [
