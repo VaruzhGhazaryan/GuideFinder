@@ -1,10 +1,8 @@
 import {Component} from "@angular/core";
-import { MatDialog, MatDialogRef } from '@angular/material';
-import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
-
-import { ListComponent } from '../list/list.component';
-import { EditComponent } from '../edit/edit.component';
-import { AddEventModalComponent } from '../add-event-modal/add-event-modal.component';
+import {MatDialog, MatDialogRef} from "@angular/material";
+import {ListComponent} from "../list/list.component";
+import {EditComponent} from "../edit/edit.component";
+import {AddEventModalComponent} from "../add-event-modal/add-event-modal.component";
 
 @Component({
     selector: 'app-account',
@@ -13,7 +11,7 @@ import { AddEventModalComponent } from '../add-event-modal/add-event-modal.compo
 })
 export class AccountComponent {
 
-
+    login = true;
 
     events = [
         {
@@ -224,15 +222,19 @@ export class AccountComponent {
             '320': {items: 2},
             '768': {items: 2},
             '1200': {items: 3},
+            '1700': {items: 4},
         }
     };
 
-    constructor(private dialog: MatDialog) { }
+    constructor(private dialog: MatDialog) {
+    }
 
     //noinspection JSAnnotator
     listDialog: MatDialogRef<ListComponent>;
     //noinspection JSAnnotator
     editDialog: MatDialogRef<EditComponent>;
+    //noinspection JSAnnotator
+    eventDialog: MatDialogRef<EditComponent>;
 
     openListDialog() {
         this.listDialog = this.dialog.open(ListComponent);
@@ -243,7 +245,7 @@ export class AccountComponent {
     }
 
     openAddDialog() {
-        this.editDialog = this.dialog.open(AddEventModalComponent);
+        this.eventDialog = this.dialog.open(AddEventModalComponent);
     }
 
 }
