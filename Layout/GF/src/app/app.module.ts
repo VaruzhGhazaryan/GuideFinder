@@ -41,6 +41,8 @@ import { AccountComponent } from './account/account.component';
 import { ListComponent } from './list/list.component';
 import { EditComponent } from './edit/edit.component';
 import { AddEventComponent } from './add-event/add-event.component';
+import { ProfileComponent } from './profile/profile.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 
 
@@ -71,7 +73,9 @@ export function createTranslateLoader(http: HttpClient) {
     ListComponent,
     EditComponent,
     AddEventComponent,
-    AddEventModalComponent
+    AddEventModalComponent,
+    ProfileComponent,
+    EditProfileComponent
   ],
   imports: [
     BrowserModule,

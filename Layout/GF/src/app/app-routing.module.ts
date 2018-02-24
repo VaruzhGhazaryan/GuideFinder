@@ -1,13 +1,15 @@
-import {NgModule} from "@angular/core";
-import {RouterModule, Routes} from "@angular/router";
-import {BlogComponent} from "./blog/blog.component";
-import {AppHomeContentComponent} from "./app-home-content/app-home-content.component";
-import {BlogItemComponent} from "./blog-item/blog-item.component";
-import {FaqComponent} from "./faq/faq.component";
-import {GuideComponent} from "./guide/guide.component";
-import {EventsComponent} from "./events/events.component";
-import {AccountComponent} from "./account/account.component";
-import {AddEventComponent} from "./add-event/add-event.component";
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {BlogComponent} from './blog/blog.component';
+import {AppHomeContentComponent} from './app-home-content/app-home-content.component';
+import {BlogItemComponent} from './blog-item/blog-item.component';
+import {FaqComponent} from './faq/faq.component';
+import {GuideComponent} from './guide/guide.component';
+import {EventsComponent} from './events/events.component';
+import {AccountComponent} from './account/account.component';
+import {AddEventComponent} from './add-event/add-event.component';
+import {ProfileComponent} from './profile/profile.component';
+import {EditProfileComponent} from './edit-profile/edit-profile.component';
 
 const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -18,7 +20,9 @@ const routes: Routes = [
     {path: 'guide', component: GuideComponent},
     {path: 'events', component: EventsComponent},
     {path: 'account', component: AccountComponent},
-    {path: 'add-event', component: AddEventComponent}
+    {path: 'add-event', component: AddEventComponent},
+    {path: 'profile', component: ProfileComponent},
+    {path: 'edit-profile', component: EditProfileComponent}
 ];
 
 @NgModule({
