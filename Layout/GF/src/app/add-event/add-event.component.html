@@ -37,20 +37,25 @@
     <div class="col-sm-4" style="background-color:white;"><b>Продлжителность:</b></div>
     <div class="col-sm-8" style="background-color:white;">
       <div class="form-group">
-
         <input type="text" style="background-color: white;color: #3fb8af"
                placeholder=" Укажите продлжителность мероприятия " class=" form-control">
       </div>
     </div>
   </div>
 
-  <div class="row d-flex align-items-center flex-wrap mt-4">
+  <div class="row d-flex align-items-center flex-wrap mt-5">
     <div class="col-sm-4" style="background-color:white;"><b>Частное мероприятие:</b></div>
     <div class="col-sm-8" style="background-color:white;">
-      <label class="switch" style="width: 70px">
-        <input type="checkbox">
-        <span class="slider round" style="color: white;padding: 2px;margin-left: 10px"> &nbsp;да</span>
-      </label>
+      <div class="toggle-group">
+        <input type="checkbox" name="on-off-switch" id="switch1" checked="" tabindex="1">
+        <label for="switch1"></label>
+        <div class="onoffswitch" aria-hidden="true">
+          <div class="onoffswitch-label">
+            <div class="onoffswitch-inner"></div>
+            <div class="onoffswitch-switch"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -60,7 +65,7 @@
     <div class="col-sm-5">Максималное количество участников частное экскурсии<span
       style="color: red">&nbsp;*</span></div>
     <div class="col-sm-3">
-      <div class="form-group">
+      <div class="form-group select-caret">
         <select class="form-control">
           <option>7</option>
           <option>6</option>
@@ -86,14 +91,20 @@
   </div>
 
 
-  <div class="row d-flex align-items-center flex-wrap mt-4">
+  <div class="row d-flex align-items-center flex-wrap mt-5">
     <div class="col-sm-4" style="background-color:white;"><b>Груповое мероприятие:</b></div>
 
     <div class="col-sm-8" style="background-color:white;">
-      <label class="switch" style="width: 70px">
-        <input type="checkbox">
-        <span class="slider round" style="color: white;padding: 2px;margin-left: 10px"> &nbsp;да</span>
-      </label>
+      <div class="toggle-group">
+        <input type="checkbox" name="on-off-switch" id="switch2" checked="" tabindex="1">
+        <label for="switch2"></label>
+        <div class="onoffswitch" aria-hidden="true">
+          <div class="onoffswitch-label">
+            <div class="onoffswitch-inner"></div>
+            <div class="onoffswitch-switch"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -103,7 +114,7 @@
     <div class="col-sm-5">Минималное количество участников Груповое экскурсии<span
       style="color: red">&nbsp;*</span></div>
     <div class="col-sm-3">
-      <div class="form-group">
+      <div class="form-group select-caret">
         <select class="form-control" id="sel1">
           <option>8</option>
           <option>7</option>
@@ -125,7 +136,7 @@
       style="color: red">&nbsp;*</span>
     </div>
     <div class="col-sm-3">
-      <div class="form-group">
+      <div class="form-group select-caret">
         <select class="form-control">
           <option>14</option>
           <option>13</option>
@@ -152,7 +163,7 @@
       Количество дополнителний места групавой экскурсии<span style="color: red">&nbsp;*</span>
     </div>
     <div class="col-sm-3">
-      <div class="form-group">
+      <div class="form-group select-caret">
         <select class="form-control">
           <option>7</option>
           <option>6</option>
@@ -189,14 +200,20 @@
   </div>
 
 
-  <div class="row d-flex align-items-center flex-wrap mt-4">
+  <div class="row d-flex align-items-center flex-wrap mt-5">
     <div class="col-sm-4" style="background-color:white;"><b>Сборное мероприятие:</b></div>
 
     <div class="col-sm-8" style="background-color:white;">
-      <label class="switch" style="width: 70px">
-        <input type="checkbox">
-        <span class="slider round" style="color: white;padding: 2px;margin-left: 10px"> &nbsp;да</span>
-      </label>
+      <div class="toggle-group">
+        <input type="checkbox" name="on-off-switch" id="switch3" checked="" tabindex="1">
+        <label for="switch3"></label>
+        <div class="onoffswitch" aria-hidden="true">
+          <div class="onoffswitch-label">
+            <div class="onoffswitch-inner"></div>
+            <div class="onoffswitch-switch"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -206,7 +223,7 @@
     <div class="col-sm-5">Максималное количество участников сборное экскурсии<span
       style="color: red">&nbsp;*</span></div>
     <div class="col-sm-3">
-      <div class="form-group">
+      <div class="form-group select-caret">
         <select class="form-control">
           <option>7</option>
           <option>6</option>
@@ -236,39 +253,59 @@
     <div class="col-sm-4" style="background-color:white;"><b>Дополнительные услуги:</b></div>
     <div class="col-sm-8" style="background-color:white;">
 
-      <div class="grey container-fluid   ">
-        <div class="row">
-          <div class="col-sm-9  editTaitle"> &nbsp;Переводчик</div>
-          <div class="col-sm-3  editTaitle">5 000 <i class="ic material-icons ">mode_edit</i> <i
-            class="close  material-icons">highlight_off</i></div>
-        </div>
-      </div>
-      <div class="grey  container-fluid">
-        <div class="row">
-          <div class="col-sm-9 editTaitle">&nbsp; Шопингконсултант</div>
-          <div class=" col-sm-3 editTaitle">2 000 <i class="ic material-icons ">mode_edit</i> <i
-            class="close material-icons">highlight_off</i></div>
+      <div class="grey-line">
+        <div class="row d-flex">
+          <div class="col-lg-9"><span>Переводчик</span></div>
+          <div class="col-lg-3 float-right">
+            <div class="text-right">
+              <span class="ruble">5 000</span>
+              <a href="javascript:void(0)"><i class="ic material-icons ml-2">mode_edit</i></a>
+              <a href="javascript:void(0)"><i class="close  material-icons ml-1">highlight_off</i></a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="grey  container-fluid">
-        <div class="row">
-          <div class="col-sm-9 editTaitle">&nbsp; Услуги фотографа</div>
-          <div class="col-sm-3 editTaitle">1 000 <i class="ic material-icons ">mode_edit</i> <i
-            class="close  material-icons">highlight_off</i></div>
+      <div class="grey-line">
+        <div class="row d-flex">
+          <div class="col-lg-9"><span>Шопингконсултант</span></div>
+          <div class="col-lg-3 float-right">
+            <div class="text-right">
+              <span class="ruble">2 000</span>
+              <a href="javascript:void(0)"><i class="ic material-icons ml-2">mode_edit</i></a>
+              <a href="javascript:void(0)"><i class="close  material-icons ml-1">highlight_off</i></a>
+            </div>
+          </div>
         </div>
       </div>
+
+      <div class="grey-line">
+        <div class="row d-flex">
+          <div class="col-lg-9"><span>Услуги фотографа</span></div>
+          <div class="col-lg-3 float-right">
+            <div class="text-right">
+              <span class="ruble">1 000</span>
+              <a href="javascript:void(0)"><i class="ic material-icons ml-2">mode_edit</i></a>
+              <a href="javascript:void(0)"><i class="close  material-icons ml-1">highlight_off</i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <div class="row d-flex align-items-center flex-wrap mt-4">
+  <div class="row d-flex align-items-center flex-wrap mt-2">
     <div class="col-sm-4" style="background-color:white;"><b></b></div>
-    <div class="col-sm-8" style="background-color:white;"><i class="pluse material-icons">add_circle_outline
-      <button type="button" class="pluselink btn btn-link">Добавить дополнителную услугу</button>
-    </i></div>
+    <div class="col-sm-8" style="background-color:white;">
+      <a class="d-flex align-items-center add-attr" href="javascript:void(0)">
+        <i class="plusIcon"></i>
+        <u class="ml-2">Добавить дополнителную услугу</u>
+      </a>
+    </div>
   </div>
 
-  <div class="row d-flex align-items-center flex-wrap mt-4">
+  <div class="row d-flex align-items-center flex-wrap mt-5">
     <div class="col-sm-4" style="background-color:white;"><b></b></div>
     <div class="col-sm-8" style="background-color:white;">
 
@@ -292,69 +329,70 @@
     </div>
   </div>
 
+
   <div class="row d-flex align-items-center flex-wrap mt-4">
     <div class="col-sm-4" style="background-color:white;"><b>Тематика:</b></div>
     <div class="col-sm-8" style="background-color:white;">
-      <button type="button" style="background-color: white;color: #3fb8af" class="btn btn-info col-sm-4">Обзорная
-        экскурсия
-      </button>
-      <button type="button" style="background-color: white;color: #3fb8af" class="btn btn-info col-sm-4">Тематическая
-        экскурсия
-      </button>
+      <div class="btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="model">
+        <label ngbButtonLabel class="btn btn btn-outline-bordered p-3 mr-2 active">
+          <input ngbButton type="radio" value="tem1" [value]="1">Обзорная экскурсия
+        </label>
+        <label ngbButtonLabel class="btn btn btn-outline-bordered p-3 mr-2">
+          <input ngbButton type="radio" value="tem2"> Тематическая экскурсия
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="row d-flex align-items-center flex-wrap mt-4">
+    <div class="col-sm-4" style="background-color:white;"><b>Роспопожение:</b></div>
+    <div class="col-sm-8" style="background-color:white;">
+      <div class="form-group">
+        <select class="form-control col-md-8">
+          <option>Россия</option>
+
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="row d-flex align-items-center flex-wrap mt-4">
+    <div class="col-sm-4" style="background-color:white;"><b>Роспопожение:</b></div>
+    <div class="col-sm-8" style="background-color:white;">
+      <div class="form-group">
+        <select class="form-control col-md-8">
+          <option>Россия</option>
+
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="row d-flex align-items-center flex-wrap mt-4">
+    <div class="col-sm-4" style="background-color:white;"><b>Роспопожение:</b></div>
+    <div class="col-sm-8" style="background-color:white;">
+      <div class="form-group">
+        <select class="form-control col-md-8">
+          <option>Россия</option>
+
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="row d-flex align-items-center flex-wrap mt-4">
+    <div class="col-sm-4" style="background-color:white;"><b>Роспопожение:</b></div>
+    <div class="col-sm-8" style="background-color:white;">
+      <div class="form-group">
+        <select class="form-control col-md-8">
+          <option>Россия</option>
+
+        </select>
+      </div>
     </div>
   </div>
 
 
-    <br><br><br>
-
-
-    <div class="col-sm-4" style="background-color:white;"><b>Роспопожение:</b></div>
-    <div class="col-sm-8" style="background-color:white;">
-      <div class="form-group">
-        <select class="form-control col-md-8">
-          <option>Россия</option>
-
-        </select>
-      </div>
-    </div>
-    <br><br><br>
-
-
-    <div class="col-sm-4" style="background-color:white;"><b>Роспопожение:</b></div>
-    <div class="col-sm-8" style="background-color:white;">
-      <div class="form-group">
-        <select class="form-control col-md-8">
-          <option>Россия</option>
-
-        </select>
-      </div>
-    </div>
-    <br><br><br>
-
-
-    <div class="col-sm-4" style="background-color:white;"><b>Роспопожение:</b></div>
-    <div class="col-sm-8" style="background-color:white;">
-      <div class="form-group">
-        <select class="form-control col-md-8">
-          <option>Россия</option>
-
-        </select>
-      </div>
-    </div>
-
-    <br><br><br>
-
-
-    <div class="col-sm-4" style="background-color:white;"><b>Роспопожение:</b></div>
-    <div class="col-sm-8" style="background-color:white;">
-      <div class="form-group">
-        <select class="form-control col-md-8">
-          <option>Россия</option>
-
-        </select>
-      </div>
-    </div>
-    <br> <br> <br>
     <div class="container">
 
       <div class="row">
