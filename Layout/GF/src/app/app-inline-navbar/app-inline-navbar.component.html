@@ -46,9 +46,12 @@
                 <a class="nav-link" href="javascript:void(0)" (click)="openSignInDialog()">{{menu.signin}}</a>
               </li>
               <li class="nav-item" *ngIf ="login">
-                <a class="nav-link" href="javascript:void(0)" (click)="openSignInDialog()">fghnmfgh</a>
+                <a routerLink="/account" class="nav-link account">
+                  <i class="material-icons">account_circle</i>
+                  <span class="account"> Наташа Ветлицкая</span>
+                </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" *ngIf ="!login">
                 <a class="nav-link" href="javascript:void(0)" (click)="openSignUpDialog()">{{menu.signup}}</a>
               </li>
             </ul>

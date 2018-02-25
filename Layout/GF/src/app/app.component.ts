@@ -23,11 +23,15 @@ export class AppComponent {
                 console.log(event);
                 if (event.url != '' && event.url != '/' && event.url != '/home') {
                     this.show = true;
-                } else if (event.url != '/account') {
-                    this.login = true;
-
                 } else {
                     this.show = false;
+                }
+            }
+            if (event instanceof NavigationStart) {
+                console.log(event);
+                if (event.url == '/account') {
+                    this.login = true;
+                    console.log("account");
                 }
             }
         });
