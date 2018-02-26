@@ -43,8 +43,6 @@ import { EditComponent } from './edit/edit.component';
 import { AddEventComponent } from './add-event/add-event.component';
 
 
-
-
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');

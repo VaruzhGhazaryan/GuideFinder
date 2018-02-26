@@ -624,7 +624,6 @@ ngb-datepicker {
     background-color: #53bcb2 !important;
 }
 
-
 .btn-light {
     width: 3rem !important;
     border-radius: 0 !important;
@@ -640,6 +639,11 @@ ngb-datepicker {
 
 .outside {
     opacity: 0 !important;
+}
+
+
+mat-dialog-container{
+    display: inline-table !important;
 }
 
 /*Large devices (desktops, 992px and up)*/

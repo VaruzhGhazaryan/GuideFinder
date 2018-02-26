@@ -219,7 +219,7 @@ export class AccountComponent {
         nav: true,
         navText: ['', ''],
         responsive: {
-            '320': {items: 2},
+            '320': {items: 1},
             '768': {items: 2},
             '1200': {items: 3},
             '1700': {items: 4},
@@ -229,12 +229,19 @@ export class AccountComponent {
     constructor(private dialog: MatDialog) {
     }
 
+ /*   //noinspection JSAnnotator
+    constructor(private dialog: MatDialog,
+                private dialogRef: MatDialogRef<EditComponent>) {
+
+    }
+*/
+
     //noinspection JSAnnotator
     listDialog: MatDialogRef<ListComponent>;
     //noinspection JSAnnotator
     editDialog: MatDialogRef<EditComponent>;
     //noinspection JSAnnotator
-    eventDialog: MatDialogRef<EditComponent>;
+    addEventDialog: MatDialogRef<AddEventModalComponent>;
 
     openListDialog() {
         this.listDialog = this.dialog.open(ListComponent);
@@ -245,7 +252,7 @@ export class AccountComponent {
     }
 
     openAddDialog() {
-        this.eventDialog = this.dialog.open(AddEventModalComponent);
+        this.addEventDialog = this.dialog.open(AddEventModalComponent);
     }
 
 }

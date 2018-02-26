@@ -13,7 +13,6 @@ declare var $: any;
 export class AppComponent {
 
     show = false;
-    login = false;
     title = 'Guide Finder';
     public location: Router;
 
@@ -23,9 +22,6 @@ export class AppComponent {
                 console.log(event);
                 if (event.url != '' && event.url != '/' && event.url != '/home') {
                     this.show = true;
-                } else if (event.url != '/account') {
-                    this.login = true;
-
                 } else {
                     this.show = false;
                 }
