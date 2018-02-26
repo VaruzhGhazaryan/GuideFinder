@@ -346,132 +346,167 @@
 
   <div class="row d-flex align-items-center flex-wrap mt-4">
     <div class="col-sm-4" style="background-color:white;"><b>Роспопожение:</b></div>
-    <div class="col-sm-8" style="background-color:white;">
-      <div class="form-group">
-        <select class="form-control col-md-8">
+    <div class="col-sm-5" style="background-color:white;">
+      <div class="form-group select-caret">
+        <select class="form-control col-md-12">
           <option>Россия</option>
-
+          <option>Россия</option>
+          <option>Россия</option>
+          <option>Россия</option>
         </select>
       </div>
     </div>
   </div>
 
   <div class="row d-flex align-items-center flex-wrap mt-4">
-    <div class="col-sm-4" style="background-color:white;"><b>Роспопожение:</b></div>
-    <div class="col-sm-8" style="background-color:white;">
-      <div class="form-group">
-        <select class="form-control col-md-8">
-          <option>Россия</option>
-
+    <div class="col-sm-4" style="background-color:white;"><b>Способ передвижение:</b></div>
+    <div class="col-sm-5" style="background-color:white;">
+      <div class="form-group select-caret">
+        <select class="form-control col-md-12">
+          <option>Автомобиль</option>
+          <option>Автомобиль</option>
+          <option>Автомобиль</option>
+          <option>Автомобиль</option>
         </select>
       </div>
     </div>
   </div>
 
   <div class="row d-flex align-items-center flex-wrap mt-4">
-    <div class="col-sm-4" style="background-color:white;"><b>Роспопожение:</b></div>
-    <div class="col-sm-8" style="background-color:white;">
-      <div class="form-group">
-        <select class="form-control col-md-8">
-          <option>Россия</option>
-
+    <div class="col-sm-4" style="background-color:white;"><b>Город:</b></div>
+    <div class="col-sm-5" style="background-color:white;">
+      <div class="form-group select-caret">
+        <select class="form-control col-md-12">
+          <option>Москва</option>
+          <option>Москва</option>
+          <option>Москва</option>
+          <option>Москва</option>
+          <option>Москва</option>
         </select>
       </div>
     </div>
   </div>
 
   <div class="row d-flex align-items-center flex-wrap mt-4">
-    <div class="col-sm-4" style="background-color:white;"><b>Роспопожение:</b></div>
-    <div class="col-sm-8" style="background-color:white;">
-      <div class="form-group">
-        <select class="form-control col-md-8">
-          <option>Россия</option>
-
+    <div class="col-sm-4" style="background-color:white;"><b>Локация:</b></div>
+    <div class="col-sm-5" style="background-color:white;">
+      <div class="form-group select-caret">
+        <select class="form-control col-md-12">
+          <option>Кремль</option>
+          <option>Кремль</option>
+          <option>Кремль</option>
+          <option>Кремль</option>
+          <option>Кремль</option>
+          <option>Кремль</option>
         </select>
       </div>
     </div>
   </div>
 
 
+  <div class="row d-flex align-items-center flex-wrap mt-4">
     <div class="container">
-
       <div class="row">
+
         <div class="col-sm-4" style="background-color:white;"><b>Теги:</b></div>
         <div class="col-sm-8">
-          <button type="button" style="background-color: white;color: black;border: solid 1px darkgrey"
-                  class="tags btn btn-info ">Обзор
-          </button>
-          <button type="button" style="background-color: white;color: #3fb8af;" class="tags btn btn-info "> Тематическая
-            экскурсия
-          </button>
-          <button type="button" style="background-color: white;color: black;border: solid 1px darkgrey  ;"
-                  class="tags btn btn-info ">Виды на город
-          </button>
+          <div class="btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="model">
+            <label ngbButtonLabel class="btn btn btn-outline-bordered p-3 mr-1 mb-2 active">
+              <input ngbButton type="checkbox" value="ru" > Русский
+            </label>
+            <label ngbButtonLabel class="btn btn btn-outline-bordered p-3 mr-1 mb-2">
+              <input ngbButton type="checkbox" value="en"> Тематическая
+              экскурсия
+            </label>
+            <label ngbButtonLabel class="btn btn btn-outline-bordered p-3 mr-1 mb-2">
+              <input ngbButton type="checkbox" value="en"> Виды на город
+            </label>
+            <label ngbButtonLabel class="btn btn btn-outline-bordered p-3 mr-1 mb-2">
+              <input ngbButton type="checkbox" value="en"> Экскурсия
+            </label>
+            <label ngbButtonLabel class="btn btn btn-outline-bordered p-3 mr-1 mb-2">
+              <input ngbButton type="checkbox" value="en"> История
+            </label>
+            <label ngbButtonLabel class="btn btn btn-outline-bordered p-3 mr-1 mb-2">
+              <input ngbButton type="checkbox" value="en"> Искусствоведение
+            </label>
+            <label ngbButtonLabel class="btn btn btn-outline-bordered p-3 mr-1 mb-2">
+              <input ngbButton type="checkbox" value="en"> Литература
+            </label>
+            <label ngbButtonLabel class="btn btn btn-outline-bordered p-3 mr-1 mb-2">
+              <input ngbButton type="checkbox" value="en"> Религия
+            </label>
+            <label ngbButtonLabel class="btn btn btn-outline-bordered p-3 mr-1 mb-2">
+              <input ngbButton type="checkbox" value="en"> Спорт
+            </label>
+            <label ngbButtonLabel class="btn btn btn-outline-bordered p-3 mr-1 mb-2">
+              <input ngbButton type="checkbox" value="en"> Фотография
+            </label>
 
-
-          <button type="button" style="background-color: white;color: #3fb8af" class="tags btn btn-info "> Экскурсия
-          </button>
-          <button type="button" style="background-color: white;color: black;" class="tags btn btn-info "> История
-          </button>
-          <button type="button" style="background-color: white;color: black;" class="tags btn btn-info ">
-            Искусствоведение
-          </button>
+          </div>
         </div>
-        <br> <br>
-
-        <div class="col-sm-4" style="background-color:white;"></div>
-        <div class="col-sm-8">
-          <button type="button" style="background-color: white;color: black;border: solid 1px darkgrey"
-                  class="tags btn btn-info ">Литература
-          </button>
-          <button type="button" style="background-color: white;color: #3fb8af;" class="tags btn btn-info "> Религия
-          </button>
-          <button type="button" style="background-color: white;color: #3fb8af;" class="tags btn btn-info "> Спорт
-          </button>
-          <button type="button" style="background-color: white;color: black;border: solid 1px darkgrey"
-                  class="tags btn btn-info ">Фотография
-          </button>
-        </div>
-
-      </div>
-
-    </div>
-    <br> <br> <br> <br> <br> <br>
-    <div class="col-sm-4" style="background-color:white;"><b>Главный фото:</b><span style="color: red">&nbsp;*</span><p></p></div>
-    <div class="col-sm-8" >
-           <div class="foto col-sm-8">
-             <div> <i class="fotoIc material-icons">camera_alt</i></div>
-             <p class="hint"> Вы можете перетащить фото сюда</p>
-             <p class="hint"> или</p>
-             <div class="uploadFail">Выберите файл</div>
-           </div>
-    </div>
-
-    <div class="col-sm-4" ><b>Фотография:</b><p></p></div>
-    <div class="col-sm-8" >
-      <div class="foto col-sm-8">
-        <div> <i class="fotoIc material-icons">camera_alt</i></div>
-        <p class="hint"> Вы можете перетащить фото сюда</p>
-        <p class="hint"> или</p>
-        <div class="uploadFail">Выберите файл</div>
-      </div>
-    </div>
-
-    <div class="col-sm-4" style="background-color:white;"><b>Видео:</b><p></p></div>
-    <div class="col-sm-8" >
-      <div class="foto col-sm-8">
-        <div> <i class="fotoIc material-icons">camera_alt</i></div>
-        <p class="hint"> Вы можете перетащить видео сюда</p>
-        <p class="hint"> или</p>
-        <div class="uploadFail">Выберите файл</div>
-      </div>
-    </div>
-
-    <div class="col-sm-4" style="background-color:white;"><b>Картографическая информация марштуие:</b><p></p></div>
-    <div class="col-sm-8" >
-      <div class="map  col-sm-8">
-
       </div>
     </div>
   </div>
+
+  <div class="row d-flex  flex-wrap mt-4">
+    <div class="col-sm-4" style="background-color:white;"><b>Главный фото:</b><span style="color: red">&nbsp;*</span>
+      <p class="text-grey mt-2">(Поддерживается фото в форматах JPG, PNG), разрешение не более 1200 x 630 px, размером не более 1 Гб</p>
+    </div>
+    <div class="col-sm-8" >
+      <form id="zdrop" class="fileuploader center-align col-sm-8">
+        <div class="upload-label" style="width: 200px;">
+          <i class="fotoIc material-icons">camera_alt</i>
+        </div>
+        <p class="hint"> Вы можете перетащить фото сюда</p>
+        <p class="hint"> или</p>
+        <div class="col text-center">
+          <input type="button" class="btn btn-white col-sm-6 form-control" value="ВЫБЕРИТЕ ФАЙЛ">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="row d-flex  flex-wrap mt-4">
+    <div class="col-sm-4" ><b>Фотография:</b>
+      <p class="text-grey mt-2">(Поддерживается фото в форматах JPG, PNG), разрешение не более 1200 x 630 px, размером не более 1 Гб</p>
+    </div>
+    <div class="col-sm-8" >
+      <form id="zdrop2" class="fileuploader center-align col-sm-8">
+        <div class="upload-label" style="width: 200px;">
+          <i class="fotoIc material-icons">camera_alt</i>
+        </div>
+        <p class="hint"> Вы можете перетащить фото сюда</p>
+        <p class="hint"> или</p>
+        <div class="col text-center">
+          <input type="button" class="btn btn-white col-sm-6 form-control" value="ВЫБЕРИТЕ ФАЙЛ">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="row d-flex  flex-wrap mt-4">
+    <div class="col-sm-4" style="background-color:white;"><b>Видео:</b>
+      <p class="text-grey mt-2">(Поддерживается видео в форматах AVI, MP4, MPEG, MOV, MKV), разрешение не более 1080 px, размером не более 1 Гб</p>
+    </div>
+    <div class="col-sm-8" >
+      <form id="zdrop-3" class="fileuploader center-align col-sm-8">
+        <div class="upload-label" style="width: 200px;">
+          <i class="fotoIc material-icons">videocam</i>
+        </div>
+        <p class="hint"> Вы можете перетащить видео сюда</p>
+        <p class="hint"> или</p>
+        <div class="col text-center">
+          <input type="button" class="btn btn-white col-sm-6 form-control" value="ВЫБЕРИТЕ ФАЙЛ">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row d-flex  flex-wrap mt-5">
+    <div class="col-sm-4" style="background-color:white;"><b>Картографическая информация марштуие:</b><p></p></div>
+    <div class="col-sm-8" >
+      <iframe class="ya-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A2e51b69f58beae86577ba7a4bb2759e72438b7302a2b81d035ee9c55d9cd573e&amp;source=constructor" frameborder="0"></iframe>
+    </div>
+  </div>
+</div>
 

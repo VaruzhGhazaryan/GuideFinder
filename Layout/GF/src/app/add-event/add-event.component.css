@@ -122,6 +122,7 @@
   position: absolute;
   right: 21px;
   top: 9px;
+  z-index: 5;
 }
 
 .grey-line {
@@ -138,6 +139,57 @@
   content: '\20BD';
   margin-left: 3px;
   color: #0d0d0d;
+}
+
+/*file uploader*/
+.fileuploader {
+  position: relative;
+  height: 300px;
+  border: 4px dashed #ddd;
+  background: #f6f6f6;
+  padding: 40px;
+}
+.fileuploader .upload-label{
+  background: rgba(231, 97, 92, 0);
+  color: #fff;
+  cursor: pointer;
+  margin: auto;
+  text-align: center;
+}
+.fileuploader.active{
+  background: #fff;
+}
+.fileuploader.active .upload-label{
+  background: #fff;
+  color: #e7615c;
+}
+.foto {
+  background-color: #8b8b8b;
+  height: 300px;
+  border-style: dashed;
+}
+
+.fotoIc {
+  font-size: 60px;
+  color: #d0d0d0;
+}
+.hint {
+  text-align: center;
+  color: #949494;
+  font-weight: bold;
+}
+.btn-white{
+  background-color: white;
+}
+
+.uploadFail {
+  padding: 10px;
+  text-align: center;
+  margin: auto;
+  height: 50px;
+  width: 200px;
+  background-color: white;
+  border: solid 1px grey;
 }
 
 /* ==== Accessibility ===== */
@@ -251,32 +303,6 @@ i {
   color: #3fb8af;
 }
 
-.foto {
-  background-color: #8b8b8b;
-  height: 300px;
-  border-style: dashed;
-}
-
-.fotoIc {
-  margin-left: 40%;
-  font-size: 50px;
-  color: black;
-}
-
-.hint {
-  text-align: center;
-}
-
-.uploadFail {
-  padding: 10px;
-  text-align: center;
-  margin: auto;
-  height: 50px;
-  width: 200px;
-  background-color: white;
-  border: solid 1px grey;
-}
-
 .add-ev .form-group {
   margin-bottom: 0;
 }
@@ -284,4 +310,14 @@ i {
 .add-ev input[type=text],
 .add-ev input[type=textarea] {
   padding: 10px;
+}
+.ya-map{
+  width: 100%;
+  height: 350px;
+}
+@media (max-width: 576px) {
+  .toggle-group {
+    margin: 0;
+    margin-top: 10px;
+  }
 }

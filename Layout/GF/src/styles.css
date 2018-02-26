@@ -21,7 +21,9 @@ h2 {
     font-weight: bold;
     position: relative;
 }
-
+.text-grey{
+  color: #8b8b8b;
+}
 .logo path {
     fill: #EF7C8A;
 }
