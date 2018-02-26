@@ -29,6 +29,7 @@ b {
 
 h1{
   margin-bottom: 30px;
+  font-size: 35px;
 }
 .text-center{
   height: 50px;
@@ -40,7 +41,7 @@ h1{
 }
 
 .fotoIc {
-  margin-left: 40%;
+  margin-left: 0%;
   font-size: 50px;
   color: darkgrey;
 }
@@ -74,4 +75,357 @@ h1{
   padding-right: 20px;
   padding-bottom:10px;
   padding-left: 20px;
+}
+.onoffswitch {
+  position: relative;
+  width: 80px;
+  display: inline-block;
+  font-size: 80%;
+}
+
+.onoffswitch .onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #bdbdbd;
+  border-radius: 41px;
+  margin: 0;
+}
+
+.onoffswitch .onoffswitch-inner {
+  width: 200%;
+  margin-left: -100%;
+  -webkit-transition: margin 0.15s ease-in-out;
+  -o-transition: margin 0.15s ease-in-out;
+  -moz-transition: margin 0.15s ease-in-out;
+  transition: margin 0.15s ease-in-out;
+}
+
+.onoffswitch .onoffswitch-inner:before,
+.onoffswitch .onoffswitch-inner:after {
+  float: left;
+  width: 50%;
+  height: 37px;
+  padding: 0;
+  line-height: 38px;
+  font-size: 100%;
+  color: #ffffff;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+.onoffswitch .onoffswitch-inner:before {
+  content: "Да";
+  padding-left: 20px;
+  background-color: #ffffff;
+  color: #53bcb2;
+}
+
+.onoffswitch .onoffswitch-inner:after {
+  content: "Нет";
+  padding-right: 15px;
+  background-color: #fafafa;
+  color: #b9b9b9;
+  text-align: right;
+}
+
+.onoffswitch .onoffswitch-switch {
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  background: #bdbdbd;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  bottom: 0;
+  right: 44px;
+  -webkit-transition: right 0.15s ease-in-out;
+  -o-transition: right 0.15s ease-in-out;
+  -moz-transition: right 0.15s ease-in-out;
+  transition: right 0.15s ease-in-out;
+}
+
+.toggle-group {
+  position: relative;
+  height: 37px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  top: 50%;
+  left: 0px;
+  margin-top: -13.5px;
+}
+
+.toggle-group input[type=checkbox] {
+  display: none;
+}
+
+.toggle-group input[type=checkbox]:checked ~ .onoffswitch .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+
+.toggle-group input[type=checkbox]:checked ~ .onoffswitch .onoffswitch-label .onoffswitch-switch {
+  right: 4px;
+  background-color: #53bcb2;
+}
+
+.toggle-group input[type=checkbox]:checked ~ .onoffswitch .onoffswitch-label {
+  border-color: #53bcb2;
+}
+
+.toggle-group input[type=checkbox]:focus ~ .onoffswitch {
+  outline: thin dotted #333;
+  outline: 0;
+}
+
+.toggle-group label {
+  position: absolute;
+  cursor: pointer;
+  padding-left: 65px;
+  display: inline-block;
+  text-align: left;
+  line-height: 24px;
+  width: 100%;
+  z-index: 1;
+  height: 38px;
+  font-weight: 200;
+}
+
+.select-caret:before {
+  content: 'keyboard_arrow_down';
+  font-family: "Material Icons";
+  width: 12px;
+  height: 15px;
+  background-color: #ffffff;
+  display: block;
+  position: absolute;
+  right: 21px;
+  top: 9px;
+  z-index: 5;
+}
+
+.grey-line {
+  background-color: #ececec;
+  margin-bottom: 0.5rem;
+  padding: 15px;
+}
+
+.ruble {
+  color: #0d0d0d;
+}
+
+.ruble:after {
+  content: '\20BD';
+  margin-left: 3px;
+  color: #0d0d0d;
+}
+
+/*file uploader*/
+.fileuploader {
+  position: relative;
+  height: 300px;
+  border: 4px dashed #ddd;
+  background: #f6f6f6;
+  padding: 40px;
+}
+.fileuploader .upload-label{
+  background: rgba(231, 97, 92, 0);
+  color: #fff;
+  cursor: pointer;
+  margin: auto;
+  text-align: center;
+}
+.fileuploader.active{
+  background: #fff;
+}
+.fileuploader.active .upload-label{
+  background: #fff;
+  color: #e7615c;
+}
+.foto {
+  background-color: #8b8b8b;
+  height: 300px;
+  border-style: dashed;
+}
+
+.fotoIc {
+  font-size: 60px;
+  color: #d0d0d0;
+}
+.hint {
+  text-align: center;
+  color: #949494;
+  font-weight: bold;
+}
+.btn-white{
+  background-color: white;
+  height: 60px;
+}
+
+.uploadFail {
+  padding: 10px;
+  text-align: center;
+  margin: auto;
+  height: 50px;
+  width: 200px;
+  background-color: white;
+  border: solid 1px grey;
+}
+
+/* ==== Accessibility ===== */
+.aural {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+.aural:focus {
+  clip: rect(0, 0, 0, 0);
+  font-size: 1em;
+  height: auto;
+  outline: thin dotted;
+  position: static !important;
+  width: auto;
+  overflow: visible;
+}
+.add-attr:hover .plusIcon{
+  transform: rotate(90deg);
+  transition: all 0.2s ease;
+}
+.add-attr u {
+  color: #53bcb2 !important;
+}
+.plusIcon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-size: 100%;
+  z-index: 555;
+  float: none;
+  transform: rotate(0deg);
+  transition: all 0.2s ease;
+  background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUyIDUyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MiA1MjsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIxMjhweCIgaGVpZ2h0PSIxMjhweCI+CjxnPgoJPHBhdGggZD0iTTI2LDBDMTEuNjY0LDAsMCwxMS42NjMsMCwyNnMxMS42NjQsMjYsMjYsMjZzMjYtMTEuNjYzLDI2LTI2UzQwLjMzNiwwLDI2LDB6IE0yNiw1MEMxMi43NjcsNTAsMiwzOS4yMzMsMiwyNiAgIFMxMi43NjcsMiwyNiwyczI0LDEwLjc2NywyNCwyNFMzOS4yMzMsNTAsMjYsNTB6IiBmaWxsPSIjNTNiY2IyIi8+Cgk8cGF0aCBkPSJNMzguNSwyNUgyN1YxNGMwLTAuNTUzLTAuNDQ4LTEtMS0xcy0xLDAuNDQ3LTEsMXYxMUgxMy41Yy0wLjU1MiwwLTEsMC40NDctMSwxczAuNDQ4LDEsMSwxSDI1djEyYzAsMC41NTMsMC40NDgsMSwxLDEgICBzMS0wLjQ0NywxLTFWMjdoMTEuNWMwLjU1MiwwLDEtMC40NDcsMS0xUzM5LjA1MiwyNSwzOC41LDI1eiIgZmlsbD0iIzUzYmNiMiIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
+}
+
+.tags {
+  margin-left: 3px;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+
+.edit {
+  margin-top: 5px;
+  background-color: #bdbdbd;
+  height: 25px
+}
+
+i {
+  margin-top: 3px;
+  text-align: left;
+}
+
+.editTaitle {
+
+  font-size: 15px;
+  margin-top: 5px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.icons {
+  left: 150px;
+  background-color: #0a5c54;
+  position: absolute;
+  font-size: 20px;
+  text-align: left;
+}
+
+.ic {
+  width: 25px;
+  height: 25px;
+  padding-top: 5px;
+  paclosedding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  font-size: 13px;
+  background-color: white;
+  border-radius: 100%;
+  border: 1px solid #3fb8af;
+  color: #3fb8af;
+}
+
+.close {
+  font-size: 25px;
+  color: darkgrey;
+}
+
+.padding {
+  margin-top: 20px;
+}
+
+.grey {
+  background-color: #8b8b8b;
+  margin-top: 4px;
+}
+
+.pluse {
+  color: #3fb8af;
+  font-size: 40px;
+}
+
+.pluselink {
+  color: #3fb8af;
+}
+
+.add-ev .form-group {
+  margin-bottom: 0;
+}
+
+.add-ev input[type=text],
+.add-ev input[type=textarea] {
+  padding: 10px;
+}
+.ya-map{
+  width: 100%;
+  height: 350px;
+}
+.fi{
+  color: #3fb8af;
+  font-size: 20px;
+}
+.saveFile{
+  font-size: 15px;
+  width: 300px;
+  padding: 15px;
+  margin: auto;
+  color:white;
+  background-color: #3b857e;
+  height: 50px;
+}
+.jumbotron{
+  height: 100px;
+  background-color: white;
+}
+@media (max-width: 576px) {
+   .btn-white{
+     width: 100px;
+   }
+  .toggle-group {
+    margin: 0;
+    margin-top: 10px;
+  }
+  .fotoIc {
+    margin-right: 35%;
+    font-size: 50px;
+    color: darkgrey;
+  }
+  .jumbotron{
+    height: 100px;
+    background-color: white;
+  }
 }
