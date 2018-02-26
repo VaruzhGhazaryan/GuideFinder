@@ -3,6 +3,7 @@ import {MatDialog, MatDialogRef} from "@angular/material";
 import {ListComponent} from "../list/list.component";
 import {EditComponent} from "../edit/edit.component";
 import {AddEventModalComponent} from "../add-event-modal/add-event-modal.component";
+import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
     selector: 'app-account',
@@ -10,10 +11,16 @@ import {AddEventModalComponent} from "../add-event-modal/add-event-modal.compone
     styleUrls: ['./account.component.css', '../app-home-content/app-home-content.component.css']
 })
 export class AccountComponent {
-
     login = true;
-
-    events = [
+    calendar = [
+      {events: [3, 5, 18], year: 1018, month: 2},
+      {events: [5, 24, 25], year: 1018, month: 3},
+      {events: [13, 16, 18], year: 1018, month: 4},
+      {events: [10, 12, 14], year: 1018, month: 5},
+      {events: [5, 10, 15], year: 1018, month: 6},
+    ];
+    model: NgbDateStruct;
+  events = [
         {
             h2: 'Мои Мероприятия',
             href: '#!',
@@ -214,15 +221,14 @@ export class AccountComponent {
     };
 
     option_cal = {
-        slideBy: 2,
+        slideBy: 1,
         dots: false,
         nav: true,
         navText: ['', ''],
         responsive: {
-            '320': {items: 2},
-            '768': {items: 2},
-            '1200': {items: 3},
-            '1700': {items: 4},
+            '320': {items: 1},
+            '992': {items: 2},
+            '1440': {items: 3}
         }
     };
 

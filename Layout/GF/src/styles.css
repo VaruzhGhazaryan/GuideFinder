@@ -566,6 +566,13 @@ a:hover {
 .filter-page-item .owl-next {
     top: calc(50% - 30px) !important;
 }
+.carousel-end .owl-prev,
+.carousel-end .owl-next {
+  top: calc(50% - 60px) !important;
+}
+.bdr-0{
+  border-radius: 0;
+}
 
 .filter-page-item .owl-theme .owl-nav [class*='owl-'] {
     margin: 5px 3px;
@@ -596,22 +603,55 @@ a:hover {
 /*.ngb-dp-day, .ngb-dp-weekday, .ngb-dp-week-number {*/
     /*width: 4rem !important;*/
 /*}*/
-
-.ngb-dp-day {
+.carousel .ngb-dp-day {
     background: #f8f9fa;
+    width: 3rem !important;
+    height: 3rem !important;
+    margin: 4px;
 }
-
-ngb-datepicker {
+.carousel .ngb-dp-day .btn-light {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0 !important;
+  background-color: #fff;
+  line-height: 3;
+}
+.carousel div[ng-reflect-selected=true]{
+  background-color: #3fb8af !important;
+}
+.carousel ngb-datepicker {
     border: none !important;
 }
-
-.ngb-dp-weekdays {
-    border: none !important;
-
+.cal-carousel div.owl-prev,
+.cal-carousel div.owl-next{
+  top: calc(50% - 30px) !important;
 }
-
-.ngb-dp-weekday {
+.carousel .ngb-dp-weekdays,
+.carousel .ngb-dp-week{
+    border: none !important;
+  -webkit-box-pack: justify!important;
+  -ms-flex-pack: justify!important;
+  justify-content: center!important;
+}
+.carousel .ngb-dp-month-name {
+  line-height: 2.5rem !important;
+  font-weight: bold;
+}
+.carousel .ngb-dp-weekday {
     color: #7f7f7f !important;
+    width: 3.5rem !important;
+}
+.owl-acc-car .sliding{
+  margin-left: 0;
+  margin-right: 0;
+}
+.carousel ngb-datepicker-month-view {
+  background-color: #f8f9fa;
+}
+
+.carousel .ngb-dp-month:first-child .ngb-dp-week,
+.carousel .ngb-dp-month:last-child .ngb-dp-week{
+  padding: 0 2em !important;
 }
 
 .font-italic {
@@ -625,22 +665,10 @@ ngb-datepicker {
 .bg-primary {
     background-color: #53bcb2 !important;
 }
-.ngb-dp-month:first-child .ngb-dp-week,
-.ngb-dp-month:last-child .ngb-dp-week{
-  padding: 0px !important;
-}
+
 .ngcal,
 .ngcal .ngb-dp-months{
   display: block !important;
-}
-
-.btn-light {
-  width: 3rem;
-  height: 3rem;
-
-    border-radius: 0 !important;
-    margin: 4px;
-    background-color: #fff !important;
 }
 
 .btn-light:hover, .btn-light:after {
@@ -652,9 +680,7 @@ ngb-datepicker {
 .outside {
     opacity: 0 !important;
 }
-div[ng-reflect-selected=true]{
-  background-color: #3fb8af !important;
-}
+
 
 /*Large devices (desktops, 992px and up)*/
 @media (max-width: 992px) {

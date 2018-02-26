@@ -3,7 +3,7 @@
 
 }
 .card{
-  margin-top: 10px;
+  border-radius: 0px;
 }
 .profilImg,img {
 
@@ -70,9 +70,14 @@ h1{
 .titleButton{
   height: 20px;
   font-size: 10px;
-  background-color: #7f7f7f;
+  background-color: #dfdfdf;
   padding-top: 10px;
   padding-right: 20px;
   padding-bottom:10px;
   padding-left: 20px;
+}
+@media (max-width: 992px) {
+  .prof {
+    font-size: 12px;
+  }
 }
