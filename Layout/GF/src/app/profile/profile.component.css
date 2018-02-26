@@ -68,16 +68,24 @@ h1{
   padding-left: 5px;
 }
 .titleButton{
-  height: 20px;
-  font-size: 10px;
+  font-size: 12px;
   background-color: #dfdfdf;
-  padding-top: 10px;
-  padding-right: 20px;
-  padding-bottom:10px;
-  padding-left: 20px;
+  padding: 15px;
 }
 @media (max-width: 992px) {
   .prof {
     font-size: 12px;
   }
+}
+
+@media only screen and (max-width: 500px) {
+  h2 {
+    font-size: 21px;
+  }
+
+  .titleButton{
+    font-size: 10px;
+    padding: 8px;
+  }
+
 }
