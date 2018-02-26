@@ -106,6 +106,22 @@ label {
   background-color: #3b857e !important;
 }
 
+.account {
+  color: #53bcb2;
+  text-decoration: underline;
+  vertical-align: middle;
+}
+
+.account span {
+  display: inline-block;
+  margin-top: -37px;
+}
+
+.account i {
+  font-size: 45px;
+  margin-top: -11px;
+}
+
 @media (max-width: 1000px) {
   .custom-toggler .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(83,188,178)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");

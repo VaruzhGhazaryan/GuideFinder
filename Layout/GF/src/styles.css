@@ -593,9 +593,9 @@ a:hover {
 }
 
 /*cal items*/
-.ngb-dp-day, .ngb-dp-weekday, .ngb-dp-week-number {
-    width: 4rem !important;
-}
+/*.ngb-dp-day, .ngb-dp-weekday, .ngb-dp-week-number {*/
+    /*width: 4rem !important;*/
+/*}*/
 
 .ngb-dp-day {
     background: #f8f9fa;
@@ -625,10 +625,19 @@ ngb-datepicker {
 .bg-primary {
     background-color: #53bcb2 !important;
 }
-
+.ngb-dp-month:first-child .ngb-dp-week,
+.ngb-dp-month:last-child .ngb-dp-week{
+  padding: 0px !important;
+}
+.ngcal,
+.ngcal .ngb-dp-months{
+  display: block !important;
+}
 
 .btn-light {
-    width: 3rem !important;
+  width: 3rem;
+  height: 3rem;
+
     border-radius: 0 !important;
     margin: 4px;
     background-color: #fff !important;
@@ -642,6 +651,9 @@ ngb-datepicker {
 
 .outside {
     opacity: 0 !important;
+}
+div[ng-reflect-selected=true]{
+  background-color: #3fb8af !important;
 }
 
 /*Large devices (desktops, 992px and up)*/

@@ -102,7 +102,8 @@
                               [carouselClasses]="['owl-theme', 'row', 'sliding']">
                     <div class="item slide" *ngFor="let slide of cal_event.slide;">
 
-                        <ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next"></ngb-datepicker>
+                      <ngb-datepicker class="ngcal" [displayMonths]="displayMonths" [navigation]="navigation" [showWeekNumbers]="showWeekNumbers">
+                      </ngb-datepicker>
                     </div>
                 </owl-carousel>
             </div>
