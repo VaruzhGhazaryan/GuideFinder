@@ -26,6 +26,13 @@ export class AppComponent {
                     this.show = false;
                 }
             }
+            if (event instanceof NavigationStart) {
+                console.log(event);
+                if (event.url == '/account') {
+                    this.login = true;
+                    console.log("account");
+                }
+            }
         });
     }
 }

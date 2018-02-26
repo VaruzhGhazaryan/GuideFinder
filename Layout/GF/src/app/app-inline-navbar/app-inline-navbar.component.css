@@ -119,6 +119,7 @@ label {
     color: rgb(244, 125, 137) !important;
 }
 
+
 .account img{
     margin-right: 5px;
     margin-top: -6px;
@@ -135,6 +136,7 @@ label {
     top: 23px;
     color: #53bcb2;
 }
+
 
 
 @media (max-width: 1000px) {
