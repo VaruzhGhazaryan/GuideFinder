@@ -63,13 +63,13 @@ figure.item.item-event figcaption{
 }
 
 
-@media (min-width: 992px){
+@media (max-width: 1200px){
     .white {
-        font-size: 15px;
+        font-size: 13px;
     }
 
     .slide-title{
-        font-size: 15px;
+        font-size: 13px;
     }
 }
 
@@ -89,7 +89,7 @@ figure.item.item-event figcaption{
 
 @media only screen and (max-width: 500px) {
     .white {
-        font-size: 15px;
+        font-size: 12px;
     }
     .slide-title{
         font-size: 15px;

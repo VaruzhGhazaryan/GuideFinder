@@ -9,12 +9,12 @@ h4 {
 
 label {
     position: absolute;
-    padding: 40px 34px;
-    margin-left: -15px;
+    padding: 25px;
+    margin-top: -58px;
+    margin-left: -10px;
     color: #bdbdbd;
     z-index: 53 !important;
 }
-
 .input-group {
     float: left;
     padding: 0;
@@ -67,6 +67,14 @@ input:focus + label i {
     color: #000;
     background-color: transparent;
     border-color: #ded9d9;
+}
+
+
+
+@media (min-width: 1000px) {
+    .lg-r{
+        margin-right: -39px !important;
+    }
 }
 
 @media (max-width: 820px) {
