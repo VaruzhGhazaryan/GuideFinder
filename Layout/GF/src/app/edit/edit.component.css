@@ -53,11 +53,14 @@ input:focus + label i {
 }
 
 
+.edit-modal {
+  position: relative;
+}
 .edit-modal .close {
-    margin-top: -60px;
-    right: 24%;
-    outline: none;
-    position: absolute;
+  margin-top: -55px;
+  right: -55px;
+  outline: none;
+  position: absolute;
 }
 
 .edit-modal .close:before {
@@ -108,19 +111,24 @@ input:focus + label i {
         font-size: 12px;
         margin: 0 5px;
     }
-
-    .edit-modal .close {
-        margin-top: -10px;
-        margin-right: -5px;
-    }
-    .edit-modal .close:before{
-        width: 18px;
-        height: 18px;
-    }
     .p-0-xs {
         padding: 0 !important;
     }
     .text-center-xs {
         text-align: center !important;
     }
+}
+@media (max-width: 767px){
+  .edit-modal .close {
+    margin-top: -30px;
+    right: -30px;
+    outline: none;
+    position: absolute;
+  }
+
+  .table thead th,
+  .table tbody tr td {
+    padding-right: 5px !important;
+    font-size: 10px !important;
+  }
 }

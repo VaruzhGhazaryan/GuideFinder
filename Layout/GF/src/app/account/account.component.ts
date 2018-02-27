@@ -1,8 +1,8 @@
-import {Component} from "@angular/core";
-import {MatDialog, MatDialogRef} from "@angular/material";
-import {ListComponent} from "../list/list.component";
-import {EditComponent} from "../edit/edit.component";
-import {AddEventModalComponent} from "../add-event-modal/add-event-modal.component";
+import {Component} from '@angular/core';
+import {MatDialog, MatDialogRef} from '@angular/material';
+import {ListComponent} from '../list/list.component';
+import {EditComponent} from '../edit/edit.component';
+import {AddEventModalComponent} from '../add-event-modal/add-event-modal.component';
 import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -25,61 +25,61 @@ export class AccountComponent {
             h2: 'Мои Мероприятия',
             href: '#!',
             slide: [{
-                img: "./assets/img/image.jpg",
-                url: "#!",
-                title: "Золотое Кольцо",
-                price_for_one: "1500",
-                price_for_group: "5000",
-                price_for_team: "1000",
+                img: './assets/img/image.jpg',
+                url: '#!',
+                title: 'Золотое Кольцо',
+                price_for_one: '1500',
+                price_for_group: '5000',
+                price_for_team: '1000',
 
 
             },
                 {
-                    img: "./assets/img/image.jpg",
-                    url: "#!",
-                    title: "Экскурсия по Москве",
-                    price_for_one: "1500",
-                    price_for_group: "5000",
-                    price_for_team: "1000",
+                    img: './assets/img/image.jpg',
+                    url: '#!',
+                    title: 'Экскурсия по Москве',
+                    price_for_one: '1500',
+                    price_for_group: '5000',
+                    price_for_team: '1000',
 
 
                 },
                 {
-                    img: "./assets/img/image.jpg",
-                    url: "#!",
-                    title: "Обзорная автобусная + \r\n пешеходная к Мавзолею",
-                    price_for_one: "1500",
-                    price_for_group: "5000", price_for_team: "1000",
+                    img: './assets/img/image.jpg',
+                    url: '#!',
+                    title: 'Обзорная автобусная + \r\n пешеходная к Мавзолею',
+                    price_for_one: '1500',
+                    price_for_group: '5000', price_for_team: '1000',
 
 
                 },
                 {
-                    img: "./assets/img/image.jpg",
-                    url: "#!",
-                    title: "Огни большого города",
-                    price_for_one: "1500",
-                    price_for_group: "5000",
-                    price_for_team: "1000",
+                    img: './assets/img/image.jpg',
+                    url: '#!',
+                    title: 'Огни большого города',
+                    price_for_one: '1500',
+                    price_for_group: '5000',
+                    price_for_team: '1000',
 
 
                 },
                 {
-                    img: "./assets/img/image.jpg",
-                    url: "#!",
-                    title: "Киностудия Мосфильм",
-                    price_for_one: "1500",
-                    price_for_group: "5000",
-                    price_for_team: "1000",
+                    img: './assets/img/image.jpg',
+                    url: '#!',
+                    title: 'Киностудия Мосфильм',
+                    price_for_one: '1500',
+                    price_for_group: '5000',
+                    price_for_team: '1000',
 
 
                 },
                 {
-                    img: "./assets/img/image.jpg",
-                    url: "#!",
-                    title: "Киностудия Мосфильм",
-                    price_for_one: "1500",
-                    price_for_group: "5000",
-                    price_for_team: "1000",
+                    img: './assets/img/image.jpg',
+                    url: '#!',
+                    title: 'Киностудия Мосфильм',
+                    price_for_one: '1500',
+                    price_for_group: '5000',
+                    price_for_team: '1000',
 
 
                 }
@@ -94,62 +94,62 @@ export class AccountComponent {
             h2: 'Календарь Мероприятия',
             href: '#!',
             slide: [{
-                img: "./assets/img/image.jpg",
-                url: "#!",
-                title: "Золотое Кольцо",
-                price_for_one: "1500",
-                price_for_group: "5000",
-                price_for_team: "1000",
+                img: './assets/img/image.jpg',
+                url: '#!',
+                title: 'Золотое Кольцо',
+                price_for_one: '1500',
+                price_for_group: '5000',
+                price_for_team: '1000',
 
 
             },
                 {
-                    img: "./assets/img/image.jpg",
-                    url: "#!",
-                    title: "Экскурсия по Москве",
-                    price_for_one: "1500",
-                    price_for_group: "5000",
-                    price_for_team: "1000",
+                    img: './assets/img/image.jpg',
+                    url: '#!',
+                    title: 'Экскурсия по Москве',
+                    price_for_one: '1500',
+                    price_for_group: '5000',
+                    price_for_team: '1000',
 
 
                 },
                 {
-                    img: "./assets/img/image.jpg",
-                    url: "#!",
-                    title: "Обзорная автобусная + \r\n пешеходная к Мавзолею",
-                    price_for_one: "1500",
-                    price_for_group: "5000",
-                    price_for_team: "1000",
+                    img: './assets/img/image.jpg',
+                    url: '#!',
+                    title: 'Обзорная автобусная + \r\n пешеходная к Мавзолею',
+                    price_for_one: '1500',
+                    price_for_group: '5000',
+                    price_for_team: '1000',
 
 
                 },
                 {
-                    img: "./assets/img/image.jpg",
-                    url: "#!",
-                    title: "Огни большого города",
-                    price_for_one: "1500",
-                    price_for_group: "5000",
-                    price_for_team: "1000",
+                    img: './assets/img/image.jpg',
+                    url: '#!',
+                    title: 'Огни большого города',
+                    price_for_one: '1500',
+                    price_for_group: '5000',
+                    price_for_team: '1000',
 
 
                 },
                 {
-                    img: "./assets/img/image.jpg",
-                    url: "#!",
-                    title: "Киностудия Мосфильм",
-                    price_for_one: "1500",
-                    price_for_group: "5000",
-                    price_for_team: "1000",
+                    img: './assets/img/image.jpg',
+                    url: '#!',
+                    title: 'Киностудия Мосфильм',
+                    price_for_one: '1500',
+                    price_for_group: '5000',
+                    price_for_team: '1000',
 
 
                 },
                 {
-                    img: "./assets/img/image.jpg",
-                    url: "#!",
-                    title: "Киностудия Мосфильм",
-                    price_for_one: "1500",
-                    price_for_group: "5000",
-                    price_for_team: "1000",
+                    img: './assets/img/image.jpg',
+                    url: '#!',
+                    title: 'Киностудия Мосфильм',
+                    price_for_one: '1500',
+                    price_for_group: '5000',
+                    price_for_team: '1000',
 
 
                 }
@@ -163,46 +163,46 @@ export class AccountComponent {
             h2: 'Прошедшие Мероприятия',
             href: '#!',
             slide: [{
-                img: "./assets/img/image.jpg",
-                url: "#!",
-                title: "Золотое Кольцо",
-                price: "12 500",
-                date: "18 февраля 2018, 16:00",
+                img: './assets/img/image.jpg',
+                url: '#!',
+                title: 'Золотое Кольцо',
+                price: '12 500',
+                date: '18 февраля 2018, 16:00',
             },
                 {
-                    img: "./assets/img/image.jpg",
-                    url: "#!",
-                    title: "Экскурсия по Москве",
-                    price: "15 500",
-                    date: "16 февраля 2018, 16:00",
+                    img: './assets/img/image.jpg',
+                    url: '#!',
+                    title: 'Экскурсия по Москве',
+                    price: '15 500',
+                    date: '16 февраля 2018, 16:00',
                 },
                 {
-                    img: "./assets/img/image.jpg",
-                    url: "#!",
-                    title: "Обзорная автобусная + \r\n пешеходная к Мавзолею",
-                    price: "5 800",
-                    date: "18 2018, 08: 00",
+                    img: './assets/img/image.jpg',
+                    url: '#!',
+                    title: 'Обзорная автобусная + \r\n пешеходная к Мавзолею',
+                    price: '5 800',
+                    date: '18 2018, 08: 00',
                 },
                 {
-                    img: "./assets/img/image.jpg",
-                    url: "#!",
-                    title: "Огни большого города",
-                    price: "55 500",
-                    date: "12 февраля 2018, 16:00",
+                    img: './assets/img/image.jpg',
+                    url: '#!',
+                    title: 'Огни большого города',
+                    price: '55 500',
+                    date: '12 февраля 2018, 16:00',
                 },
                 {
-                    img: "./assets/img/image.jpg",
-                    url: "#!",
-                    title: "Киностудия Мосфильм",
-                    price: "22 600",
-                    date: "08 февраля 2018, 16:00",
+                    img: './assets/img/image.jpg',
+                    url: '#!',
+                    title: 'Киностудия Мосфильм',
+                    price: '22 600',
+                    date: '08 февраля 2018, 16:00',
                 },
                 {
-                    img: "./assets/img/image.jpg",
-                    url: "#!",
-                    title: "Киностудия Мосфильм",
-                    price: "12 500",
-                    date: "05 февраля 2018, 17:00",
+                    img: './assets/img/image.jpg',
+                    url: '#!',
+                    title: 'Киностудия Мосфильм',
+                    price: '12 500',
+                    date: '05 февраля 2018, 17:00',
                 }
             ]
         }

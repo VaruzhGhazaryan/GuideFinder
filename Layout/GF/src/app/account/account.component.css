@@ -73,14 +73,18 @@ figure.item.item-event figcaption{
     }
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 767px) {
     .white {
         font-size: 15px;
     }
     .slide-title{
         font-size: 15px;
     }
-
+    figcaption button {
+      box-sizing: padding-box;
+      transition: all 0.2s ease-out;
+      font-size: 10px;
+    }
 }
 
 @media only screen and (max-width: 500px) {

@@ -34,10 +34,12 @@ table {
 .delete:hover {
     color: #EF7C8A;
 }
-
+.edit-modal {
+  position: relative;
+}
 .edit-modal .close {
-    margin-top: -60px;
-    right: 25%;
+    margin-top: -55px;
+    right: -55px;
     outline: none;
     position: absolute;
 }
@@ -57,9 +59,17 @@ table {
 
 
 
-@media (min-width: 1200px){
-    .edit-modal.close{
-        right: 7% !important;
-    }
+@media (max-width: 767px){
+  .edit-modal .close {
+    margin-top: -30px;
+    right: -30px;
+    outline: none;
+    position: absolute;
+  }
+  .table thead th,
+  .table tbody tr td {
+    padding-right: 5px !important;
+    font-size: 10px !important;
+  }
 }
 
