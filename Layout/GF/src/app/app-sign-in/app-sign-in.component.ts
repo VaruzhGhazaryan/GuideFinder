@@ -10,9 +10,9 @@ import { MatDialog, MatDialogRef } from '@angular/material';
 export class AppSignInComponent implements OnInit {
   //noinspection JSAnnotator
   constructor(private fb: FormBuilder,
-    private elementRef: ElementRef,
-    private dialog: MatDialog,
-    private dialogRef: MatDialogRef<AppSignInComponent>) {
+              private elementRef: ElementRef,
+              private dialog: MatDialog,
+              private dialogRef: MatDialogRef<AppSignInComponent>) {
     this.loginForm = fb.group({
       email: ['', [AppSignInComponent.emptyValidator]], // initial value as string
       password: ['', [AppSignInComponent.emptyValidator]]  // initial value as array

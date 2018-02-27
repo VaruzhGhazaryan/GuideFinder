@@ -1,4 +1,4 @@
-<div class="edit-modal container">
+<div class="edit-modal container" id="eee">
   <button class="close" mat-dialog-close [disabled]="false" mat-button></button>
   <div class="row text-center">
     <div class="col-lg-12">
@@ -26,10 +26,9 @@
         <span class="pull-left pb-2"><b>Дата:</b></span>
       </div>
 
-      <input type="text" class="form-control" id="inp2" placeholder="{{today | date:'dd MMMM yyyy'}}"
-             aria-describedby="basic-addon2" [displayMonths]="displayMonths" [navigation]="navigation"
-             [showWeekNumbers]="showWeekNumbers" ngbDatepicker #d="ngbDatepicker">
-      <label for="inp2"><i class="material-icons" (click)="d.toggle()">date_range</i></label>
+      <input type="text" class="form-control" id="inp" placeholder="{{today | date:'dd MMMM yyyy'}}"
+             aria-describedby="basic-addon2" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()">
+      <label for="inp"><i class="material-icons">date_range</i></label>
     </div>
 
     <div class="input-group col-lg-3 col-md-4 col-6">

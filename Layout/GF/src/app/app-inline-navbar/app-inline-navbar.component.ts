@@ -27,28 +27,20 @@ export class AppInlineNavbarComponent implements OnInit {
   constructor(private dialog: MatDialog, router: Router) { }
 
 
-    openSignInDialog() {
-      this.signInDialog = this.dialog.open(AppSignInComponent);
-    }
-    openSignUpDialog() {
-      this.signUpDialog = this.dialog.open(AppSignUpComponent);
-    }
-
-    ngOnInit() {
-      if (location.pathname === '/blog'  ||  location.pathname === '/blog-item' ||  location.pathname === '/faq') {
-        this.show = true;
-      }
-      if (location.pathname === '/guide'  ||  location.pathname === '/blog-item' ||  location.pathname === '/faq') {
-        this.show = true;
-      }
-
-      if (location.pathname === '/account') {
-        this.login = true;
-       console.log("fsdf");
-      } else {
-          this.login = false;
-      }
-    }
+  openSignInDialog() {
+    this.signInDialog = this.dialog.open(AppSignInComponent);
+  }
+  openSignUpDialog() {
+    this.signUpDialog = this.dialog.open(AppSignUpComponent);
   }
 
+  ngOnInit() {
+    if (location.pathname === '/blog'  ||  location.pathname === '/blog-item' ||  location.pathname === '/faq') {
+      this.show = true;
+    }
+    if(location.pathname === '/account') {
+      this.login = true;
+    }
 
+  }
+}

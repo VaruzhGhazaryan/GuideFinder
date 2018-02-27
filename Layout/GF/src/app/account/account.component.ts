@@ -240,7 +240,7 @@ export class AccountComponent {
     //noinspection JSAnnotator
     editDialog: MatDialogRef<EditComponent>;
     //noinspection JSAnnotator
-    eventDialog: MatDialogRef<EditComponent>;
+    addEventDialog: MatDialogRef<AddEventModalComponent>;
 
     openListDialog() {
         this.listDialog = this.dialog.open(ListComponent);
@@ -251,7 +251,7 @@ export class AccountComponent {
     }
 
     openAddDialog() {
-        this.eventDialog = this.dialog.open(AddEventModalComponent);
+        this.addEventDialog = this.dialog.open(AddEventModalComponent);
     }
 
 }

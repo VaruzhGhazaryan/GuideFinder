@@ -36,7 +36,7 @@ table {
 }
 
 .edit-modal .close {
-    margin-top: -74px;
+    margin-top: -60px;
     right: 25%;
     outline: none;
     position: absolute;
@@ -54,3 +54,12 @@ table {
 .table-striped tbody tr:nth-of-type(even) {
     background-color: #f2f2f2;
 }
+
+
+
+@media (min-width: 1200px){
+    .edit-modal.close{
+        right: 7% !important;
+    }
+}
+

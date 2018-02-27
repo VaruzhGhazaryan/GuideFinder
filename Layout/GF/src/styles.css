@@ -667,8 +667,14 @@ a:hover {
 }
 
 .ngcal,
-.ngcal .ngb-dp-months{
+.ngcal .ngb-dp-months {
   display: block !important;
+}
+.btn-light {
+    width: 3rem !important;
+    border-radius: 0 !important;
+    margin: 4px;
+    background-color: #fff !important;
 }
 
 .btn-light:hover, .btn-light:after {
@@ -681,6 +687,10 @@ a:hover {
     opacity: 0 !important;
 }
 
+
+mat-dialog-container{
+    display: inline-table !important;
+}
 
 /*Large devices (desktops, 992px and up)*/
 @media (max-width: 992px) {

@@ -8,9 +8,6 @@ import {Component, OnInit} from "@angular/core";
 export class AddEventModalComponent implements OnInit {
   today = Date.now();
 
-  displayMonths = 2;
-  navigation = 'select';
-
   events = [
     {
       h2: 'Мои Мероприятия',
