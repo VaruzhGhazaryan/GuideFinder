@@ -12,7 +12,7 @@
       </div>
       <div class="row">
         <div class=" text-center col-sm-12">
-          <button class="icon btn btn-link">  <i class="fi material-icons">camera_alt</i><b style="color: #3fb8af">Изменить фото</b></button>
+          <button class="icon btn btn-link">  <i class="fi material-icons">camera_alt</i><b style="color: #3fb8af; margin-left: 5px; vertical-align: super"><u>Изменить фото</u></b></button>
         </div>
       </div>
     </div>
@@ -64,8 +64,7 @@
           <div class="row mt-2">
             <div class="col-sm-4"><b>Пол:</b></div>
             <div class="col-sm-8">
-              <div class="form-group">
-
+              <div class="form-group select-caret">
                 <select class="form-control">
                   <option>1</option>
                   <option>2</option>
@@ -100,8 +99,7 @@
           <div class="row mt-2">
             <div class="col-sm-4"><b>Страна:</b><span style="color: red">&nbsp;*</span></div>
             <div class="col-sm-8">
-              <div class="form-group">
-
+              <div class="form-group select-caret">
                 <select class="form-control">
                   <option>1</option>
                   <option>2</option>
@@ -114,8 +112,7 @@
           <div class="row mt-2">
             <div class="col-sm-4"><b>Город:</b><span style="color: red">&nbsp;*</span></div>
             <div class="col-sm-8">
-              <div class="form-group">
-
+              <div class="form-group select-caret">
                 <select class="form-control">
                   <option>1</option>
                   <option>2</option>
@@ -144,9 +141,13 @@
           <div class="row">
             <div class="col-sm-4"><b>Языки мероприятий:</b></div>
             <div class="col-sm-8">
-              <div class="form-group">
-
-                <input type="text" class="form-control">
+              <div class="btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="model">
+                <label ngbButtonLabel class="btn btn btn-outline-bordered p-2 mb-2 mr-2 active">
+                  <input ngbButton type="radio" value="ru" [value]="1"> Русский
+                </label>
+                <label ngbButtonLabel class="btn btn btn-outline-bordered p-2 mb-2 mr-2">
+                  <input ngbButton type="radio" value="en"> Английский
+                </label>
               </div>
             </div>
           </div>
@@ -162,7 +163,7 @@
           <div class="row mt-2">
             <div class="col-sm-4"><b>Оброзвание:</b></div>
             <div class="col-sm-8">
-              <div class="form-group">
+              <div class="form-group select-caret">
                 <select class="form-control">
                   <option>1</option>
                   <option>2</option>
@@ -252,7 +253,7 @@
           <div class="row mt-2">
             <div class="col-sm-4"><b>Город выдачи:</b></div>
             <div class="col-sm-8">
-              <div class="form-group">
+              <div class="form-group select-caret">
 
                 <select class="form-control">
                   <option>1</option>

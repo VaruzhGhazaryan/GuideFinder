@@ -184,18 +184,29 @@ h1{
   height: 38px;
   font-weight: 200;
 }
-
-.select-caret:before {
-  content: 'keyboard_arrow_down';
-  font-family: "Material Icons";
-  width: 12px;
-  height: 15px;
-  background-color: #ffffff;
-  display: block;
+.date-input label {
   position: absolute;
-  right: 21px;
-  top: 9px;
-  z-index: 5;
+  padding: 40px 34px;
+  margin-left: -15px;
+  color: #bdbdbd;
+  z-index: 53 !important;
+}
+
+.date-input{
+  float: left;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  margin-left: -1px;
+}
+.date-input input {
+  padding-left: 50px;
+  font-size: 9pt;
+  font-family: "Roboto";
+  color: rgb(0, 0, 0);
+  line-height: 2.4;
+  border-radius: 0;
+  border-color: #d9d9d9;
 }
 
 .grey-line {
