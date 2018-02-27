@@ -1,9 +1,9 @@
-import {Component} from '@angular/core';
-import {MatDialog, MatDialogRef} from '@angular/material';
-import {ListComponent} from '../list/list.component';
-import {EditComponent} from '../edit/edit.component';
-import {AddEventModalComponent} from '../add-event-modal/add-event-modal.component';
-import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
+import {Component} from "@angular/core";
+import {MatDialog, MatDialogRef} from "@angular/material";
+import {ListComponent} from "../list/list.component";
+import {EditComponent} from "../edit/edit.component";
+import {AddEventModalComponent} from "../add-event-modal/add-event-modal.component";
+import {NgbDateStruct} from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
     selector: 'app-account',
