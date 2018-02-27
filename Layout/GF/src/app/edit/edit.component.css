@@ -80,7 +80,6 @@ label {
     display: block
 }
 
-
 @media (max-width: 820px) {
     .edit-modal {
         width: 453px;
