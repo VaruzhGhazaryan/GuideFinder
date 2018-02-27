@@ -2,7 +2,7 @@
   <div class="row d-flex align-items-center flex-wrap mt-4">
     <div class="col-sm-4" style="background-color:white;"><b>Язик</b><span style="color: red">&nbsp;*</span></div>
     <div class="col-sm-8" style="background-color:white;">
-      <div class="btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="model">
+      <div class="btn-group-toggle" ngbRadioGroup name="radioBasic">
         <label ngbButtonLabel class="btn btn btn-outline-bordered p-3 mr-2 active">
           <input ngbButton type="radio" value="ru" [value]="1"> Русский
         </label>
@@ -333,7 +333,7 @@
   <div class="row d-flex align-items-center flex-wrap mt-4">
     <div class="col-sm-4" style="background-color:white;"><b>Тематика:</b></div>
     <div class="col-sm-8" style="background-color:white;">
-      <div class="btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="model">
+      <div class="btn-group-toggle" ngbRadioGroup name="radioBasic">
         <label ngbButtonLabel class="btn btn btn-outline-bordered p-3 mr-2 active">
           <input ngbButton type="radio" value="tem1" [value]="1">Обзорная экскурсия
         </label>
@@ -410,7 +410,7 @@
 
         <div class="col-sm-4" style="background-color:white;"><b>Теги:</b></div>
         <div class="col-sm-8">
-          <div class="btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="model">
+          <div class="btn-group-toggle" ngbRadioGroup name="radioBasic">
             <label ngbButtonLabel class="btn btn btn-outline-bordered p-3 mr-1 mb-2 active">
               <input ngbButton type="checkbox" value="ru" > Русский
             </label>

@@ -26,7 +26,7 @@
         <span class="pull-left pb-2"><b>Дата:</b></span>
       </div>
       <input type="text" class="form-control" id="inp" placeholder="{{today | date:'dd MMMM yyyy'}}"
-             aria-describedby="basic-addon2" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()">
+             aria-describedby="basic-addon2" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()">
       <label for="inp"><i class="material-icons">date_range</i></label>
     </div>
 

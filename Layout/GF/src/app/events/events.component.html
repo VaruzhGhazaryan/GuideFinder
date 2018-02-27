@@ -3,7 +3,7 @@
   <div class="row filters mt-5">
     <div class="col-9 col-xs-12 col-xl-9 col-lg-7 col-md-7">
       <!--Тематика-->
-      <div ngbDropdown class="d-inline-block mr-2 mb-2" #filterItem="ngbDropdown" (open)="dropChange()">
+      <div ngbDropdown class="d-inline-block mr-2 mb-2" #filterItem="ngbDropdown">
         <button class="btn btn-outline-primary green" id="ftr1" ngbDropdownToggle>Тематика</button>
         <div ngbDropdownMenu aria-labelledby="ftr1" class="w-500">
           <div class="row p-2 pr-3 pl-3">
@@ -118,7 +118,7 @@
         <span>Сортировать</span>
         <div class="btn-group-toggle">
           <div ngbDropdown class="d-inline-block filterBy ml-1 mb-2-md" #filterItem="ngbDropdown">
-            <button class="btn btn-outline-primary" id="ftr9" ngbDropdownToggle openChange="dropChange()">{{ftrlBy || "По рейтингу"}}</button>
+            <button class="btn btn-outline-primary" id="ftr9" ngbDropdownToggle>{{ftrlBy || "По рейтингу"}}</button>
             <div ngbDropdownMenu aria-labelledby="ftr9" class="p-3">
               <div class="item col-12 mb-2" (click)="ftrlBy = $event.target.innerText" >По рейтингу</div>
               <div class="item col-12 mb-2" (click)="ftrlBy = $event.target.innerText" >По отзывам</div>

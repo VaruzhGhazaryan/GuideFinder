@@ -13,7 +13,7 @@ export class EventsComponent implements OnInit {
   constructor(config: NgbDropdownConfig) {
     config.autoClose = "outside";
   }
-
+  ftrlBy: any;
   priceRange = [1000000,9000000];
   filters = {
     byRate: false,
