@@ -444,6 +444,9 @@ a:hover {
     footer {
         font-size: 14px;
     }
+    footer .dropdown-menu.show:after{
+      display: none;
+    }
 
     h2 {
         font-size: 28px;
@@ -703,6 +706,9 @@ mat-dialog-container{
         -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;
         flex-direction: column !important;
+    }
+    footer .btn-group .dropdown-menu.show{
+      margin-top: 34px !important;
     }
 }
 

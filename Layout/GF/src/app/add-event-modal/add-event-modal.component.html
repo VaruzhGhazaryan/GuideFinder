@@ -20,14 +20,17 @@
     </div>
   </div>
 
-  <div class="row mt-3 ml-0">
-    <div class="input-group col-lg-8 col-md-6 col-12 mr-4">
+  <div class="row input-group">
+    <div class=" col-lg-7 col-md-12 col-12 mr-4">
       <div class="col-lg-12">
         <span class="pull-left pb-2"><b>Дата:</b></span>
       </div>
-      <input type="text" class="form-control" id="inp" placeholder="{{today | date:'dd MMMM yyyy'}}"
-             aria-describedby="basic-addon2" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()">
-      <label for="inp"><i class="material-icons">date_range</i></label>
+      <div class="col-lg-12">
+        <input type="text" class="form-control" id="inp" placeholder="{{today | date:'dd MMMM yyyy'}}"
+               aria-describedby="basic-addon2" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()">
+        <label for="inp"><i class="material-icons">date_range</i></label>
+      </div>
+
     </div>
 
     <div class="col-lg-4 col-md-12 col-sm-12 col-12">
@@ -50,14 +53,11 @@
             <option>02</option>
           </select>
         </div>
-
       </div>
     </div>
-
-
     <div class="col-lg-12 text-center">
       <button class="btn btn-success btn-blue  mt-4" type="button">Добавить</button>
     </div>
-
   </div>
 </div>
+

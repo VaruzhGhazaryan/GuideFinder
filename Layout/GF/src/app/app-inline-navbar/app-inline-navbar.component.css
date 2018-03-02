@@ -115,10 +115,38 @@ label {
     text-decoration: underline;
 }
 
-.account a:hover{
-    color: rgb(244, 125, 137) !important;
+.drop{
+  position: relative;
 }
-
+.drop:after{
+  display: none;
+}
+.drop + .dropdown-menu {
+  border-radius: 0px;
+  border: none;
+  background-color: #eeeeee;
+}
+.drop + .dropdown-menu .dropdown-item{
+  padding: .55rem 1.5rem;
+  border-left: 2px solid transparent;
+  cursor: pointer;
+  color: #000 !important;
+  text-decoration: none !important;
+}
+.drop + .dropdown-menu .dropdown-item:hover{
+  background-color: #fff;
+  border-left-color: #3fb8af;
+}
+.drop + .dropdown-menu.show:before{
+  content: '';
+  top: -14px;
+  left: 30px;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-bottom-color: #eeeeee;
+}
 
 .account img{
     margin-right: 5px;

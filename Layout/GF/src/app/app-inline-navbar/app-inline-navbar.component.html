@@ -56,10 +56,21 @@
                             </li>
 
                             <li class="nav-item account" *ngIf="login">
-                                <a routerLink="/account" class="nav-link">
-                                    <img src="../../assets/img/download.png" alt="">
-                                    Наташа Ветлицкая
+
+                              <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
+                                <a routerLink="/account" class="nav-link drop" id="dropdownManual" ngbDropdownToggle>
+                                  <img src="../../assets/img/download.png" alt="">
+                                  Наташа Ветлицкая
                                 </a>
+                                <div ngbDropdownMenu aria-labelledby="dropdownManual">
+                                  <a class="dropdown-item">Профиль</a>
+                                  <a class="dropdown-item">Карты оплаты</a>
+                                  <a class="dropdown-item">Финансы</a>
+                                  <a class="dropdown-item">Мероприятия</a>
+                                  <a class="dropdown-item">Добавление записи в блог</a>
+                                  <a class="dropdown-item">Выход</a>
+                                </div>
+                              </div>
                             </li>
                         </ul>
                     </div>
