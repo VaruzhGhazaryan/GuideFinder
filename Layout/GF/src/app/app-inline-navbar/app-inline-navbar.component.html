@@ -41,7 +41,7 @@
                 <div class="float-lg-right">
                     <div class="collapse  navbar-toggleable-md navbar-collapse text-md-left justify-content-lg-center order-md-2"
                          id="navbarNav">
-                        <ul class="navbar-nav d-inline-flex ">
+                        <ul class="navbar-nav d-inline-flex align-items-center">
                             <li class="nav-item active ">
                                 <a class="nav-link" routerLink="/blog">{{menu.blog}}</a>
                             </li>
@@ -58,7 +58,7 @@
                             <li class="nav-item account" *ngIf="login">
 
                               <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
-                                <a routerLink="/account" class="nav-link drop" id="dropdownManual" ngbDropdownToggle>
+                                <a href="javascript:void(0)" class="nav-link drop" id="dropdownManual" ngbDropdownToggle>
                                   <img src="../../assets/img/download.png" alt="">
                                   Наташа Ветлицкая
                                 </a>

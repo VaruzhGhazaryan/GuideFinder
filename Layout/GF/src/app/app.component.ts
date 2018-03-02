@@ -1,5 +1,5 @@
-import {Component} from "@angular/core";
-import {Router, NavigationStart} from "@angular/router";
+import {Component} from '@angular/core';
+import {Router, NavigationStart} from '@angular/router';
 
 declare var jquery: any;
 declare var $: any;
@@ -24,7 +24,8 @@ export class AppComponent {
                   case '' : this.show = false; break;
                   case '/' : this.show = false; break;
                   case '/home' : this.show = false; break;
-                  case '/account' : this.show = true; this.login = false; break;
+                  case '/account' : this.show = true; this.login = true; break;
+                  case '/events-view' : this.show = true; this.login = true; break;
                   default : this.show = true; this.login = false; break;
                 }
             }

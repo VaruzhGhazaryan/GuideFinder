@@ -882,7 +882,11 @@ mat-dialog-container{
         top: 20% !important;
     }
 }
-
+@media (max-width: 480px){
+  .breadcrumbs ul li{
+    font-size: 12px;
+  }
+}
 @media (max-width: 375px) {
     #notify-method .mat-form-field-infix {
         padding: 6px 10px;

@@ -10,6 +10,7 @@ import {AccountComponent} from './account/account.component';
 import {AddEventComponent} from './add-event/add-event.component';
 import {ProfileComponent} from './profile/profile.component';
 import {EditProfileComponent} from './edit-profile/edit-profile.component';
+import {EventsViewComponent} from './events-view/events-view.component';
 
 const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -22,7 +23,8 @@ const routes: Routes = [
     {path: 'account', component: AccountComponent},
     {path: 'add-event', component: AddEventComponent},
     {path: 'profile', component: ProfileComponent},
-    {path: 'edit-profile', component: EditProfileComponent}
+    {path: 'edit-profile', component: EditProfileComponent},
+    {path: 'events-view', component: EventsViewComponent}
 ];
 
 @NgModule({

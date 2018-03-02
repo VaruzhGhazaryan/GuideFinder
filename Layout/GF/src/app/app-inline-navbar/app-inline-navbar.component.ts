@@ -38,7 +38,7 @@ export class AppInlineNavbarComponent implements OnInit {
     if (location.pathname === '/blog'  ||  location.pathname === '/blog-item' ||  location.pathname === '/faq') {
       this.show = true;
     }
-    if(location.pathname === '/account') {
+    if (location.pathname === '/account' || location.pathname === '/events-view') {
       this.login = true;
     }
 

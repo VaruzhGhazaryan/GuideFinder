@@ -43,6 +43,7 @@ import { EditComponent } from './edit/edit.component';
 import { AddEventComponent } from './add-event/add-event.component';
 import { ProfileComponent } from './profile/profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { EventsViewComponent } from './events-view/events-view.component';
 
 
 // AoT requires an exported function for factories
@@ -73,7 +74,8 @@ export function createTranslateLoader(http: HttpClient) {
     AddEventComponent,
     AddEventModalComponent,
     ProfileComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    EventsViewComponent
   ],
   imports: [
     BrowserModule,
