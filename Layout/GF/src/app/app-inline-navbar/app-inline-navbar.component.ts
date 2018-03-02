@@ -12,6 +12,7 @@ import { AppSignUpComponent} from '../app-sign-up/app-sign-up.component';
 export class AppInlineNavbarComponent implements OnInit {
   show = false;
   login = false;
+  beGuide = true;
   menu = {
     'blog': 'Блог',
     'guide': 'Стать гидом',
@@ -41,6 +42,9 @@ export class AppInlineNavbarComponent implements OnInit {
     if (location.pathname === '/account' || location.pathname === '/events-view') {
       this.login = true;
     }
-
+    if (location.pathname === '/user-profile' || location.pathname === '/edit-user-profile') {
+      this.beGuide = false;
+      this.login = true;
+    }
   }
 }

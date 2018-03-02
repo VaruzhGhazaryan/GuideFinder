@@ -1,0 +1,101 @@
+<div class="container-fluid mt-1">
+  <div class="row">
+    <div class="breadcrumbs  hidden-sm-down">
+      <ul>
+        <li><a routerLink="/">Главная</a></li>
+        <li><a routerLink="/guide">Иванов Иван Иванович</a></li>
+      </ul>
+
+    </div>
+    <div class="col-md-12 mb-5">
+      <h2><span style="vertical-align: sub;">{{user.fullname}}</span></h2>
+    </div>
+  </div>
+
+
+</div>
+<div class="container">
+  <div class="row ">
+    <!--If user hava a photo-->
+    <div class="col-md-4">
+      <div class="item" *ngIf="user.photoPath || user.photoPath !=''">
+        <figure class="item">
+          <img class="w-100" src="{{ user.photoPath }}" alt="sq-sample26"/>
+          <figcaption>
+            <div class="row bottom d-flex justify-content-center">
+              <button class="col-lg-10 col-md-10 btn btn-outline-primary white">обновить фото</button>
+            </div>
+            <div class="row bottom d-flex justify-content-center">
+              <button class="col-lg-10 col-md-10 btn btn-outline-primary white" (click)="user.photoPath=''">
+                удалить фото
+              </button>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+      <!--If user hava not a photo-->
+      <div class="item" *ngIf="!user.photoPath || user.photoPath =='' ">
+        <figure class="item px-0">
+          <img class="w-100" src="{{ defaultPhotoPath }}" alt="sq-sample26"/>
+          <figcaption>
+            <i class="plusIconWhite"></i>
+            <div class="row text-center">
+              <p class="w-100"><a href="javascript:void(0);" class="position-relative text-white"><u>добавить фото</u></a></p>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+      <button class="btn col-sm-12 text-center prof mt-4 text-center bdr-0">
+        РЕДАКТИРОВАТЬ ПРОФИЛЬ
+      </button>
+    </div>
+
+    <div class="col-md-8 mt-10">
+
+      <div class="card w-100">
+        <div class="card-header "><b>Личный информация</b></div>
+        <div class="card-body">
+
+          <div class="row d-flex align-items-center flex-wrap mt-0">
+            <div class="col-sm-4"><b>Дата рождения:</b></div>
+            <div class="col-sm-8">{{user.fullname}}</div>
+          </div>
+
+          <div class="row d-flex align-items-center flex-wrap mt-4">
+            <div class="col-sm-4"><b>Пол: </b></div>
+            <div class="col-sm-8">{{user.sex}}</div>
+          </div>
+
+          <div class="row d-flex align-items-center flex-wrap mt-4">
+            <div class="col-sm-4"><b>E-mail:</b></div>
+            <div class="col-sm-8">{{user.email}}</div>
+          </div>
+
+          <div class="row d-flex align-items-center flex-wrap mt-4">
+            <div class="col-sm-4"><b>Номер телефона:</b></div>
+            <div class="col-sm-8">{{user.phone}}</div>
+          </div>
+
+          <div class="row d-flex align-items-center flex-wrap mt-4">
+            <div class="col-sm-4"><b>Валюта оплаты:</b></div>
+            <div class="col-sm-8">{{user.currency}}</div>
+          </div>
+
+          <div class="row d-flex align-items-center flex-wrap mt-4">
+            <div class="col-sm-4"><b>Место проживания:</b></div>
+            <div class="col-sm-8">{{user.address}}</div>
+          </div>
+
+          <div class="row d-flex align-items-center flex-wrap mt-4">
+            <div class="col-sm-4"><b>Социальные сети:</b></div>
+            <div class="col-sm-8">
+              <ul class="social d-inline">
+                <li *ngFor="let item of user.socials"><a href="item.url"><i class="fa fa-{{item.name}}"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -45,14 +45,14 @@
                             <li class="nav-item active ">
                                 <a class="nav-link" routerLink="/blog">{{menu.blog}}</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item" *ngIf="beGuide">
                                 <a class="nav-link" routerLink="/guide">{{menu.guide}}</a>
                             </li>
                             <li class="nav-item" *ngIf="!login">
-                                <a class="nav-link" href="javascript:void(0)" (click)="openSignInDialog()">{{menu.signin}}</a>
+                                <a class="nav-link" href="return false" (click)="openSignInDialog()">{{menu.signin}}</a>
                             </li>
                             <li class="nav-item" *ngIf="!login">
-                                <a class="nav-link" href="javascript:void(0)" (click)="openSignUpDialog()">{{menu.signup}}</a>
+                                <a class="nav-link" href="return false" (click)="openSignUpDialog()">{{menu.signup}}</a>
                             </li>
 
                             <li class="nav-item account" *ngIf="login">

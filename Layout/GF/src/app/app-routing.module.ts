@@ -11,6 +11,8 @@ import {AddEventComponent} from './add-event/add-event.component';
 import {ProfileComponent} from './profile/profile.component';
 import {EditProfileComponent} from './edit-profile/edit-profile.component';
 import {EventsViewComponent} from './events-view/events-view.component';
+import {EditUserProfileComponent} from './edit-user-profile/edit-user-profile.component';
+import {UserProfileComponent} from './user-profile/user-profile.component';
 
 const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -24,7 +26,9 @@ const routes: Routes = [
     {path: 'add-event', component: AddEventComponent},
     {path: 'profile', component: ProfileComponent},
     {path: 'edit-profile', component: EditProfileComponent},
-    {path: 'events-view', component: EventsViewComponent}
+    {path: 'events-view', component: EventsViewComponent},
+    {path: 'user-profile', component: UserProfileComponent},
+    {path: 'edit-user-profile', component: EditUserProfileComponent},
 ];
 
 @NgModule({
