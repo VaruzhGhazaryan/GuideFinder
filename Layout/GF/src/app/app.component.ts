@@ -25,6 +25,7 @@ export class AppComponent {
                   case '/' : this.show = false; break;
                   case '/home' : this.show = false; break;
                   case '/account' : this.show = true; this.login = true; break;
+                  case '/about' : this.show = true; this.login = true; break;
                   case '/events-view' : this.show = true; this.login = true; break;
                   default : this.show = true; this.login = false; break;
                 }

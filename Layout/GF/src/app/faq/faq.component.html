@@ -11,23 +11,19 @@
       <h2>ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
     </div>
     <div class="col-md-12">
-    <mat-accordion *ngFor="let info of infoObject">
-    <mat-expansion-panel>
-      <mat-expansion-panel-header (click)="info.isopen = showHideMessage(info.isopen)">
-        <p class="faq-title showhide" [ngClass]="{'mat_content_close': info.isopen}"><span>{{info.title}}</span></p>
-      </mat-expansion-panel-header>
-
-      <p class="faq-answer">{{info.description}}</p>
-
-
-    </mat-expansion-panel>
-      </mat-accordion>
+      <div class="faq-answers" *ngFor="let info of infoObject; let i = index">
+        <p>
+          <a (click)="info.isopen = showHideMessage(info.isopen)" data-toggle="collapse" href="#collapseExample-{{i}}" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <p class="faq-title showhide" [ngClass]="{'mat_content_close': info.isopen}"><span>{{info.title}}</span></p>
+          </a>
+        </p>
+        <div class="collapse" id="collapseExample-{{i}}">
+          <div class="card card-body">
+            <p class="faq-answer">{{info.description}}</p>
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
-
-
-
-
     <div class="col-sm-12 show-more">
       <button type="button" class="show-more-btn">Показать еще</button>
     </div>

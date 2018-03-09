@@ -1,3 +1,198 @@
-<p>
-  edit-user-profile works!
-</p>
+<div class="container-fluid mt-1">
+  <div class="row">
+    <div class="breadcrumbs  hidden-sm-down">
+      <ul>
+        <li><a routerLink="/">Главная</a></li>
+        <li><a routerLink="/guide">Иванов Иван Иванович</a></li>
+      </ul>
+
+    </div>
+    <div class="col-md-12 mb-5">
+      <h2><span style="vertical-align: sub;">{{user.fullname}}</span></h2>
+    </div>
+  </div>
+
+
+</div>
+<div class="container">
+  <div class="row ">
+    <!--If user hava a photo-->
+    <div class="col-md-4">
+      <div class="item" *ngIf="user.photoPath || user.photoPath !=''">
+        <img class="w-100" src="{{ user.photoPath }}" alt="sq-sample26"/>
+      </div>
+      <!--If user hava not a photo-->
+      <div class="item" *ngIf="!user.photoPath || user.photoPath =='' ">
+        <img class="w-100" src="{{ defaultPhotoPath }}" alt="sq-sample26"/>
+      </div>
+      <p class="col-sm-12 text-center mt-2 text-center">
+        <a href="javascript:void(0)"><i class="fa fa-camera" aria-hidden="true"></i>  <u>Изменить фото</u></a>
+      </p>
+    </div>
+
+    <div class="col-md-8 mt-10">
+
+      <div class="card w-100">
+        <div class="card-header "><b>Личный информация</b></div>
+        <div class="card-body">
+
+          <div class="row d-flex align-items-center flex-wrap mt-0">
+            <div class="col-sm-4" style="background-color:white;"><b>Фамилия:</b><span style="color: red">&nbsp;*</span></div>
+            <div class="col-sm-8">
+              <div class="form-group mb-0">
+                <input class="form-control">
+              </div>
+            </div>
+          </div>
+
+          <div class="row d-flex align-items-center flex-wrap mt-4">
+            <div class="col-sm-4" style="background-color:white;"><b>Имя:</b><span style="color: red">&nbsp;*</span></div>
+            <div class="col-sm-8">
+              <div class="form-group mb-0">
+                <input class="form-control">
+              </div>
+            </div>
+          </div>
+
+          <div class="row d-flex align-items-center flex-wrap mt-4">
+            <div class="col-sm-4"><b>Дата рождения:</b></div>
+            <div class="col-sm-8">
+              <div class="form-group mb-0 date-input">
+                <div class="input-group">
+                  <input type="text" class="form-control" id="inp" placeholder="{{today | date:'dd MMMM yyyy'}}"
+                         aria-describedby="basic-addon2" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()">
+                  <label for="inp"><i class="material-icons">date_range</i></label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row d-flex align-items-center flex-wrap mt-4">
+            <div class="col-sm-4" style="background-color:white;"><b>Пол:</b><span style="color: red">&nbsp;*</span></div>
+            <div class="col-sm-8">
+              <div class="form-group select-caret mb-0">
+                <select class="form-control col-md-12">
+                  <option>мужской</option>
+                  <option>женский</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="row d-flex align-items-center flex-wrap mt-4">
+            <div class="col-sm-4" style="background-color:white;"><b>Номер телефона:</b><span style="color: red">&nbsp;*</span></div>
+            <div class="col-sm-8">
+              <div class="form-group mb-0">
+                <input class="form-control">
+              </div>
+            </div>
+          </div>
+
+          <div class="row d-flex align-items-center flex-wrap mt-4">
+            <div class="col-sm-4" style="background-color:white;"><b>E-mail:</b><span style="color: red">&nbsp;*</span></div>
+            <div class="col-sm-8">
+              <div class="form-group mb-0">
+                <input class="form-control">
+              </div>
+            </div>
+          </div>
+
+          <div class="row d-flex align-items-center flex-wrap mt-4">
+            <div class="col-sm-4" style="background-color:white;"><b>Валюта оплаты:</b></div>
+            <div class="col-sm-8">
+              <div class="form-group select-caret mb-0">
+                <select class="form-control col-md-12">
+                  <option>Рубль</option>
+                  <option>Доллар</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="row d-flex align-items-center flex-wrap mt-4">
+            <div class="col-sm-4" style="background-color:white;"><b>Страница:</b><span style="color: red">&nbsp;*</span></div>
+            <div class="col-sm-8">
+              <div class="form-group select-caret mb-0">
+                <select class="form-control col-md-12">
+                  <option>Москва</option>
+                  <option>Армения</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="row d-flex align-items-center flex-wrap mt-4">
+            <div class="col-sm-4" style="background-color:white;"><b>Город:</b><span style="color: red">&nbsp;*</span></div>
+            <div class="col-sm-8">
+              <div class="form-group select-caret mb-0">
+                <select class="form-control col-md-12">
+                  <option>Москва</option>
+                  <option>Сочи</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="row d-flex align-items-top flex-wrap mt-4">
+            <div class="col-sm-4" style="background-color:white;"><b>E-mail:</b><span style="color: red">&nbsp;*</span></div>
+            <div class="col-sm-8">
+              <div class="form-group">
+                <input class="form-control social-link" value="https://www.facebook.com/">
+              </div>
+              <div class="form-group">
+                <input class="form-control social-link" value="https://www.instagram.com/">
+              </div>
+              <div class="form-group">
+                <input class="form-control social-link" value="https://ok.ru/">
+              </div>
+
+              <div class="form-group">
+                <a class="d-flex align-items-center add-attr" href="javascript:void(0)">
+                  <i class="plusIcon"></i>
+                  <u class="ml-2">Добавить еще соцсетей</u>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card w-100 mt-5">
+        <div class="card-header "><b>Способ получение уведомлений</b></div>
+        <div class="card-body">
+
+          <div class="row d-flex align-items-center flex-wrap">
+            <div class="col-sm-4" style="background-color:white;"><b>Получать уведомления:</b></div>
+            <div class="col-sm-8" style="background-color:white;">
+              <div class="toggle-group mt-1">
+                <input type="checkbox" name="on-off-switch" id="switch1" checked="" tabindex="1">
+                <label for="switch1"></label>
+                <div class="onoffswitch" aria-hidden="true">
+                  <div class="onoffswitch-label">
+                    <div class="onoffswitch-inner"></div>
+                    <div class="onoffswitch-switch"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row d-flex align-items-center flex-wrap mt-4">
+            <div class="col-sm-4" style="background-color:white;"><b>Способ получения:</b></div>
+            <div class="col-sm-8">
+              <div class="form-group select-caret mb-0">
+                <select class="form-control col-md-12">
+                  <option>Email и смс</option>
+                  <option>только смс</option>
+                  <option>только Email</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col text-center mt-4">
+        <button class="btn btn-success btn-blue btn-w" type="button">СОХРАНИТЬ ПРОФИЛЬ</button>
+      </div>
+    </div>
+  </div>
+</div>
