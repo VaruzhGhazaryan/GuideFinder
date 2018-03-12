@@ -36,13 +36,20 @@ export class AppInlineNavbarComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (location.pathname === '/blog'  ||  location.pathname === '/blog-item' ||  location.pathname === '/faq') {
+    if (location.pathname === '/blog'  ||
+        location.pathname === '/blog-item' ||
+        location.pathname === '/faq') {
       this.show = true;
     }
-    if (location.pathname === '/account' || location.pathname === '/events-view') {
+    if (location.pathname === '/account' ||
+        location.pathname === '/events-view') {
       this.login = true;
     }
-    if (location.pathname === '/user-profile' || location.pathname === '/edit-user-profile' || location.pathname === '/about') {
+    if (location.pathname === '/user-profile' ||
+        location.pathname === '/edit-user-profile' ||
+        location.pathname === '/about' ||
+        location.pathname === '/booking'
+    ) {
       this.beGuide = false;
       this.login = true;
     }

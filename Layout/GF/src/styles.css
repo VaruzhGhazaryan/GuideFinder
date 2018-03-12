@@ -112,7 +112,12 @@ h2 {
 .filters .mat-ripple-element {
     background-color: rgba(87, 148, 55, 0.2) !important;
 }
-
+.grey-line .mat-checkbox-layout {
+  margin-bottom: 0;
+}
+.grey-line .mat-checkbox-inner-container {
+  background-color: white;
+}
 .shadow {
     background-color: white !important;
     box-shadow: 0px 0px 10px 0px #0006;
@@ -291,10 +296,24 @@ a:visited {
     color: #ef7c8a;
 }
 
+.desc ol,.desc ul{
+  color: #53bcb2;
+  padding-left: 20px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+.desc ol span,
+.desc ul span{
+  color: rgb(34, 32, 33);
+  font-weight: normal;
+}
 /* mouse over link */
 a:hover {
     color: #ef7c8a;
     text-decoration: underline;
+}
+.select-caret {
+  margin-bottom: 0;
 }
 .select-caret:before {
   content: '';
@@ -306,8 +325,11 @@ a:hover {
   display: block;
   position: absolute;
   right: 22px;
-  top: 15px;
+  top: calc(50% - 5px);
   z-index: 5;
+}
+.h-50{
+  height: 50px !important;
 }
 .pr-0.select-caret:before{
   right: 5px;
@@ -602,10 +624,16 @@ a:hover {
 
 }
 
-/*cal items*/
-/*.ngb-dp-day, .ngb-dp-weekday, .ngb-dp-week-number {*/
-    /*width: 4rem !important;*/
-/*}*/
+.bottom-line:after{
+  content: '';
+  width: 100%;
+  height: 0;
+  border-bottom: 1px solid #e4e4e4;
+  display: block;
+  margin: 0 15px;
+  margin-top: 30px;
+}
+
 .carousel .ngb-dp-day {
     background: #f8f9fa;
     width: 3rem !important;

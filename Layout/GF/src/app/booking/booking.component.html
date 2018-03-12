@@ -1,0 +1,165 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="breadcrumbs  hidden-sm-down mt-2">
+      <ul class="mb-0">
+        <li><a routerLink="/">Главная</a></li>
+        <li><a routerLink="/account">Наташа Ветлицкая</a></li>
+        <li><a routerLink="">Бронирование и оплота мероприятия</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col mt-lg-5 mt-md-5">
+        <h2>Бронирование и оплота мероприятия</h2>
+      </div>
+    </div>
+    <div class="row d-flex align-items-start flex-wrap mt-5">
+      <div class="col-md-4" style="background-color:white;"><b>Выберите формат мероприятия:</b></div>
+      <div class="col-md-8" style="background-color:white;">
+        <div class="btn-group-toggle" ngbRadioGroup name="radioBasic">
+          <label ngbButtonLabel class="btn btn btn-outline-bordered p-3 mr-2">
+            <input ngbButton type="radio" value="1" [value]="1">Частное
+          </label>
+          <label ngbButtonLabel class="btn btn btn-outline-bordered p-3 mr-2 active">
+            <input ngbButton type="radio" value="2" checked>Групповое
+          </label>
+          <label ngbButtonLabel class="btn btn btn-outline-bordered p-3 mr-2">
+            <input ngbButton type="radio" value="3">Сборное
+          </label>
+        </div>
+        <div class="desc">
+          <ul>
+            <li><span>Минимальное количество участников: <b>3</b></span></li>
+            <li><span>Махимальное количество участников: <b>15</b></span></li>
+            <li><span>Количество дополнительных мест: <b>5 (+<span class="ruble">1000</span> за место)</b></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row d-flex align-items-center flex-wrap mt-4">
+      <div class="col-md-4" style="background-color:white;"><b>Количество взрослых:</b></div>
+      <div class="col-md-5" style="background-color:white;">
+        <div class="counter">
+          <input type="button" value="-"  onclick="minus()">
+          <input type="text" size="25" value="1" >
+          <input type="button" value="+"  onclick="plus()">
+        </div>
+        <span class="ml-3">5 (+<span class="ruble">1000</span> за место)</span>
+      </div>
+    </div>
+
+    <div class="row d-flex align-items-center flex-wrap mt-4">
+      <div class="col-md-4" style="background-color:white;"><b>Количество детей:</b></div>
+      <div class="col-md-5" style="background-color:white;">
+        <div class="counter">
+          <input type="button" value="-"  onclick="minus()">
+          <input type="text" size="25" value="1" >
+          <input type="button" value="+"  onclick="plus()">
+        </div>
+        <span class="ml-3">5 (+<span class="ruble">500</span> за место)</span>
+      </div>
+    </div>
+    <div class="row mt-4 justify-content-end">
+      <div class="col-8 col-xs-12">
+        <p class="helpers mb-0 text-danger d-flex align-items-center">
+          <i class="material-icons mr-1 mt-0">error_outline</i> Общее количество бронируемых мест не должно превышать количество свободных мест
+        </p>
+      </div>
+    </div>
+
+    <div class="row d-flex mt-4">
+      <div class="col-md-4" style="background-color:white;"><b>Дополнение услуги:</b></div>
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-xl-6 col-lg-12 col-md-12 p-0-xs" style="background-color:white;" *ngFor="let item of options">
+            <div class="grey-line filters">
+              <div class="row d-flex">
+                <div class="col-8 mr-0">
+                  <mat-checkbox [(ngModel)] = "item.checked"><b>{{item.title}}</b> (<span class="ruble">{{item.price}}</span>)</mat-checkbox>
+                </div>
+                <div class="col-4 float-right ml-0">
+                  <div class="counter" [ngClass]="{disabled: !item.checked}">
+                    <input type="button" value="-"  onclick="minus()">
+                    <input type="text" size="25" value="1" >
+                    <input type="button" value="+"  onclick="plus()">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row d-flex align-items-center flex-wrap mt-5">
+      <div class="col-md-4" style="background-color:white;"><b>Подарочный Сертификат:</b></div>
+      <div class="col-md-8" style="background-color:white;">
+        <div class="toggle-group">
+          <input type="checkbox" name="on-off-switch" id="switch1" checked="" tabindex="1">
+          <label for="switch1"></label>
+          <div class="onoffswitch" aria-hidden="true">
+            <div class="onoffswitch-label">
+              <div class="onoffswitch-inner"></div>
+              <div class="onoffswitch-switch"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="row d-flex align-items-center flex-wrap mt-5 bottom-line">
+      <div class="col-md-4" style="background-color:white;"><b>Карта оплаты:</b></div>
+
+      <div class="col-md-4" style="background-color:white;">
+        <div class="form-group select-caret">
+          <select class="form-control col-md-12 h-50">
+            <option>Оплатить вручную</option>
+            <option>Оплатить вручную</option>
+            <option>Оплатить вручную</option>
+            <option>Оплатить вручную</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col prices-panel">
+        <div class="grey-line d-flex">
+          <div class="row w-100 m-auto">
+            <div class="col-sm-3 col-xs-12">
+              <p>Стоимость оплаты за взрослых:</p>
+              <h5><span class="ruble">24000</span></h5>
+            </div>
+
+            <div class="col-sm-3 col-xs-12">
+              <p>Стоимость оплаты за детей:</p>
+              <h5><span class="ruble">3000</span></h5>
+            </div>
+
+            <div class="col-sm-3 col-xs-12">
+              <p>Стоимость дополнительных услуг:</p>
+              <h5><span class="ruble">7500</span></h5>
+            </div>
+
+            <div class="col-sm-3 col-xs-12">
+              <p>Подарочный сертификат:</p>
+              <h5><span class="ruble">0</span></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+    <div class="row mt-4 justify-content-end text-right">
+      <div class="col-sm-12 order-section d-flex justify-content-end text-right align-items-center m-clear">
+        <h3>К оплате: <span class="text-green ruble">35500</span></h3>
+        <button class="btn btn-success btn-blue text-uppercase p-2 pr-4 pl-4">Забронировать мероприятие</button>
+      </div>
+    </div>
+</div>
+
