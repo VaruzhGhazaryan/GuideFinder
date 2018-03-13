@@ -1,9 +1,11 @@
-import {Component} from "@angular/core";
-import {MatDialog, MatDialogRef} from "@angular/material";
-import {ListComponent} from "../list/list.component";
-import {EditComponent} from "../edit/edit.component";
-import {AddEventModalComponent} from "../add-event-modal/add-event-modal.component";
-import {NgbDateStruct} from "@ng-bootstrap/ng-bootstrap";
+import {Component} from '@angular/core';
+import {MatDialog, MatDialogRef} from '@angular/material';
+import {ListComponent} from '../list/list.component';
+import {EditComponent} from '../edit/edit.component';
+import {AddEventModalComponent} from '../add-event-modal/add-event-modal.component';
+import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
+import {ChargeEventComponent} from './charge-event/charge-event.component';
+import {ChargeSuccessComponent} from './charge-success/charge-success.component';
 
 @Component({
     selector: 'app-account',
@@ -241,6 +243,7 @@ export class AccountComponent {
     editDialog: MatDialogRef<EditComponent>;
     //noinspection JSAnnotator
     addEventDialog: MatDialogRef<AddEventModalComponent>;
+    eventChargetDialog: MatDialogRef<ChargeEventComponent>;
 
     openListDialog() {
         this.listDialog = this.dialog.open(ListComponent);
@@ -254,4 +257,7 @@ export class AccountComponent {
         this.addEventDialog = this.dialog.open(AddEventModalComponent);
     }
 
+    openEventChargetDialog() {
+      this.eventChargetDialog = this.dialog.open(ChargeEventComponent);
+    }
 }

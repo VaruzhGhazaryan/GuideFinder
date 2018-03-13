@@ -48,6 +48,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { EditUserProfileComponent } from './edit-user-profile/edit-user-profile.component';
 import { AboutComponent } from './about/about.component';
 import { BookingComponent } from './booking/booking.component';
+import { ChargeEventComponent } from './account/charge-event/charge-event.component';
+import { ChargeSuccessComponent } from './account/charge-success/charge-success.component';
 
 
 // AoT requires an exported function for factories
@@ -83,7 +85,9 @@ export function createTranslateLoader(http: HttpClient) {
     UserProfileComponent,
     EditUserProfileComponent,
     AboutComponent,
-    BookingComponent
+    BookingComponent,
+    ChargeEventComponent,
+    ChargeSuccessComponent
   ],
   imports: [
     BrowserModule,
@@ -111,7 +115,7 @@ export function createTranslateLoader(http: HttpClient) {
     })
   ],
   providers: [],
-  entryComponents: [AppSignInComponent, AppSignUpComponent, ListComponent, EditComponent, AddEventModalComponent],
+  entryComponents: [AppSignInComponent, AppSignUpComponent, ListComponent, EditComponent, AddEventModalComponent, ChargeEventComponent, ChargeSuccessComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

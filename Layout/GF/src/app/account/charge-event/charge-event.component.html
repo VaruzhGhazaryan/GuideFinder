@@ -1,0 +1,21 @@
+<div class="edit-modal container" id="change-event">
+  <button class="close" mat-dialog-close [disabled]="false" mat-button></button>
+  <div class="row text-center">
+    <div class="col-lg-12">
+      <h4>Зачисление оплаты за мероприятие</h4>
+    </div>
+  </div>
+  <div class="row mb-0 mt-4 mt-2-xs ">
+    <div class="input-group">
+      <div class="col-6 col-xs-12">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Код подтверждения">
+        </div>
+      </div>
+      <div class="col-6 col-xs-12">
+        <button class="btn btn-success btn-blue w-100" type="button" (click)="openSuccessChargetDialog()">Получить оплату</button>
+      </div>
+    </div>
+  </div>
+</div>
+
