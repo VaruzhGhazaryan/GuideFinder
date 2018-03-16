@@ -11,6 +11,7 @@ import {AddEventComponent} from './add-event/add-event.component';
 import {ProfileComponent} from './profile/profile.component';
 import {EditProfileComponent} from './edit-profile/edit-profile.component';
 import {EventsViewComponent} from './events-view/events-view.component';
+import {EventItemComponent} from './event-item/event-item.component';
 import {EditUserProfileComponent} from './edit-user-profile/edit-user-profile.component';
 import {UserProfileComponent} from './user-profile/user-profile.component';
 import {AboutComponent} from './about/about.component';
@@ -29,6 +30,7 @@ const routes: Routes = [
     {path: 'profile', component: ProfileComponent},
     {path: 'edit-profile', component: EditProfileComponent},
     {path: 'events-view', component: EventsViewComponent},
+    {path: 'event-item', component: EventItemComponent},
     {path: 'user-profile', component: UserProfileComponent},
     {path: 'edit-user-profile', component: EditUserProfileComponent},
     {path: 'about', component: AboutComponent},

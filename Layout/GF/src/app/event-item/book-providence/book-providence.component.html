@@ -1,0 +1,29 @@
+<div class="edit-modal container my-2">
+  <button class="close" mat-dialog-close [disabled]="false" mat-button></button>
+  <table class="table table-striped pr-0" *ngFor="let last_event of last_events;">
+    <thead>
+    <tr>
+      <th>Дата</th>
+      <th>Время</th>
+      <th>Свободные места</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr class="mb-2" *ngFor="let slide of last_event.slide;">
+      <td>{{ slide.date}}</td>
+      <td>{{ slide.time}}</td>
+      <td>25</td>
+      <td>
+        <div *ngIf="!slide.ordered">
+          <span class="mr-2">Вы забрали два места</span>
+          <a href="javascript:void(0)" class="float-right" (click)="openRemoveProvidenceDialog()">
+            <i class="material-icons delete">cancel</i>
+          </a>
+        </div>
+        <a href="" *ngIf="slide.ordered">Забронировать</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

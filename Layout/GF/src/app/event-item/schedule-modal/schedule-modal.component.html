@@ -1,0 +1,19 @@
+<div class="edit-modal container" id="scedule">
+  <button class="close" mat-dialog-close [disabled]="false" mat-button></button>
+  <div class="row text-center">
+    <div class="col-lg-12">
+      <h4>Удалить провидение</h4>
+    </div>
+  </div>
+  <div class="row mb-0 mt-2 mt-2-xs item slide">
+    <div class="col schedule">
+      <owl-carousel class="carousel cal-carousel" [options]="option"
+                    [carouselClasses]="['owl-theme', 'row', 'sliding']">
+        <div class="item slide" *ngFor="let month of calendar;">
+          <ngb-datepicker class="ngcal"  [(ngModel)]="month.date" [displayMonths]="displayMonths" (ngModelChange)="openBookProvidenceDialog()" [navigation]="navigation" [showWeekNumbers]="showWeekNumbers">
+          </ngb-datepicker>
+        </div>
+      </owl-carousel>
+    </div>
+  </div>
+</div>

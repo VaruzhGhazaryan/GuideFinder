@@ -17,6 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule, MatSelectModule } from '@angular/material';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatTabsModule } from '@angular/material/tabs';
 import {NgxMaskModule} from 'ngx-mask';
 
 import { HttpClientModule, HttpClient } from '@angular/common/http';
@@ -50,6 +51,11 @@ import { AboutComponent } from './about/about.component';
 import { BookingComponent } from './booking/booking.component';
 import { ChargeEventComponent } from './account/charge-event/charge-event.component';
 import { ChargeSuccessComponent } from './account/charge-success/charge-success.component';
+import { EventItemComponent } from './event-item/event-item.component';
+import { BookProvidenceComponent } from './event-item/book-providence/book-providence.component';
+import { RemoveProvidenceComponent } from './event-item/remove-providence/remove-providence.component';
+import { RateEventModalComponent } from './event-item/rate-event-modal/rate-event-modal.component';
+import { ScheduleModalComponent } from './event-item/schedule-modal/schedule-modal.component';
 
 
 // AoT requires an exported function for factories
@@ -87,7 +93,12 @@ export function createTranslateLoader(http: HttpClient) {
     AboutComponent,
     BookingComponent,
     ChargeEventComponent,
-    ChargeSuccessComponent
+    ChargeSuccessComponent,
+    EventItemComponent,
+    BookProvidenceComponent,
+    RemoveProvidenceComponent,
+    RateEventModalComponent,
+    ScheduleModalComponent
   ],
   imports: [
     BrowserModule,
@@ -105,6 +116,7 @@ export function createTranslateLoader(http: HttpClient) {
     HttpClientModule,
     MatDialogModule,
     MatExpansionModule,
+    MatTabsModule,
     NouisliderModule,
     TranslateModule.forRoot({
       loader: {
@@ -115,7 +127,18 @@ export function createTranslateLoader(http: HttpClient) {
     })
   ],
   providers: [],
-  entryComponents: [AppSignInComponent, AppSignUpComponent, ListComponent, EditComponent, AddEventModalComponent, ChargeEventComponent, ChargeSuccessComponent],
+  entryComponents: [
+    AppSignInComponent,
+    AppSignUpComponent,
+    ListComponent, EditComponent,
+    AddEventModalComponent,
+    ChargeEventComponent,
+    ChargeSuccessComponent,
+    BookProvidenceComponent,
+    RemoveProvidenceComponent,
+    RateEventModalComponent,
+    ScheduleModalComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,328 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="breadcrumbs  hidden-sm-down mt-2">
+      <ul class="mb-0">
+        <li><a routerLink="">Россия</a></li>
+        <li><a routerLink="">Москва</a></li>
+        <li><a routerLink="">Локация</a></li>
+        <li><a routerLink="">Огни большого города</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col mt-lg-5 mt-md-5">
+      <h2>{{event.title}}</h2>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col">
+      <div class="event-header">
+        <div class="checkbox_block">
+          <div class="checkbox-heart">
+            <input class="checkbox-heart--origin" [(ngModel)]="event.like" id="like" type="checkbox"/>
+            <label class="checkbox-label" for="like"></label>
+          </div>
+        </div>
+        <img src="../../assets/img/photo-1.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12">
+      <div class="card">
+        <div class="card-header "><b>Информация о бронировании</b></div>
+        <div class="card-body">
+
+          <div class="row d-flex align-items-center flex-wrap mt-0">
+            <div class="col-12 help-row mb-3">
+              <h6 class="list-title">Продолжительность</h6>
+
+              <!--helper icon-->
+              <span class="help-icon" [ngbPopover]="popContent" popoverTitle="" #p="ngbPopover">?</span>
+              <!--helper popup-->
+              <ng-template #popContent>
+                Только для вас и ваших близких
+                <i class="material-icons pop-close" (click)="p.close()">clear</i>
+              </ng-template>
+
+              <div class="ans">
+                <span>3 часа</span>
+              </div>
+
+            </div>
+
+            <div class="col-12 help-row mb-3">
+              <h6 class="list-title">Язык</h6>
+
+              <!--helper icon-->
+              <span class="help-icon" [ngbPopover]="popContent" popoverTitle="" #p="ngbPopover">?</span>
+              <!--helper popup-->
+              <ng-template #popContent>
+                Только для вас и ваших близких
+                <i class="material-icons pop-close" (click)="p.close()">clear</i>
+              </ng-template>
+
+              <div class="ans">
+                <span>Русский, English</span>
+              </div>
+
+            </div>
+
+            <div class="col-12 help-row mb-3">
+              <h6 class="list-title">Форматы <br>Индивидуальная частная</h6>
+
+              <!--helper icon-->
+              <span class="help-icon" [ngbPopover]="popContent" popoverTitle="" #p="ngbPopover">?</span>
+              <!--helper popup-->
+              <ng-template #popContent>
+                Только для вас и ваших близких
+                <i class="material-icons pop-close" (click)="p.close()">clear</i>
+              </ng-template>
+
+              <div class="ans">
+                <span>• Количество участников</span>
+                <br>
+                <span>• Цена за человека</span>
+              </div>
+
+            </div>
+
+            <div class="col-12 help-row mb-3">
+              <h6 class="list-title">Индивидуальная в составе группы</h6>
+
+              <!--helper icon-->
+              <span class="help-icon" [ngbPopover]="popContent" popoverTitle="" #p="ngbPopover">?</span>
+              <!--helper popup-->
+              <ng-template #popContent>
+                Только для вас и ваших близких
+                <i class="material-icons pop-close" (click)="p.close()">clear</i>
+              </ng-template>
+
+              <div class="ans">
+                <span>• Количество человеков до 15</span>
+                <br>
+                <span>• Цена за человека 1000 рублей</span>
+              </div>
+
+            </div>
+
+            <div class="col-12 help-row mb-3">
+              <h6 class="list-title">Групповая</h6>
+
+              <!--helper icon-->
+              <span class="help-icon" [ngbPopover]="popContent" popoverTitle="" #p="ngbPopover">?</span>
+              <!--helper popup-->
+              <ng-template #popContent>
+                Только для вас и ваших близких
+                <i class="material-icons pop-close" (click)="p.close()">clear</i>
+              </ng-template>
+
+              <div class="ans">
+                <span>• Количество человеков от10 до 15 человек</span>
+                <br>
+                <span>• Цена за группу: 1000 рублей</span>
+                <br>
+                <span>• Цена дополнительного места за человека: 1000 рублей</span>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-9 col-lg-8 col-md-8 col-sm-12">
+      <div class="row d-flex align-items-center">
+        <div class="col-md-9 d-flex align-items-center d-b-sm">
+          <div class="guide-col"><b>Гид</b></div>
+          <div class="guide-col center-image-sm">
+            <div class="small-avatar">
+              <img src="../../assets/img/user_image.png" alt="avatar">
+            </div>
+          </div>
+          <div class="guide-col"><b><a class="user-link" href="#">Иванов Иван Иванович</a></b></div>
+          <div class="bordered guide-col">
+            <div class="rate" (click)="openRateEventModalDialog()">
+              <ngb-rating [(rate)]="event.rate" [max] = "5" [readonly] = "true" class="d-inline">
+                <ng-template let-fill="fill">
+                  <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                </ng-template>
+              </ngb-rating>
+            </div>
+          </div>
+          <div class="guide-col">
+            <span class="review">{{event.review}} отзывов</span>
+          </div>
+        </div>
+        <div class="col-md-3 d-flex align-items-center justify-content-end mb-20-sm">
+          <button class="btn btn-success btn-blue w-100" (click)="openScheduleModalDialog()">Забронировать</button>
+        </div>
+      </div>
+
+      <!--Tabs-->
+      <div class="tabs">
+        <mat-tab-group>
+
+          <mat-tab label="Описание">
+            <div class="mt-4">
+              <b>Описание</b>
+              <p class="mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cumque deleniti hic inventore ipsa quaerat quas quos recusandae voluptatum? Alias consequatur sed sunt. Eos eveniet neque odit sapiente ut voluptatem!
+              </p>
+              <p class="mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cumque deleniti hic inventore ipsa quaerat quas quos recusandae voluptatum? Alias consequatur sed sunt. Eos eveniet neque odit sapiente ut voluptatem!
+              </p>
+            </div>
+          </mat-tab>
+
+
+          <mat-tab label="Что входит">
+            <div class="mt-4">
+              <b>Что входит</b>
+              <p class="mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cumque deleniti hic inventore ipsa quaerat quas quos recusandae voluptatum? Alias consequatur sed sunt. Eos eveniet neque odit sapiente ut voluptatem!
+              </p>
+            </div>
+          </mat-tab>
+
+
+          <mat-tab label="Фото и видео">
+            <div class="mt-4">
+              <b>Фото и видео</b>
+              <div class="mt-2 px-5">
+                <owl-carousel  class="carousel" [options]="option"
+                               [carouselClasses]="['owl-theme', 'row', 'sliding']">
+                  <div class="item slide rev" *ngFor="let slide of gallery;">
+                    <img src="{{slide}}" alt="image">
+                  </div>
+                </owl-carousel>
+              </div>
+            </div>
+
+          </mat-tab>
+
+
+          <mat-tab label="Карта Маршрута">
+            <div class="mt-4">
+              <b>Карта Маршрута</b>
+              <div class="mt-3 w-100">
+                <iframe class="ya-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A2e51b69f58beae86577ba7a4bb2759e72438b7302a2b81d035ee9c55d9cd573e&amp;source=constructor" frameborder="0"></iframe>
+              </div>
+            </div>
+          </mat-tab>
+
+
+          <mat-tab label="Отзывы клиентов">
+            <div class="mt-4">
+              <b>Отзывы клиентов</b>
+            </div>
+            <div class="comments">
+<!--Comment-item-->
+              <div class="comment-item">
+                <div class="user-image small-avatar">
+                  <img src="../../assets/img/user_image.png" alt="">
+                </div>
+                <!--comment autor name-->
+                <p class="mb-0"><b class="name">ivan ivanov</b></p>
+                <!--comment ate and date-->
+                <div class="d-flex align-content-center">
+                  <!--rate-->
+                  <div class="rate small mr-4">
+                    <ngb-rating [(rate)]="event.rate" [max] = "5" [readonly] = "true" class="d-inline">
+                      <ng-template let-fill="fill">
+                        <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                      </ng-template>
+                    </ngb-rating>
+                  </div>
+                  <!--date-->
+                  <div class="date">
+                    <i class="material-icons">date_range</i>
+                    <span>18 февраля 2018</span>
+                  </div>
+                </div>
+
+                <div class="desc mt-2">
+                  <span>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda autem consequatur corporis cupiditate dolore dolorum earum enim error laboriosam molestiae nihil perferendis perspiciatis, quas tempora totam veniam? Adipisci, quis?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda autem consequatur corporis cupiditate dolore dolorum earum enim error laboriosam molestiae nihil perferendis perspiciatis, quas tempora totam veniam? Adipisci, quis?
+                  </span>
+                </div>
+              </div>
+<!--Comment-item-->
+              <div class="comment-item">
+                <div class="user-image small-avatar">
+                  <img src="../../assets/img/user_image.png" alt="">
+                </div>
+                <!--comment autor name-->
+                <p class="mb-0"><b class="name">ivan ivanov</b></p>
+                <!--comment ate and date-->
+                <div class="d-flex align-content-center">
+                  <!--rate-->
+                  <div class="rate small mr-4">
+                    <ngb-rating [(rate)]="event.rate" [max] = "5" [readonly] = "true" class="d-inline">
+                      <ng-template let-fill="fill">
+                        <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                      </ng-template>
+                    </ngb-rating>
+                  </div>
+                  <!--date-->
+                  <div class="date">
+                    <i class="material-icons">date_range</i>
+                    <span>18 февраля 2018</span>
+                  </div>
+                </div>
+
+                <div class="desc mt-2">
+                  <span>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda autem consequatur corporis cupiditate dolore dolorum earum enim error laboriosam molestiae nihil perferendis perspiciatis, quas tempora totam veniam? Adipisci, quis?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda autem consequatur corporis cupiditate dolore dolorum earum enim error laboriosam molestiae nihil perferendis perspiciatis, quas tempora totam veniam? Adipisci, quis?
+                  </span>
+                </div>
+              </div>
+<!--Comment-item-->
+              <div class="comment-item">
+                <div class="user-image small-avatar">
+                  <img src="../../assets/img/user_image.png" alt="">
+                </div>
+                <!--comment autor name-->
+                <p class="mb-0"><b class="name">ivan ivanov</b></p>
+                <!--comment ate and date-->
+                <div class="d-flex align-content-center">
+                  <!--rate-->
+                  <div class="rate small mr-4">
+                    <ngb-rating [(rate)]="event.rate" [max] = "5" [readonly] = "true" class="d-inline">
+                      <ng-template let-fill="fill">
+                        <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                      </ng-template>
+                    </ngb-rating>
+                  </div>
+                  <!--date-->
+                  <div class="date">
+                    <i class="material-icons">date_range</i>
+                    <span>18 февраля 2018</span>
+                  </div>
+                </div>
+
+                <div class="desc mt-2">
+                  <span>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda autem consequatur corporis cupiditate dolore dolorum earum enim error laboriosam molestiae nihil perferendis perspiciatis, quas tempora totam veniam? Adipisci, quis?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda autem consequatur corporis cupiditate dolore dolorum earum enim error laboriosam molestiae nihil perferendis perspiciatis, quas tempora totam veniam? Adipisci, quis?
+                  </span>
+                </div>
+              </div>
+
+              <div class="col-sm-12 show-more">
+                <button type="button" class="show-more-btn">Показать еще</button>
+              </div>
+            </div>
+          </mat-tab>
+
+        </mat-tab-group>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -21,6 +21,9 @@ h2 {
     font-weight: bold;
     position: relative;
 }
+b{
+  color: #203647;
+}
 .text-grey{
   color: #8b8b8b;
 }
@@ -588,7 +591,9 @@ a:hover {
 }
 
 .filter-page-item .owl-prev,
-.filter-page-item .owl-next {
+.filter-page-item .owl-next,
+.tabs .owl-prev,
+.tabs .owl-next{
     top: calc(50% - 30px) !important;
 }
 .carousel-end .owl-prev,
@@ -685,6 +690,23 @@ a:hover {
   padding: 0 2em !important;
 }
 
+.schedule .ngb-dp-day {
+  background: #f8f9fa;
+  width: 2.6rem !important;
+  height: 2.6rem !important;
+  margin: 3px;
+}
+.schedule .ngb-dp-day .btn-light {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 0 !important;
+  background-color: #fff;
+  line-height: 2.6;
+}
+.schedule .btn-light {
+  width: 2.6rem !important;
+}
+
 .font-italic {
     font-style: normal !important;
 }
@@ -718,9 +740,26 @@ a:hover {
     opacity: 0 !important;
 }
 
+/*mat themes*/
+.mat-tab-group.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus,
+.mat-tab-group.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus,
+.mat-tab-nav-bar.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus,
+.mat-tab-nav-bar.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus{
+  background-color: transparent !important;
+}
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar{
+  background-color: #53bcb2 !important;
+}
+.mat-tab-label-active > div{
+  color: #53bcb2;
+}
 
 mat-dialog-container{
     display: inline-table !important;
+}
+.help-row .popover-body {
+  padding: 1rem 1.2rem !important;
 }
 .social {
   padding-left: 0;
