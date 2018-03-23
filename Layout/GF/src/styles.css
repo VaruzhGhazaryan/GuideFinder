@@ -957,6 +957,13 @@ ngb-datepicker.dropdown-menu{
     }
 }
 
+/*Large devices(desktops, 992px and up)*/
+@media (min-width: 1400px) and (max-width: 1460px) {
+  .navbar .navbar-nav .nav-link {
+    padding: 15px 12px !important;
+  }
+}
+
 @media (max-width: 768px) {
     .flex-column-sm {
         -webkit-box-orient: vertical !important;
@@ -993,6 +1000,10 @@ ngb-datepicker.dropdown-menu{
   }
   .grey-line .mat-checkbox .mat-checkbox-label {
     font-size: 12px;
+  }
+  .nav-item .account{
+    display: inline-block;
+    position: relative;
   }
 }
 @media (max-width: 375px) {
