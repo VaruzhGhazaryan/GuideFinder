@@ -988,6 +988,12 @@ ngb-datepicker.dropdown-menu{
   .breadcrumbs ul li{
     font-size: 12px;
   }
+  .grey-line .mat-checkbox-inner-container {
+    margin-right: 3px;
+  }
+  .grey-line .mat-checkbox .mat-checkbox-label {
+    font-size: 12px;
+  }
 }
 @media (max-width: 375px) {
     #notify-method .mat-form-field-infix {
