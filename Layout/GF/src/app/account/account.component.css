@@ -53,6 +53,21 @@ figure.item.item-event figcaption{
     box-shadow: 0 0 0 0.2rem rgba(88, 188, 179, 0.5);
     background-color: #3b857e !important;
 }
+
+.status-label{
+  border: none;
+  line-height: 3;
+  font-size: 10pt;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  border-radius: 3px;
+  font-weight: bold;
+  margin: auto;
+}
+.status-label.green{
+  background-color: #53bcb2;
+  width: 180px;
+}
 .form-control {
   font-size: 0.8rem;
   line-height: 2;

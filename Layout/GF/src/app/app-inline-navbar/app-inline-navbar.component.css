@@ -221,6 +221,39 @@ label {
 
 }
 
+@media (min-width: 992px) and (max-width: 1200px) {
+  .fullanme{
+    display: none;
+  }
+}
+@media (min-width: 992px) and (max-width: 1400px) {
+  .dropdown-menu{
+    left: -150px !important;
+  }
+  .drop + .dropdown-menu.show:before{
+    left: 85% !important;
+  }
+  .nav-item.account{
+    display: inline-block;
+    position: relative;
+  }
+}
+@media screen and (max-width: 992px) {
+  .navbar-nav{
+    display: block !important;
+    width: 100%;
+  }
+  ul.navbar-nav{
+    text-align: center;
+  }
+  .navbar-nav > *{
+    display: inline-block !important;
+  }
+  .drop + .dropdown-menu{
+    position: absolute !important;
+  }
+}
+
 @media screen and (min-width: 768px) {
     .searchBlog {
         margin-left: 10px;

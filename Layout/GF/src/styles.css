@@ -1001,10 +1001,6 @@ ngb-datepicker.dropdown-menu{
   .grey-line .mat-checkbox .mat-checkbox-label {
     font-size: 12px;
   }
-  .nav-item .account{
-    display: inline-block;
-    position: relative;
-  }
 }
 @media (max-width: 375px) {
     #notify-method .mat-form-field-infix {
