@@ -1,7 +1,7 @@
 <div class="container-fluid">
 
   <div class="row filters mt-5">
-    <div class="col-9 col-xs-12 col-xl-9 col-lg-7 col-md-7">
+    <div class="col-12">
       <!--Тематика-->
       <div ngbDropdown class="d-inline-block mr-2 mb-2" #filterItem="ngbDropdown">
         <button class="btn btn-outline-primary green" id="ftr1" ngbDropdownToggle>Тематика</button>
@@ -112,30 +112,33 @@
         </div>
       </div>
 
-    </div>
-    <div class="col-3 col-xs-12 col-xl-3 col-lg-5 col-md-5">
-      <div class=" sortBy d-flex align-items-center justify-content-end flex-column-sm">
-        <span>Сортировать</span>
-        <div class="btn-group-toggle">
-          <div ngbDropdown class="d-inline-block filterBy ml-1 mb-2-md" #filterItem="ngbDropdown">
-            <button class="btn btn-outline-primary" id="ftr9" ngbDropdownToggle>{{ftrlBy || "По рейтингу"}}</button>
-            <div ngbDropdownMenu aria-labelledby="ftr9" class="p-3">
-              <div class="item col-12 mb-2" (click)="ftrlBy = $event.target.innerText" >По рейтингу</div>
-              <div class="item col-12 mb-2" (click)="ftrlBy = $event.target.innerText" >По отзывам</div>
-              <div class="item col-12 mb-2" (click)="ftrlBy = $event.target.innerText" >По новизне</div>
-              <div class="item col-12 mb-2" (click)="ftrlBy = $event.target.innerText" >По цене</div>
+      <div class="d-inline-block mr-2 mb-2 right-filters">
+        <div class=" sortBy d-flex align-items-center justify-content-end flex-column-sm">
+          <span class="sort-desc">Сортировать</span>
+          <div class="btn-group-toggle">
+            <div ngbDropdown class="d-inline-block filterBy ml-1 mb-2-md" #filterItem="ngbDropdown">
+              <button class="btn btn-outline-primary" id="ftr9" ngbDropdownToggle>{{ftrlBy || "По рейтингу"}}</button>
+              <div ngbDropdownMenu aria-labelledby="ftr9" class="p-3">
+                <div class="item col-12 mb-2" (click)="ftrlBy = $event.target.innerText" >По рейтингу</div>
+                <div class="item col-12 mb-2" (click)="ftrlBy = $event.target.innerText" >По отзывам</div>
+                <div class="item col-12 mb-2" (click)="ftrlBy = $event.target.innerText" >По новизне</div>
+                <div class="item col-12 mb-2" (click)="ftrlBy = $event.target.innerText" >По цене</div>
+              </div>
             </div>
-          </div>
 
-          <label class="btn-primary ml-1" ngbButtonLabel>
-            <input type="checkbox" ngbButton [(ngModel)]="filters.byAsc">
-            <span *ngIf="filters.byAsc">По возрастанию</span>
-            <span *ngIf="!filters.byAsc">По убыванию</span>
-          </label>
+            <label class="btn-primary ml-1" ngbButtonLabel>
+              <input type="checkbox" ngbButton [(ngModel)]="filters.byAsc">
+              <span *ngIf="filters.byAsc">По возрастанию</span>
+              <span *ngIf="!filters.byAsc">По убыванию</span>
+            </label>
+          </div>
         </div>
       </div>
-
     </div>
+    <!--<div class="col-3 col-xs-12 col-xl-3 col-lg-5 col-md-5">-->
+
+
+    <!--</div>-->
   </div>
 
   <div class="row mt-4" *ngFor="let carusel of carusels;">

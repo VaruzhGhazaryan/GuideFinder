@@ -262,6 +262,22 @@ h6.group-title {
   width: 500px;
 }
 
+.right-filters{
+  float: right;
+}
+
+@media (max-width: 1500px) {
+  .sort-desc {
+    display: none;
+  }
+  .right-filters{
+    float: inherit;
+  }
+  .filters .btn {
+    font-size: 13px;
+  }
+}
+
 @media (max-width: 1200px) {
   .col1-5 {
     width: 33.333331% !important;
