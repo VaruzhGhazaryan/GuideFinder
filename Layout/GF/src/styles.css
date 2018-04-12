@@ -5,9 +5,17 @@
 @import '~font-awesome/css/font-awesome.min.css';
 @import "~nouislider/distribute/nouislider.min.css";
 
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
 body {
     font-family: "Roboto" !important;
     color: rgb(34, 32, 33);
+    position: relative;
+    margin: 0;
+    padding-bottom: 14rem;
+    min-height: 100%;
 }
 
 .navbar-toggleable-sm .navbar-collapse {
@@ -796,6 +804,9 @@ mat-dialog-container{
 ngb-datepicker.dropdown-menu{
   width: 16rem !important;
 }
+.cdk-overlay-pane {
+  overflow: hidden;
+}
 /*Large devices (desktops, 992px and up)*/
 @media (max-width: 992px) {
 
@@ -939,6 +950,12 @@ ngb-datepicker.dropdown-menu{
     }
 }
 
+@media (min-width: 1024px) and (max-width: 1200px) {
+  body{
+    padding-bottom: 18rem;
+  }
+}
+
 /*Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
     .navbar {
@@ -965,6 +982,9 @@ ngb-datepicker.dropdown-menu{
 }
 
 @media (max-width: 768px) {
+    body{
+      padding-bottom: 36rem;
+    }
     .flex-column-sm {
         -webkit-box-orient: vertical !important;
         -webkit-box-direction: normal !important;
@@ -982,6 +1002,49 @@ ngb-datepicker.dropdown-menu{
 
     .p-0-md {
         padding: 0px !important;
+    }
+    .edit-modal{
+      width: inherit !important;
+      position: inherit !important;
+      padding: inherit !important;
+      padding-top: 10px !important;
+    }
+    .schedule {
+      width: 300px;
+    }
+    .schedule .ngb-dp-day .btn-light {
+      width: 2rem;
+      height: 2rem;
+      line-height: 2;
+    }
+    .carousel .ngb-dp-day .btn-light {
+      width: 2rem;
+      height: 2rem;
+      line-height: 2;
+    }
+    .schedule .btn-light {
+      width: 2rem !important;
+    }
+    .schedule .ngb-dp-day {
+      background: #f8f9fa;
+      width: 2rem !important;
+      height: 2rem !important;
+      margin: 0px;
+    }
+    .carousel .ngb-dp-weekday {
+      width: 2rem !important;
+    }
+    .schedule .carousel .ngb-dp-month:first-child .ngb-dp-week,
+    .schedule .carousel .ngb-dp-month:last-child .ngb-dp-week {
+      padding: 0 0.5em !important;
+    }
+    .schedule .carousel ngb-datepicker-month-view {
+      padding: 15px 0;
+    }
+    .schedule .owl-prev:before,
+    .schedule .owl-next:before {
+      width: 26px;
+      height: 26px;
     }
 }
 

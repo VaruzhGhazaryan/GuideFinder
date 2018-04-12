@@ -31,6 +31,7 @@ export class EventItemComponent implements OnInit {
     nav: true,
     navText: ['', '' ],
     responsive: {
+      '320': {items: 1},
       '768': { items: 1 },
       '1200': { items: 4 },
     }

@@ -12,6 +12,7 @@
     font-family: "Roboto";
     color: rgb(34, 32, 33);
     line-height: 1.667;
+    white-space: nowrap;
 }
 
 .navbar .navbar-nav .nav-link:hover {
