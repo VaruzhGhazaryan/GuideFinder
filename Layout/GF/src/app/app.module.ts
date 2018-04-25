@@ -56,6 +56,7 @@ import { BookProvidenceComponent } from './event-item/book-providence/book-provi
 import { RemoveProvidenceComponent } from './event-item/remove-providence/remove-providence.component';
 import { RateEventModalComponent } from './event-item/rate-event-modal/rate-event-modal.component';
 import { ScheduleModalComponent } from './event-item/schedule-modal/schedule-modal.component';
+import { PaymentCardsComponent } from './payment-cards/payment-cards.component';
 
 
 // AoT requires an exported function for factories
@@ -98,7 +99,8 @@ export function createTranslateLoader(http: HttpClient) {
     BookProvidenceComponent,
     RemoveProvidenceComponent,
     RateEventModalComponent,
-    ScheduleModalComponent
+    ScheduleModalComponent,
+    PaymentCardsComponent
   ],
   imports: [
     BrowserModule,

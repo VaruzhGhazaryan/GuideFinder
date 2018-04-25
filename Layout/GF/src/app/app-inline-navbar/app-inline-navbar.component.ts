@@ -48,7 +48,8 @@ export class AppInlineNavbarComponent implements OnInit {
     if (location.pathname === '/user-profile' ||
         location.pathname === '/edit-user-profile' ||
         location.pathname === '/about' ||
-        location.pathname === '/booking'
+        location.pathname === '/booking' ||
+        location.pathname === '/payment-cards'
     ) {
       this.beGuide = false;
       this.login = true;

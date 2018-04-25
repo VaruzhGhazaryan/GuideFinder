@@ -29,6 +29,7 @@ export class AppComponent {
                   case '/booking' : this.show = true; this.login = true; break;
                   case '/events-view' : this.show = true; this.login = true; break;
                   case '/event-item' : this.show = true; this.login = true; break;
+                  case '/payment-cards' : this.show = true; this.login = true; break;
                   default : this.show = true; this.login = false; break;
                 }
             }
