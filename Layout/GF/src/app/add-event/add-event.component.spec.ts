@@ -23,3 +23,4 @@ describe('AddEventComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

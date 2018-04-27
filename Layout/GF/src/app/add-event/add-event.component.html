@@ -1,3 +1,8 @@
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
+<link href="https://unpkg.com/@angular/material/prebuilt-themes/deeppurple-amber.css" rel="stylesheet">
+
 <div class="container mt-5 add-ev">
   <div class="row d-flex align-items-center flex-wrap mt-4">
     <div class="col-sm-4" style="background-color:white;"><b>Язик</b><span style="color: red">&nbsp;*</span></div>
@@ -454,6 +459,59 @@
       </form>
     </div>
   </div>
+
+  <div class="row d-flex  flex-wrap mt-4">
+    <div class="col-sm-4" style="background-color:white;"><b>Фотографии:</b>
+      <p class="text-grey mt-2">(Поддерживается фото в форматах JPG, PNG), разрешение не более 1200 x 630 px, размером не более 1 Гб</p>
+    </div>
+    <div class="col-sm-8 owlHalf">
+      <owl-carousel class="carousel owl-acc-car" [options]="option"
+                    [items]="slides"
+                    [carouselClasses]="['owl-theme', 'row', 'sliding']">
+
+        <div class="item slide">
+          <figure class="item item-event">
+            <img src="./assets/img/image.jpg" alt="sq-sample26" width="100%"/>
+            <figcaption>
+              <div class="container">
+                <div class="row">
+                  <button class="col-lg-11 col-md-11 m-auto btn btn-outline-primary white">Удалить фото</button>
+                </div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="item slide">
+          <figure class="item item-event">
+            <img src="./assets/img/image.jpg" alt="sq-sample26" width="100%"/>
+            <figcaption>
+              <div class="container">
+                <div class="row">
+                  <button class="col-lg-11 col-md-11 m-auto btn btn-outline-primary white">Удалить фото</button>
+                </div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="item slide">
+          <figure class="item item-event">
+            <img src="./assets/img/image.jpg" alt="sq-sample26" width="100%"/>
+            <figcaption>
+              <div class="container">
+                <div class="row">
+                  <button class="col-lg-11 col-md-11 m-auto btn btn-outline-primary white">Удалить фото</button>
+                </div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+   
+      </owl-carousel>
+    </div>
+  </div>
+
   <div class="row d-flex  flex-wrap mt-5">
     <div class="col-sm-4" style="background-color:white;"><b>Картографическая информация марштуие:</b><p></p></div>
     <div class="col-sm-8" >
