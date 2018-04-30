@@ -87,7 +87,10 @@ b{
     background: transparent !important;
 }
 
-
+.owlHalf .owl-prev,
+.owlHalf .owl-next {
+  top: 50% !important;
+}
 .mat-checkbox-frame {
     border-width: 1px !important;
     border-color: #d9d9d9 !important;
@@ -283,7 +286,9 @@ a:visited {
     margin-bottom: 1rem;
     line-height: 1;
 }
-
+.btn{
+  white-space: normal !important;
+}
 .btn-outline-bordered {
     border: 1px solid #ced4da;
 }
@@ -906,7 +911,7 @@ ngb-datepicker.dropdown-menu{
         font-weight: normal;
         line-height: 2.2 !important;
     }
-
+    
     .row {
         margin: 0;
     }

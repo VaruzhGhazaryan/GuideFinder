@@ -311,6 +311,87 @@ i {
   background-color: #3b857e;
   height: 50px;
 }
+.slide{
+  margin-left: 10px;
+  height: 340px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+figure.item {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  width: 100%;
+  color: #000000;
+  text-align: center;
+  -webkit-perspective: 50em;
+  perspective: 50em;
+}
+figure.item * {
+  -webkit-box-sizing: padding-box;
+  box-sizing: padding-box;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+figure.item img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+figure.item figcaption {
+  top: 46%;
+  left: 20px;
+  right: 20px;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+}
+
+figure {
+  margin: 0 0 0.5rem;
+}
+
+figure.item:after {
+  background-color: rgb(83, 188, 178);
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+}
+figure.item:hover figcaption,
+figure.item.hover figcaption {
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+figure.item:hover:after,
+figure.item.hover:after {
+  opacity: 0.7;
+}
+.white {
+    color: #fff;
+    border-color: #fff;
+}
+.white:hover {
+    background-color: #fff;
+    border-color: #ffffff !important;
+    color: #53bcb2;
+}
+.white:active{
+    background-color: transparent !important;
+    border-color: #fff !important;
+}
+.white:focus {
+    box-shadow: none;
+}
 
 @media (max-width: 576px) {
   .toggle-group {
@@ -318,3 +399,4 @@ i {
     margin-top: 10px;
   }
 }
+
