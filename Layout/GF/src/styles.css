@@ -90,6 +90,7 @@ b{
 .owlHalf .owl-prev,
 .owlHalf .owl-next {
   top: 50% !important;
+  padding: 4px 0px !important;
 }
 .mat-checkbox-frame {
     border-width: 1px !important;

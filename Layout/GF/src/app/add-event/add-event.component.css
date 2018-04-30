@@ -311,6 +311,9 @@ i {
   background-color: #3b857e;
   height: 50px;
 }
+.owlHalf{
+  margin-left: -10px
+}
 .slide{
   margin-left: 10px;
   height: 340px;
@@ -341,7 +344,7 @@ figure.item img {
 }
 
 figure.item figcaption {
-  top: 46%;
+  top: 50%;
   left: 20px;
   right: 20px;
   position: absolute;
