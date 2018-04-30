@@ -737,13 +737,17 @@ a:hover {
 .ngcal .ngb-dp-months {
   display: block !important;
 }
+
 .btn-light {
     width: 3rem !important;
     border-radius: 0 !important;
     margin: 4px;
     background-color: #fff !important;
 }
-
+.btn-light[_nghost-c8] {
+    text-align: center;
+    width: 100% !important
+}
 .btn-light:hover, .btn-light:after {
     color: #212529;
     background-color: #53bcb2 !important;
@@ -752,6 +756,12 @@ a:hover {
 
 .outside {
     opacity: 0 !important;
+}
+@media only screen and (max-width: 381px){
+  .btn-light{
+    font-size: 12px;
+    margin: 0
+  }
 }
 
 /*mat themes*/
@@ -1053,11 +1063,28 @@ ngb-datepicker.dropdown-menu{
       height: 26px;
     }
 }
-
-@media (max-width: 576px) {
+@media (max-width: 767px) {
     .owl-prev,
     .owl-next {
-        top: 20% !important;
+        top: 40% !important;
+    }
+}
+@media (max-width: 668px) {
+    .owl-prev,
+    .owl-next {
+        top: 35% !important;
+    }
+}
+@media (max-width: 566px) {
+    .owl-prev,
+    .owl-next {
+        top: 30% !important;
+    }
+}
+@media (max-width: 499px) {
+    .owl-prev,
+    .owl-next {
+        top: 40% !important;
     }
 }
 @media (max-width: 480px){

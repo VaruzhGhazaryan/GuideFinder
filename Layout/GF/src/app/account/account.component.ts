@@ -216,7 +216,8 @@ export class AccountComponent {
         nav: true,
         navText: ['', ''],
         responsive: {
-            '320': {items: 2},
+            '320': {items:1},
+            '500': {items: 2},
             '768': {items: 3},
             '1200': {items: 5},
         }
@@ -229,7 +230,7 @@ export class AccountComponent {
         navText: ['', ''],
         responsive: {
             '320': {items: 1},
-            '992': {items: 2},
+            '940': {items: 2},
             '1440': {items: 3}
         }
     };
