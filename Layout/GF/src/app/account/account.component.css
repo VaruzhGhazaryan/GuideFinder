@@ -21,12 +21,9 @@
 .bottom{
     padding-bottom: 15px;
 }
-
-.bottom button{
-  /*font-size: 10px*/
-}
 .text-color{
     color: #757575;
+    padding-bottom: 25px
 }
 
 figure.item.item-event figcaption{
@@ -84,38 +81,141 @@ figure.item.item-event figcaption{
 .breadcrumbs {
     margin-top: 30px;
 }
-
-
-@media (max-width: 1200px){
+@media only screen and (max-width: 1360px){
     .white {
-        font-size: 13px;
+        font-size: 14px ;
+    }
+    #title{
+        font-size: 14px;
+    }
+    figcaption button {
+      padding: 4px;
+      margin-top: -5px
+    }
+    .bottom{
+      padding-bottom: 10px
+    }
+    .material-icons{
+      margin-top: -20px
+    }
+}
+@media only screen and (max-width: 1288px){
+    .white {
+        font-size: 13px ;
     }
 
-    .slide-title{
+    #title{
+        font-size: 13px;
+    }
+    figcaption button {
+      padding: 2px;
+    }
+}
+@media only screen and (max-width: 1199px){
+    .white {
+        font-size: 16px ;
+    }
+
+    #title{
+        font-size: 16px;
+    }
+    figcaption button {
+      padding: 10px;
+      margin-top: 0
+    }
+    .bottom{
+      padding-bottom: 15px
+    }
+    .material-icons{
+      margin-top: -10px
+    }
+}
+@media only screen and (max-width: 989px){
+    figcaption button {
+      padding: 6px;
+    }
+    .bottom{
+      padding-bottom: 10px
+    }
+}
+@media only screen and (max-width: 917px){
+    .white {
+        font-size: 14px ;
+    }
+    #title{
+        font-size: 14px;
+    }
+    figcaption button {
+      padding: 4px;
+    }
+}
+@media only screen and (max-width: 860px){
+    .white {
+        font-size: 13px ;
+    }
+    #title{
         font-size: 13px;
     }
 }
-
 @media screen and (max-width: 767px) {
-    .white {
-        font-size: 15px;
+  .white {
+        font-size: 15px ;
     }
-    .slide-title{
+
+    #title{
         font-size: 15px;
     }
     figcaption button {
-      box-sizing: padding-box;
-      transition: all 0.2s ease-out;
-      font-size: 10px;
+      padding: 10px;
+    }
+    .bottom{
+      padding-bottom: 10px
+    }
+    .material-icons{
+      margin-top: 0
     }
 }
-
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 622px){
     .white {
-        font-size: 12px;
-    }
-    .slide-title{
-        font-size: 15px;
+        font-size: 13px ;
     }
 
+    #title{
+        font-size: 13px;
+    }
+    figcaption button {
+      padding: 5px;
+    }
+    .material-icons{
+      margin-top: -20px
+    }
+}
+@media only screen and (max-width: 499px) {
+    .white {
+        font-size: 16px ;
+    }
+
+    #title{
+        font-size: 16px;
+    }
+    figcaption button {
+      padding: 10px;
+    }
+    .bottom{
+      padding-bottom: 10px
+    }
+    .material-icons{
+      margin-top: 0
+    }
+}
+@media only screen and (max-width: 355px) {
+    .white {
+        font-size: 14px ;
+    }
+    #title{
+        font-size: 14px;
+    }
+    figcaption button {
+      padding: 5px;
+    }
 }
