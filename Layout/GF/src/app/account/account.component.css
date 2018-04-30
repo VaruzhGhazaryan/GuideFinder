@@ -22,6 +22,9 @@
     padding-bottom: 15px;
 }
 
+.bottom button{
+  /*font-size: 10px*/
+}
 .text-color{
     color: #757575;
 }
@@ -29,7 +32,9 @@
 figure.item.item-event figcaption{
     top: 10%;
 }
+.kkk{
 
+}
 .btn-blue {
     background-color: #53bcb2;
     border: none;
