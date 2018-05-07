@@ -7,15 +7,17 @@
 
 .balanceDiv{
 	border:1px solid #53bcb2;
-	padding: 5px;
 	border-radius: 5px;
 	overflow: hidden;
+  display: inline-block;
+  padding: 5px 10px;
+  float: right;
 }
 .balanceDiv span b,
 .balanceDiv span{
 	color: #108e81;
 	font-size: 17px
-} 
+}
 .table.spacing-table tr th {
   border-width: 0;
 }
@@ -41,14 +43,49 @@
 }
 .table tr td a{
 	color: #108e81;
-	padding-left: 15px
+	padding-left: 15px;
+  text-decoration-line: underline;
 }
 .table tr td a:hover{
-	text-decoration-line: underline;
+  color: #e7615c;
 }
 .more{
 	margin-top: 50px;
 	padding-bottom: 50px
+}
+
+.filters .btn {
+  color: #222021;
+  border-color: #b7b7b7;
+  font-size: 14px;
+  background-color: transparent;
+  box-shadow: none !important;
+  padding-right: 50px;
+}
+
+.sortBy .btn-primary:before,
+.filterBy .btn-outline-primary:before {
+  content: 'keyboard_arrow_down';
+  font-family: "Material Icons";
+  background: #fff;
+  font-size: 20px;
+  position: absolute;
+  right: 5px;
+  top: 4px;
+  color: #222021;
+}
+.dropdown-menu {
+  font-size: 0.9rem;
+}
+.dropdown-toggle::after {
+  display: none;
+}
+.dropdown-menu .item {
+  padding-top: 5px;
+  cursor: pointer;
+}
+.dropdown-menu .item:hover {
+  text-decoration: underline;
 }
 @media only screen and (max-width: 1024px) {
    	.showOptions{
@@ -65,9 +102,16 @@
 		padding-bottom: 100px
 	}
 }
-
+@media only screen and (max-width: 992px){
+  .text-center-xs {
+    text-align: center;
+  }
+  .balanceDiv{
+    float: none;
+  }
+}
 @media only screen and (max-width: 768px) {
-   	.showOptions{
+ 	.showOptions{
 		padding-left: 16px;
 		padding-bottom: 5px
 	}
@@ -79,7 +123,16 @@
 		padding: 5px 30px;
 	}
 }
-
+@media only screen and (max-width: 480px) {
+  .filters {
+    display: block !important;
+    width: 100%;
+  }
+  .sortBy {
+    margin-left: 0px !important;
+    margin-bottom: 10px;
+  }
+}
 @media only screen and (max-width: 414px) {
    	.show-more{
    		margin-top: -50px

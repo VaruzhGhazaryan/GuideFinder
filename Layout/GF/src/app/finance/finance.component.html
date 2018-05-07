@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container">
 	<div class="row">
 		<div class="breadcrumbs  hidden-sm-down mt-2">
 	    	<ul class="mb-0">
@@ -15,46 +15,53 @@
 	</div>
 
 	<div class="row">
-		<div class="col-12 col-lg-7 mt-4">
+		<div class="col-12 col-lg-8 mt-4">
 			<div class="row mt-3">
-	            <div class="col-12 col-md-2 pt-1 sortOptions">Сортировать</div>
-	            <div class="col-12 col-md-3">
-	          		<div class="form-group select-caret">
-		                <select class="form-control">
-		                  <option>По дате <span>↓</span></option>
-		                  <option>По дате</option>
-		                  <option>По дате</option>
-		                  <option>По дате</option>
-		                </select>
-	              	</div>
-	            </div>
-
-	            <div class="col-12 col-md-2 pt-1 showOptions">Показывать</div>
-	            <div class="col-12 col-md-5">
-	          		<div class="form-group select-caret">
-		                <select class="form-control">
-		                  <option>Все финансовые операции</option>
-		                  <option>Все финансовые операции</option>
-		                  <option>Все финансовые операции</option>
-		                  <option>Все финансовые операции</option>
-		                </select>
-	              	</div>
-	            </div>
+        <div class="d-inline-block mr-2 mb-2 right-filters filters d-flex">
+          <div class=" sortBy d-flex align-items-center justify-content-end flex-column-sm">
+            <span class="sort-desc">Сортировать</span>
+            <div class="btn-group-toggle">
+              <div ngbDropdown class="d-inline-block filterBy ml-1" #filterItem="ngbDropdown">
+                <button class="btn btn-outline-primary" id="ftr1" ngbDropdownToggle>{{ftrlAsc || "По дате ↓"}}</button>
+                <div ngbDropdownMenu aria-labelledby="ftr1">
+                  <div class="item col-12 mb-2" (click)="ftrlAsc = $event.target.innerText">По дате ↓</div>
+                  <div class="item col-12 mb-2" (click)="ftrlAsc = $event.target.innerText">По отзывам</div>
+                  <div class="item col-12 mb-2" (click)="ftrlAsc = $event.target.innerText">По новизне</div>
+                  <div class="item col-12 mb-2" (click)="ftrlAsc = $event.target.innerText">По цене</div>
+                </div>
+              </div>
             </div>
-		</div>
+          </div>
 
-		<div class="col-12 col-lg-5 mt-4">
-			<div class="col-12 col-md-5 float-right d-flex justify-content-center align-items-center balanceDiv mt-3">
+          <div class=" sortBy d-flex align-items-center justify-content-end flex-column-sm ml-3">
+            <span class="sort-desc">Показывать</span>
+            <div class="btn-group-toggle">
+              <div ngbDropdown class="d-inline-block filterBy ml-1" #filterItem="ngbDropdown">
+                <button class="btn btn-outline-primary" id="ftr2" ngbDropdownToggle>{{ftrlBy || "Все финансовые операции"}}</button>
+                <div ngbDropdownMenu aria-labelledby="ftr2">
+                  <div class="item col-12 mb-2" (click)="ftrlBy = $event.target.innerText">Все финансовые операции</div>
+                  <div class="item col-12 mb-2" (click)="ftrlBy = $event.target.innerText">Все финансовые операции1</div>
+                  <div class="item col-12 mb-2" (click)="ftrlBy = $event.target.innerText">Все финансовые операции2</div>
+                  <div class="item col-12 mb-2" (click)="ftrlBy = $event.target.innerText">Все финансовые операции3</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+		</div>
+		<div class="col-12 col-lg-4 mt-md-4 text-center-xs">
+			<div class="balanceDiv mt-3">
 				<span>
-					Ваш баланс: <span class="pl-3"><b> 5500 &#8381; </b></span> 
+					Ваш баланс: <span class="pl-3"><b> 5500 &#8381; </b></span>
 				</span>
 			</div>
 		</div>
 	</div>
 
 	<div class="row">
-		<div class="col-12 mt-5 table-responsive-md">
-			<table class="table spacing-table">
+		<div class="mt-5 table-responsive-md w-100">
+			<table class="r-table table spacing-table">
 			  	<thead class="theadborder">
 			    	<tr id="theadtr">
 			      		<th scope="col">Дата</th>
@@ -65,64 +72,64 @@
 			  	</thead>
 			  	<tbody>
 			    	<tr>
-			      		<td>13 Февраля 2018</td>
-			      		<td class="redtd">-5 000 &#8381;</td>
-			      		<td>Банковская карта</td>
-			      		<td>Оплата мероприятия &nbsp <a href="#">«Огни большог города»</a></td>
+			      		<td data-label="Дата">13 Февраля 2018</td>
+			      		<td data-label="Сумма" class="redtd">-5 000 &#8381;</td>
+			      		<td data-label="Способ оплаты">Банковская карта</td>
+			      		<td data-label="Назначение">Оплата мероприятия &nbsp <a href="#">«Огни большог города»</a></td>
 			    	</tr>
 			    	<tr>
-			      		<td>11 Февраля 2018</td>
-			      		<td class="redtd">-2 000 &#8381;</td>
-			      		<td>Банковская карта</td>
-			      		<td>Оплата мероприятия  <a href="#">«Экскурсия по Москве»</a></td>
+			      		<td data-label="Дата">11 Февраля 2018</td>
+			      		<td data-label="Сумма" class="redtd">-2 000 &#8381;</td>
+			      		<td data-label="Способ оплаты">Банковская карта</td>
+			      		<td data-label="Назначение">Оплата мероприятия  <a href="#">«Экскурсия по Москве»</a></td>
 			   		</tr>
 			    	<tr>
-			      		<td>08 Февраля 2018</td>
-			      		<td class="bluetd">+500 &#8381;</td>
-			      		<td>Банковская карта</td>
-			      		<td>Пополнение личного счета</td>
+			      		<td data-label="Дата">08 Февраля 2018</td>
+			      		<td data-label="Сумма" class="bluetd">+500 &#8381;</td>
+			      		<td data-label="Способ оплаты">Банковская карта</td>
+			      		<td data-label="Назначение">Пополнение личного счета</td>
 			   		</tr>
 			   		<tr>
-			      		<td>05 Февраля 2018</td>
-			      		<td class="redtd">-1 000 &#8381;</td>
-			      		<td>Банковская карта</td>
-			      		<td>Оплата дополнительных услуг гида</td>
+			      		<td data-label="Дата">05 Февраля 2018</td>
+			      		<td data-label="Сумма" class="redtd">-1 000 &#8381;</td>
+			      		<td data-label="Способ оплаты">Банковская карта</td>
+			      		<td data-label="Назначение">Оплата дополнительных услуг гида</td>
 			   		</tr>
 			   		<tr>
-			      		<td>02 Февраля 2018</td>
-			      		<td class="bluetd">+5 000 &#8381;</td>
-			      		<td>Банковская карта</td>
-			      		<td>Пополнение личного счета</td>
+			      		<td data-label="Дата">02 Февраля 2018</td>
+			      		<td data-label="Сумма" class="bluetd">+5 000 &#8381;</td>
+			      		<td data-label="Способ оплаты">Банковская карта</td>
+			      		<td data-label="Назначение">Пополнение личного счета</td>
 			   		</tr>
 			   		<tr>
-			      		<td>29 января 2018</td>
-			      		<td class="redtd">-5 000 &#8381;</td>
-			      		<td>Банковская карта</td>
-			      		<td>Оплата мероприятия  <a href="#">«Огни большого города»</a></td>
+			      		<td data-label="Дата">29 января 2018</td>
+			      		<td data-label="Сумма" class="redtd">-5 000 &#8381;</td>
+			      		<td data-label="Способ оплаты">Банковская карта</td>
+			      		<td data-label="Назначение">Оплата мероприятия  <a href="#">«Огни большого города»</a></td>
 			   		</tr>
 			   		<tr>
-			      		<td>25 января 2018</td>
-			      		<td class="redtd">-2 000 &#8381;</td>
-			      		<td>Банковская карта</td>
-			      		<td>Оплата мероприятия  <a href="#">«Экскурсия по Москве»</a></td>
+			      		<td data-label="Дата">25 января 2018</td>
+			      		<td data-label="Сумма" class="redtd">-2 000 &#8381;</td>
+			      		<td data-label="Способ оплаты">Банковская карта</td>
+			      		<td data-label="Назначение">Оплата мероприятия  <a href="#">«Экскурсия по Москве»</a></td>
 			   		</tr>
 			   		<tr>
-			      		<td>08 Февраля 2018</td>
-			      		<td class="bluetd">+500 &#8381;</td>
-			      		<td>Банковская карта</td>
-			      		<td>Пополнение личного счета</td>
+			      		<td data-label="Дата">08 Февраля 2018</td>
+			      		<td data-label="Сумма" class="bluetd">+500 &#8381;</td>
+			      		<td data-label="Способ оплаты">Банковская карта</td>
+			      		<td data-label="Назначение">Пополнение личного счета</td>
 			   		</tr>
 			   		<tr>
-			      		<td>05 Февраля 2018</td>
-			      		<td class="redtd">-1 000 &#8381;</td>
-			      		<td>Банковская карта</td>
-			      		<td>Оплата дополнительных услуг гида</td>
+			      		<td data-label="Дата">05 Февраля 2018</td>
+			      		<td data-label="Сумма" class="redtd">-1 000 &#8381;</td>
+			      		<td data-label="Способ оплаты">Банковская карта</td>
+			      		<td data-label="Назначение">Оплата дополнительных услуг гида</td>
 			   		</tr>
 			   		<tr>
-			      		<td>02 Февраля 2018</td>
-			      		<td class="bluetd">+5 000 &#8381;</td>
-			      		<td>Банковская карта</td>
-			      		<td>Пополнение личного счета</td>
+			      		<td data-label="Дата">02 Февраля 2018</td>
+			      		<td data-label="Сумма" class="bluetd">+5 000 &#8381;</td>
+			      		<td data-label="Способ оплаты">Банковская карта</td>
+			      		<td data-label="Назначение">Пополнение личного счета</td>
 			   		</tr>
 			  	</tbody>
 			</table>

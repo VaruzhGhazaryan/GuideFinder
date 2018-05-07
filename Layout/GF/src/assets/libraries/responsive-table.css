@@ -1,0 +1,61 @@
+.r-table {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /*table-layout: fixed;*/
+}
+
+@media screen and (max-width: 992px) {
+  .r-table {
+    border: 0;
+  }
+
+  .r-table caption {
+    font-size: 1.3em;
+  }
+
+  .r-table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  .r-table tr {
+    border-bottom: 2px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  .table td, .table th{
+    border-top: 0;
+  }
+
+  .r-table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+
+  .r-table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+  }
+
+  .r-table td:last-child {
+    border-bottom: 0;
+  }
+}
