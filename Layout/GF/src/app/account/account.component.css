@@ -81,7 +81,7 @@ figure.item.item-event figcaption{
 .breadcrumbs {
     margin-top: 30px;
 }
-@media only screen and (max-width: 1360px){
+@media only screen and (max-width: 1366px){
     .white {
         font-size: 14px ;
     }
