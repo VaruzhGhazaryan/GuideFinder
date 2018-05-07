@@ -1,19 +1,20 @@
 .paymentDiv{
   border:1px solid #cfcfcf;
   width:100%;
-  border-radius:10px;
+  border-radius:15px;
   box-sizing: border-box;
+  height: 210px;
+  display: block;
 }
 .paymentAddDiv{
   border:1px solid #53bcb2;
+  margin: auto;
   width:100%;
-  border-radius:10px;
-  box-sizing: border-box;
-  padding:57px 0 57px 0
 }
-.paymentAddDiv a{
+.paymentAddDiv p{
   color: rgba(16,142,129, 0.8);
-  line-height: 40px
+  line-height: 40px;
+  text-decoration-line: underline;
 }
 .creditCard{
   margin-top:-30px
@@ -25,26 +26,26 @@
 .paymentDiv .nameP{
   color: #3c4c59
 }
-.closeSVG,
-.addSVG{
+.closeSVG{
   cursor: pointer;
 }
-.paymentAddDiv a:hover{
-  color: rgba(16,142,129, 1);
-  text-decoration-line: underline;
+.paymentAddDiv:hover p{
+  color: rgb(239, 124, 138);
+}
+.paymentAddDiv:hover .plusIcon{
+  transform: rotate(90deg);
+  transition: all 0.2s ease;
 }
 @media only screen and (max-width: 991px) {
-  .paymentAddDiv{
-    padding:69px 0 69px 0}
+  .paymentDiv {
+    width: 380px;
+    margin-bottom: 15px;
+  }
 }
 @media only screen and (max-width: 767px) {
-  .paymentAddDiv{
-    padding:57px 0 57px 0;
-    margin: 8px 0 10px 0;
-    width: 80%}
   .paymentDiv{
     margin-top: 8px;
-    width: 80%
+    width: 100%
   }
 }
 @media only screen and (max-width: 441px){
