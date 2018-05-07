@@ -49,7 +49,8 @@ export class AppInlineNavbarComponent implements OnInit {
         location.pathname === '/edit-user-profile' ||
         location.pathname === '/about' ||
         location.pathname === '/booking' ||
-        location.pathname === '/payment-cards'
+        location.pathname === '/payment-cards' ||
+        location.pathname === '/finance'
     ) {
       this.beGuide = false;
       this.login = true;

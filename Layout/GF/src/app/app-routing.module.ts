@@ -17,6 +17,7 @@ import {UserProfileComponent} from './user-profile/user-profile.component';
 import {AboutComponent} from './about/about.component';
 import {BookingComponent} from './booking/booking.component';
 import {PaymentCardsComponent} from './payment-cards/payment-cards.component';
+import {FinanceComponent} from './finance/finance.component';
 
 const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -37,6 +38,7 @@ const routes: Routes = [
     {path: 'about', component: AboutComponent},
     {path: 'booking', component: BookingComponent},
     {path: 'payment-cards', component: PaymentCardsComponent},
+    {path: 'finance', component: FinanceComponent},
 ];
 
 @NgModule({
